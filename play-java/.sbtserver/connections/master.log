@@ -1,0 +1,7 @@
+New log file opened at Mon Mar 06 15:45:39 GMT 2017 by 10339@phills
+Taking next connection to: 33089
+New client attempting to connect on port: 52724-33089
+  Address = /127.0.1.1:33089
+This client on port 52724 has uuid 675a075c-5413-468b-a4ae-0735fd7b40e9 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-675a075c-5413-468b-a4ae-0735fd7b40e9
+Taking next connection to: 33089

@@ -1,0 +1,1 @@
+addSbtPlugin("com.typesafe.sbt" % "sbt-play-ebean" % "1.0.0")

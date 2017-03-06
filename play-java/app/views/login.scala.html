@@ -1,0 +1,44 @@
+@*
+ * This template takes a single argument, a String containing a
+ * message to display.
+ *@
+@(message: String)
+
+@*
+ * Call the `main` template with two arguments. The first
+ * argument is a `String` with the title of the page, the second
+ * argument is an `Html` object containing the body of the page.
+ *@
+@main("Security App") {
+
+
+
+<div class="col col-sm-9">
+   <form class="form-signin">
+        <h2 class="form-signin-heading">Sign in</h2>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-custom btn-block" type="submit">Sign in</button>
+      </form> 
+	  <h2 class="form-signin-middle">OR</h2>
+	 
+		<form class="form-register">
+			<h2 class="form-signin-heading">Register</h2>
+			<label for="inputEmail" class="sr-only">Email address</label>
+			<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+			<label for="nickname" class="sr-only">Nickname</label>
+			<input type ="text" id="inputNickname" class="form-control" placeholder="Nickname" required>
+			<label for="inputPassword" class="sr-only">Password</label>
+			<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+			<button class="btn btn-lg btn-custom btn-block" type="submit">Register</button>
+			
+		</form>
+	  </div>
+	  }
