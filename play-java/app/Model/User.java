@@ -21,6 +21,17 @@ public class User extends Model {
 
     @Constraints.Required
     public String loginName;
+	
+	
+	public User(){
+	}
+	
+	public User(int userID ,String email,String loginName, String password){
+		this.userID = userID;
+		this.password = password;
+		this.email = email;
+		this.loginName = loginName;
+	}
 
 
 }
