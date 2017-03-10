@@ -8,10 +8,18 @@ import com.avaje.ebean.*;
 
 
 @Entity
+@Table(name ="user")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "userType")
+@DiscriminatorValue("user")
+
+
 public class User extends Model {
 
+
     @Id
-    public int userID;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+    public Long userID;
 
     @Constraints.Required
     public String password;
@@ -19,18 +27,17 @@ public class User extends Model {
     @Constraints.Required
     public String email;
 
-    @Constraints.Required
-    public String loginName;
+    
+ 
 	
 	
 	public User(){
 	}
 	
-	public User(int userID ,String email,String loginName, String password){
-		this.userID = userID;
+	public User(String email, String password){
+		
 		this.password = password;
-		this.email = email;
-		this.loginName = loginName;
+		this.email = email;	
 	}
 
 

@@ -1,0 +1,40 @@
+
+
+@(registerForm: Form[models.Player])
+@import helper._
+
+
+@*
+ * Call the `main` template with two arguments. The first
+ * argument is a `String` with the title of the page, the second
+ * argument is an `Html` object containing the body of the page.
+ *@
+@main("Security App") {
+
+	  <div class="col col-sm-9">
+	  <div class="form-register">
+	  @form(action = routes.userRegisterController.registerFormSubmit()) {
+		   
+									
+		  @inputText(registerForm("email"),
+                                    '_label -> "email",
+                                    'class -> "form-control")
+									
+                                @inputText(registerForm("loginName"),
+                                    '_label -> "Login Name",
+                                    'class -> "form-control")
+									
+                                @inputPassword(registerForm("password"),
+                                    '_label -> "Password",
+                                    '_showConstraints -> false,
+									'class -> "form-control")
+									
+									<div class="actions">
+                                    <button type="submit" value="Submit" class="btn btn-custom" >Register</button>
+									</div>
+	 
+		} 
+		 
+	</div>
+</div>
+}

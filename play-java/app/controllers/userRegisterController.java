@@ -13,9 +13,9 @@ public class userRegisterController extends Controller {
  // Display an empty form in the view
     public Result register() {
        
-        Form<User> registerForm = Form.form(User.class);
+        Form<Player> registerForm = Form.form(Player.class);
         
-        return ok(login.render(registerForm));  
+        return ok(register.render(registerForm));  
 	}
 	
 	
@@ -24,19 +24,19 @@ public class userRegisterController extends Controller {
 	
 	 public Result registerFormSubmit() {
 		 
-			Form<User> newRegisterForm = Form.form(User.class).bindFromRequest();
+			Form<Player> newRegisterForm = Form.form(Player.class).bindFromRequest();
 			
 			
 		   if (newRegisterForm.hasErrors()) {
 				//Display the form again
-				System.out.println("badRequest but we got to here we did outputting this to log");
+				System.out.println("badRequest Outputting to log ");
 			
-				return badRequest(login.render(newRegisterForm));
+				return badRequest(register.render(newRegisterForm));
 			}else{
-				User player = newRegisterForm.get();
+				Player player = newRegisterForm.get();
 				player.save();
 			}
-			return ok(login.render(newRegisterForm));
+			return ok(register.render(newRegisterForm));
 	 }
 	
 	

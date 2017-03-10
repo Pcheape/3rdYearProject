@@ -17,7 +17,7 @@ public class LoginController extends Controller {
      * <code>GET</code> request with a path of <code>/</code>.
      */
     public Result login() {
-        return ok("/register");
+        return ok(login.render());
     }
 
 }

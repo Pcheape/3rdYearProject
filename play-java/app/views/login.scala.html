@@ -1,5 +1,3 @@
-
-@(registerForm: Form[models.User])
 @import helper._
 
 
@@ -26,28 +24,10 @@
         </div>
         <button class="btn btn-lg btn-custom btn-block" type="submit">Sign in</button>
       </form> 
-	  <h2 class="form-signin-middle">OR</h2>
-	 @form(action = routes.userRegisterController.registerFormSubmit()) {
-		    @inputText(registerForm("userID"),
-                                    '_label -> "userID",
-                                    'class -> "form-control") 
-									
-		  @inputText(registerForm("email"),
-                                    '_label -> "email",
-                                    'class -> "form-control")
-									
-                                @inputText(registerForm("loginName"),
-                                    '_label -> "Login Name",
-                                    'class -> "form-control")
-									
-                                @inputPassword(registerForm("password"),
-                                    '_label -> "Password",
-                                    '_showConstraints -> false,
-									'class -> "form-control")
-									
-									<div class="actions">
-                                    <input type="submit" value="Submit" class="btn btn-primary">
-									</div>
-	 
-		}
+	  
+	  
+
+
+		
+		
 	  }
