@@ -5,13 +5,15 @@ import play.mvc.*;
 import play.data.*;
 
 import views.html.*;
-import models.Player;
+import models.*;
 /**
  * This controller contains an action to handle HTTP requests
  * to the application's home page.
  */
 public class ScoreBoardController extends Controller {
  // Display an empty form in the view
+ @Security.Authenticated(Secured.class)
+ 
  
     public Result ScoreBoard() {
 		
@@ -19,7 +21,7 @@ public class ScoreBoardController extends Controller {
        List<Player> player = Player.findAll();
         
         
-        return ok(ScoreBoard.render(player));
+        return ok(ScoreBoard.render(User.getLoggedIn(session().get("loginname")),player));
 	}
 	
 }
