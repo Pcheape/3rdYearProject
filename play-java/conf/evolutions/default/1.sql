@@ -5,12 +5,11 @@
 
 create table user (
   usertype                      varchar(31) not null,
-  user_id                       bigint auto_increment not null,
+  email                         varchar(255) not null,
   password                      varchar(255),
-  email                         varchar(255),
   score                         integer,
   login_name                    varchar(255),
-  constraint pk_user primary key (user_id)
+  constraint pk_user primary key (email)
 );
 
 

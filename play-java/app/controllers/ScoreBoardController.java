@@ -12,6 +12,7 @@ import models.Player;
  */
 public class ScoreBoardController extends Controller {
  // Display an empty form in the view
+ 
     public Result ScoreBoard() {
 		
 		

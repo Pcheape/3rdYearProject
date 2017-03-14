@@ -5,6 +5,8 @@ import javax.persistence.*;
 import play.data.format.*;
 import play.data.validation.*;
 import com.avaje.ebean.*;
+import com.google.inject.Inject;
+import models.*;
 
 
 @Entity
@@ -17,28 +19,44 @@ import com.avaje.ebean.*;
 public class User extends Model {
 
 
-    @Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Long userID;
-
+    
+	
     @Constraints.Required
     public String password;
-
+	
+	@Id
     @Constraints.Required
     public String email;
-
-    
- 
 	
+	public static Finder<Long,User> find = new Finder<Long,User>(User.class);
 	
-	public User(){
-	}
-	
-	public User(String email, String password){
+	public @Inject User(String email, String password){
 		
 		this.password = password;
 		this.email = email;	
 	}
+	
+	List<User> user = User.find.all();
+	
+	public static User getLoggedIn(String email) {
+        if (email == null)
+                return null;
+        else
+            // Find user by id and return object
+            return find.where().eq("email", email).findUnique();
+}
+
+
+
+    public String getUserType(){
+        DiscriminatorValue val = this.getClass().getAnnotation( DiscriminatorValue.class );
+        return val == null ? null : val.value();
+	}
+	
+	  public static User authenticate(String email, String password) {
+        // If found return the user object with matching username and password
+        return find.where().eq("email", email).eq("password", password).findUnique();
+}
 
 
 }

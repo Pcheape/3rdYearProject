@@ -3,7 +3,7 @@ name := """play-java"""
 version := "1.0-SNAPSHOT"
 
 lazy val myProject = (project in file("."))
-  .enablePlugins(PlayJava, PlayEbean)
+  .enablePlugins(PlayJava, PlayEbean )
 
 
 scalaVersion := "2.11.7"
@@ -11,8 +11,9 @@ scalaVersion := "2.11.7"
 libraryDependencies ++= Seq(
   javaJdbc,
   cache,
-  javaWs
+  javaWs,
+  javaJpa
 )
 
-
+routesGenerator := InjectedRoutesGenerator
 fork in run := true

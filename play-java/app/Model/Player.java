@@ -5,7 +5,8 @@ import javax.persistence.*;
 import play.data.format.*;
 import play.data.validation.*;
 import com.avaje.ebean.*;
-import models.User;
+import models.*;
+import com.google.inject.Inject;
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
@@ -20,11 +21,10 @@ public class Player extends User{
 	@Constraints.Required
 	public String loginName;
 	
-	public Player(){
-	}
+	
 	
 	public Player(String email,String loginName, String password){
-		super( email, password);
+		super(email, password);
 		score = 0;
 		this.loginName = loginName;
 		
