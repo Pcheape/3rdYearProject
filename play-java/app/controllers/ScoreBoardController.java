@@ -21,7 +21,9 @@ public class ScoreBoardController extends Controller {
        List<Player> player = Player.findAll();
         
         
+
         return ok(ScoreBoard.render(User.getLoggedIn(session().get("email")),player));
+
 	}
 	
 }
