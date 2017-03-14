@@ -9,7 +9,10 @@ public class Secured extends Security.Authenticator {
 
 
     
-    public String getEmail(Context ctx) {
+    public String getUsername(Context ctx) {
+		
+		System.out.println("current user is " + ctx.session().get("email"));
+		
         return ctx.session().get("email");
     }
 
