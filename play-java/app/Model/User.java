@@ -62,7 +62,19 @@ public class User extends Model {
 		return User.find.all();
 	}
 	
-
+   public String getEmail(){
+	   
+	   return this.email;
+   }
+   
+   public void setUserEmail(String email){
+	   
+	   this.email = email;
+   }
+   
+   public void setUserPassword(String password){
+	   this.password = password;
+   }
 
 
 

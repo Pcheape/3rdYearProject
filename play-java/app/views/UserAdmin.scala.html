@@ -1,5 +1,5 @@
 @(user: models.User, users: List[models.User])
-
+ @import helper._
 @main("Security App"){
 
 <div class="row">
@@ -22,13 +22,18 @@
 					<td>@user.email		
 						@if(user.getUserType() == "player"){
 						<td>@user.asInstanceOf[Player].loginName</td>
+						<td> @helper.form(action=routes.AdminController.editUser(user.email)){
+                                <input class="btn-xs btn-danger" type="submit" value="Edit" >
+								}
 						}else{
 						<td>Admin</td>
 						}
-					 <td><a href="/editPlayer"><span class="glyphicon glyphicon-wrench"></span>edit</td>
-					 <td><a href="/editPlayer"><span class="glyphicon glyphicon-wrench"></span>edit</td>
+						
+						</td>
+					 
 					</tr>
 					}
+					
 				
 			</tbody>
 		</table>
@@ -38,4 +43,3 @@
 </div>
 
 }
-
