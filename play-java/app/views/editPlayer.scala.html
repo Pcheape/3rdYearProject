@@ -1,0 +1,23 @@
+@(user: models.users.User, editPlayerForm: Form[models.Player], player: models.Player)
+
+    @import helper._
+
+    @main("New Player", user) {
+	tring email,String loginName, String password
+        <h3> Edit a Player</h3>   
+        @form(action = routes.PlayerController.submitEditPlayer(player.email), 'class -> "form-horizontal", 'role -> "form") {
+		
+            @inputText(editPlayerForm("email"), '_label -> "Email")
+            @inputText(editPlayerForm("loginName"), '_label -> "LoginName")
+			@inputText(editPlayerForm("password"),'_laber -> "Password")
+     
+
+
+            <div class="actions">
+                <input type="submit" value="Edit Player" class="btn primary">
+
+            </div>
+
+
+        }
+}

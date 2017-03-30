@@ -1,29 +1,9 @@
-New log file opened at Tue Mar 14 15:07:52 GMT 2017 by 6137@phills
-Taking next connection to: 37325
-New client attempting to connect on port: 49874-37325
-  Address = /127.0.1.1:37325
-This client on port 49874 has uuid ec10072e-9dd3-40c6-a972-2286d6f8a626 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
-Connected Clients: activator-ec10072e-9dd3-40c6-a972-2286d6f8a626
-Taking next connection to: 37325
-New client attempting to connect on port: 49888-37325
-  Address = /127.0.1.1:37325
-Handshake exception on socket: 49888
-sbt.impl.ipc.HandshakeException: Unable to perform handshake
-	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
-	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
-	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
-Caused by: java.net.SocketException: Connection reset
-	at java.net.SocketInputStream.read(SocketInputStream.java:210)
-	at java.net.SocketInputStream.read(SocketInputStream.java:141)
-	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
-	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
-	at java.io.DataInputStream.readInt(DataInputStream.java:387)
-	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
-	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
-	... 2 more
-Taking next connection to: 37325
-New client attempting to connect on port: 49890-37325
-  Address = /127.0.1.1:37325
-This client on port 49890 has uuid 117471f1-b677-407b-b236-30676c080af4 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: activator-ec10072e-9dd3-40c6-a972-2286d6f8a626, play-fork-run-117471f1-b677-407b-b236-30676c080af4
-Taking next connection to: 37325
+New log file opened at Thu Mar 30 11:45:53 IST 2017 by 2924@phills
+Taking next connection to: 44277
+New client attempting to connect on port: 41502-44277
+  Address = /127.0.1.1:44277
+Server socket closed java.io.EOFException: null
+Server socket thread exiting.
+0 clients open, will close them...
+All client sockets have been closed.
+Closing the 2924@phills logs at Thu Mar 30 11:47:39 IST 2017, goodbye.

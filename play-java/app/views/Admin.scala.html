@@ -1,0 +1,33 @@
+@(user: models.User, players: List[models.Player])
+
+@main("Security App"){
+
+
+<div class="row">
+ <div class="col-lg-12">
+ 
+	
+	 <div class = "adminButton">
+		<form action = "/getUserAdmin" method = "get">
+			<button type="submit" formaction ="/getUserAdmin" value="Submit" class="btn btn-custom" >UserAdmin</button>
+		</div>
+	</div>
+	
+	
+	<div class = "adminButton">
+	
+		<div class="actions">
+			<button type="submit" value="Submit" class="btn btn-custom" >ResetScores</button>
+		</div>
+	</div>
+	
+	
+	<div class = "adminButton">
+		<div class="actions">
+			<button type="submit" value="Submit" class="btn btn-custom" >StartGame</button>
+		</div>
+		</div>
+	</div>
+
+
+}

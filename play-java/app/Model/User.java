@@ -36,7 +36,7 @@ public class User extends Model {
 		this.email = email;	
 	}
 	
-	List<User> user = User.find.all();
+	//List<User> user = User.find.all();
 	
 	public static User getLoggedIn(String email) {
         if (email == null)
@@ -56,7 +56,15 @@ public class User extends Model {
 	  public static User authenticate(String email, String password) {
         // If found return the user object with matching username and password
         return find.where().eq("email", email).eq("password", password).findUnique();
-}
+	}
+	
+	public static List<User> findAllUsers(){
+		return User.find.all();
+	}
+	
+
+
+
 
 
 }

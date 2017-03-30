@@ -1,5 +1,5 @@
-New log file opened at Tue Mar 14 15:04:18 GMT 2017 by 5913@phills
-jvm 5913@phills
+New log file opened at Tue Mar 14 15:07:52 GMT 2017 by 6137@phills
+jvm 6137@phills
 jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.121-b13
 jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
 jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
@@ -27,7 +27,7 @@ sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.Jvm
   :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
 [Loading] Done in /media/sf_phillsShared/play project/play-java/project, returning: (play-java-build)
 Loading project definition from /media/sf_phillsShared/play project/play-java/project
-Running task... Cancel: sbt.TaskCancellationStrategy$Null$@237f9d7, check cycles: false
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@7c9b0116, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -67,127 +67,9 @@ Set current project to play-java (in build file:/media/sf_phillsShared/play%20pr
 > iflast shell
 > server-send-ready-for-request
 > server-handle-next-server-request
-> {file:/media/sf_phillsShared/play%20project/play-java/}myProject/compile:mainClass
-Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@a082084, check cycles: false
-Total time: 0 s, completed 14-Mar-2017 15:04:39
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/media/sf_phillsShared/play%20project/play-java/}myProject/compile:discoveredMainClasses
-Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@2e6342be, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set(/media/sf_phillsShared/play project/play-java/app/controllers/ScoreBoardController.java, /media/sf_phillsShared/play project/play-java/target/scala-2.11/twirl/main/views/html/ScoreBoard.template.scala)
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set(/media/sf_phillsShared/play project/play-java/app/controllers/ScoreBoardController.java, /media/sf_phillsShared/play project/play-java/target/scala-2.11/twirl/main/views/html/ScoreBoard.template.scala)
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set(/media/sf_phillsShared/play project/play-java/app/controllers/ScoreBoardController.java, /media/sf_phillsShared/play project/play-java/target/scala-2.11/twirl/main/views/html/ScoreBoard.template.scala)
-
-Read from stdout: Compiling 1 Scala source and 1 Java source to /media/sf_phillsShared/play project/play-java/target/scala-2.11/classes...
-Compiling 1 Scala source and 1 Java source to /media/sf_phillsShared/play project/play-java/target/scala-2.11/classes...
-Getting compiler-interface from component compiler for Scala 2.11.7
-Other repositories:
-Default repositories:
-Getting compiler-interface from component compiler for Scala 2.11.7
-Other repositories:
-Default repositories:
-Running cached compiler 45cd7ac1, interfacing (CompilerInterface) with Scala compiler version 2.11.7
-Calling Scala compiler with arguments  (CompilerInterface):
-	-deprecation
-	-unchecked
-	-encoding
-	utf8
-	-bootclasspath
-	/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.scala-lang/scala-library/2.11.7/jars/scala-library.jar
-	-classpath
-	/media/sf_phillsShared/play project/play-java/target/scala-2.11/classes:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.typesafe.play/play-enhancer/1.1.0/jars/play-enhancer.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.typesafe.play/twirl-api_2.11/1.1.1/jars/twirl-api_2.11.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.apache.commons/commons-lang3/3.4/jars/commons-lang3.jar:/home/phillip/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.1.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-ebean_2.11/jars/play-ebean_2.11-3.0.0.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/jars/play-java-jdbc_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-jdbc_2.11/jars/play-jdbc_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-jdbc-api_2.11/jars/play-jdbc-api_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/build-link/jars/build-link-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-exceptions/jars/play-exceptions-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/jars/play-iteratees_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/org.scala-stm/scala-stm_2.11/jars/scala-stm_2.11-0.7.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.typesafe/config/1.3.0/bundles/config.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-json_2.11/jars/play-json_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-functional_2.11/jars/play-functional_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/jars/play-datacommons_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.9.6.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.joda/joda-convert/1.8.1/jars/joda-convert.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.scala-lang/scala-reflect/2.11.7/jars/scala-reflect.jar:/home/phillip/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.7.8.jar:/home/phillip/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.7.8.jar:/home/phillip/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.7.8.jar:/home/phillip/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/bundles/jackson-datatype-jdk8-2.7.8.jar:/home/phillip/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/bundles/jackson-datatype-jsr310-2.7.8.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-netty-utils/jars/play-netty-utils-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.slf4j/slf4j-api/1.7.21/jars/slf4j-api.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.slf4j/jul-to-slf4j/1.7.21/jars/jul-to-slf4j.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.slf4j/jcl-over-slf4j/1.7.21/jars/jcl-over-slf4j.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-streams_2.11/jars/play-streams_2.11-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.reactivestreams/reactive-streams/1.0.0/jars/reactive-streams.jar:/home/phillip/.ivy2/cache/com.typesafe.akka/akka-stream_2.11/jars/akka-stream_2.11-2.4.12.jar:/home/phillip/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.4.12.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.scala-lang.modules/scala-java8-compat_2.11/0.7.0/bundles/scala-java8-compat_2.11.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.typesafe/ssl-config-core_2.11/0.2.1/bundles/ssl-config-core_2.11.jar:/home/phillip/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.4.jar:/home/phillip/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.11/jars/akka-slf4j_2.11-2.4.12.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/commons-codec/commons-codec/1.10/jars/commons-codec.jar:/home/phillip/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.11.0.jar:/home/phillip/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.4.01.jar:/home/phillip/.ivy2/cache/javax.transaction/jta/jars/jta-1.1.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.google.inject/guice/4.0/jars/guice.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/javax.inject/javax.inject/1/jars/javax.inject.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/aopalliance/aopalliance/1.0/jars/aopalliance.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.google.inject.extensions/guice-assistedinject/4.0/jars/guice-assistedinject.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.jolbox/bonecp/0.8.0.RELEASE/bundles/bonecp.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.zaxxer/HikariCP/2.5.1/bundles/HikariCP.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.googlecode.usc/jdbcdslog/1.0.6.2/jars/jdbcdslog.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.h2database/h2/1.4.192/jars/h2.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/tyrex/tyrex/1.0.1/jars/tyrex.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-java_2.11/jars/play-java_2.11-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.yaml/snakeyaml/1.16/bundles/snakeyaml.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.hibernate/hibernate-validator/5.2.4.Final/jars/hibernate-validator.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/javax.validation/validation-api/1.1.0.Final/jars/validation-api.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.jboss.logging/jboss-logging/3.2.1.Final/jars/jboss-logging.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.fasterxml/classmate/1.1.0/bundles/classmate.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/javax.el/javax.el-api/3.0.0/jars/javax.el-api.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.springframework/spring-context/4.2.7.RELEASE/jars/spring-context.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.springframework/spring-core/4.2.7.RELEASE/jars/spring-core.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.springframework/spring-beans/4.2.7.RELEASE/jars/spring-beans.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.reflections/reflections/0.9.10/jars/reflections.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.google.guava/guava/19.0/bundles/guava.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/net.jodah/typetools/0.4.4/bundles/typetools.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.google.code.findbugs/jsr305/3.0.1/jars/jsr305.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.apache.tomcat/tomcat-servlet-api/8.0.33/jars/tomcat-servlet-api.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-jdbc-evolutions_2.11/jars/play-jdbc-evolutions_2.11-2.5.0.jar:/home/phillip/.ivy2/cache/org.avaje.ebeanorm/avaje-ebeanorm/jars/avaje-ebeanorm-6.18.1.jar:/home/phillip/.ivy2/cache/org.jetbrains/annotations/jars/annotations-13.0.jar:/home/phillip/.ivy2/cache/javax.persistence/persistence-api/jars/persistence-api-1.0.jar:/home/phillip/.ivy2/cache/org.avaje.ebeanorm/avaje-ebeanorm-agent/jars/avaje-ebeanorm-agent-4.9.1.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-server_2.11/jars/play-server_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-netty-server_2.11/jars/play-netty-server_2.11-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.typesafe.netty/netty-reactive-streams-http/1.0.8/jars/netty-reactive-streams-http.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.typesafe.netty/netty-reactive-streams/1.0.8/jars/netty-reactive-streams.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-handler/4.0.41.Final/jars/netty-handler.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-buffer/4.0.41.Final/jars/netty-buffer.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-common/4.0.41.Final/jars/netty-common.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-transport/4.0.41.Final/jars/netty-transport.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-codec/4.0.41.Final/jars/netty-codec.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-codec-http/4.0.41.Final/jars/netty-codec-http.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-transport-native-epoll/4.0.41.Final/jars/netty-transport-native-epoll-linux-x86_64.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-logback_2.11/jars/play-logback_2.11-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/ch.qos.logback/logback-classic/1.1.7/jars/logback-classic.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/ch.qos.logback/logback-core/1.1.7/jars/logback-core.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-cache_2.11/jars/play-cache_2.11-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/net.sf.ehcache/ehcache-core/2.6.11/jars/ehcache-core.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-java-ws_2.11/jars/play-java-ws_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-ws_2.11/jars/play-ws_2.11-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.asynchttpclient/async-http-client/2.0.11/jars/async-http-client.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.asynchttpclient/netty-resolver-dns/2.0.11/jars/netty-resolver-dns.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.asynchttpclient/netty-resolver/2.0.11/jars/netty-resolver.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.asynchttpclient/netty-codec-dns/2.0.11/jars/netty-codec-dns.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.javassist/javassist/3.20.0-GA/bundles/javassist.jar:/home/phillip/.ivy2/cache/oauth.signpost/signpost-core/jars/signpost-core-1.2.1.2.jar:/home/phillip/.ivy2/cache/oauth.signpost/signpost-commonshttp4/jars/signpost-commonshttp4-1.2.1.2.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.apache.httpcomponents/httpcore/4.0.1/jars/httpcore.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.apache.httpcomponents/httpclient/4.0.1/jars/httpclient.jar:/home/phillip/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-java-jpa_2.11/jars/play-java-jpa_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/org.hibernate.javax.persistence/hibernate-jpa-2.1-api/jars/hibernate-jpa-2.1-api-1.0.0.Final.jar
-Scala compilation took 14.562180092 s
-Attempting to call com.sun.tools.javac.api.JavacTool@226c293a directly...
-Read from stdout: /media/sf_phillsShared/play project/play-java/app/controllers/ScoreBoardController.java:23: cannot find symbol
-Read from stdout: symbol:   variable User
-Read from stdout: location: class controllers.ScoreBoardController
-/media/sf_phillsShared/play project/play-java/app/controllers/ScoreBoardController.java:23: cannot find symbol
-  symbol:   variable User
-  location: class controllers.ScoreBoardController
-Read from stdout: User
-User
-Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
-(compile:compileIncremental) javac returned nonzero exit code
-Total time: 24 s, completed 14-Mar-2017 15:05:03
-> server-post-command-error-handler
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/media/sf_phillsShared/play%20project/play-java/}myProject/compile:mainClass
-Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@3110b2ce, check cycles: false
-Total time: 0 s, completed 14-Mar-2017 15:05:04
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/media/sf_phillsShared/play%20project/play-java/}myProject/compile:discoveredMainClasses
-Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@2bb48341, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set(/media/sf_phillsShared/play project/play-java/app/controllers/ScoreBoardController.java, /media/sf_phillsShared/play project/play-java/target/scala-2.11/twirl/main/views/html/ScoreBoard.template.scala)
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set(/media/sf_phillsShared/play project/play-java/app/controllers/ScoreBoardController.java, /media/sf_phillsShared/play project/play-java/target/scala-2.11/twirl/main/views/html/ScoreBoard.template.scala)
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set(/media/sf_phillsShared/play project/play-java/app/controllers/ScoreBoardController.java, /media/sf_phillsShared/play project/play-java/target/scala-2.11/twirl/main/views/html/ScoreBoard.template.scala)
-
-Read from stdout: Compiling 1 Scala source and 1 Java source to /media/sf_phillsShared/play project/play-java/target/scala-2.11/classes...
-Compiling 1 Scala source and 1 Java source to /media/sf_phillsShared/play project/play-java/target/scala-2.11/classes...
-Getting compiler-interface from component compiler for Scala 2.11.7
-Other repositories:
-Default repositories:
-Getting compiler-interface from component compiler for Scala 2.11.7
-Other repositories:
-Default repositories:
-Running cached compiler 70301d01, interfacing (CompilerInterface) with Scala compiler version 2.11.7
-Calling Scala compiler with arguments  (CompilerInterface):
-	-deprecation
-	-unchecked
-	-encoding
-	utf8
-	-bootclasspath
-	/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.scala-lang/scala-library/2.11.7/jars/scala-library.jar
-	-classpath
-	/media/sf_phillsShared/play project/play-java/target/scala-2.11/classes:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.typesafe.play/play-enhancer/1.1.0/jars/play-enhancer.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.typesafe.play/twirl-api_2.11/1.1.1/jars/twirl-api_2.11.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.apache.commons/commons-lang3/3.4/jars/commons-lang3.jar:/home/phillip/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.1.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-ebean_2.11/jars/play-ebean_2.11-3.0.0.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/jars/play-java-jdbc_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-jdbc_2.11/jars/play-jdbc_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-jdbc-api_2.11/jars/play-jdbc-api_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/build-link/jars/build-link-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-exceptions/jars/play-exceptions-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/jars/play-iteratees_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/org.scala-stm/scala-stm_2.11/jars/scala-stm_2.11-0.7.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.typesafe/config/1.3.0/bundles/config.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-json_2.11/jars/play-json_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-functional_2.11/jars/play-functional_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/jars/play-datacommons_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.9.6.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.joda/joda-convert/1.8.1/jars/joda-convert.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.scala-lang/scala-reflect/2.11.7/jars/scala-reflect.jar:/home/phillip/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.7.8.jar:/home/phillip/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.7.8.jar:/home/phillip/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.7.8.jar:/home/phillip/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/bundles/jackson-datatype-jdk8-2.7.8.jar:/home/phillip/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/bundles/jackson-datatype-jsr310-2.7.8.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-netty-utils/jars/play-netty-utils-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.slf4j/slf4j-api/1.7.21/jars/slf4j-api.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.slf4j/jul-to-slf4j/1.7.21/jars/jul-to-slf4j.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.slf4j/jcl-over-slf4j/1.7.21/jars/jcl-over-slf4j.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-streams_2.11/jars/play-streams_2.11-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.reactivestreams/reactive-streams/1.0.0/jars/reactive-streams.jar:/home/phillip/.ivy2/cache/com.typesafe.akka/akka-stream_2.11/jars/akka-stream_2.11-2.4.12.jar:/home/phillip/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.4.12.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.scala-lang.modules/scala-java8-compat_2.11/0.7.0/bundles/scala-java8-compat_2.11.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.typesafe/ssl-config-core_2.11/0.2.1/bundles/ssl-config-core_2.11.jar:/home/phillip/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.4.jar:/home/phillip/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.11/jars/akka-slf4j_2.11-2.4.12.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/commons-codec/commons-codec/1.10/jars/commons-codec.jar:/home/phillip/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.11.0.jar:/home/phillip/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.4.01.jar:/home/phillip/.ivy2/cache/javax.transaction/jta/jars/jta-1.1.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.google.inject/guice/4.0/jars/guice.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/javax.inject/javax.inject/1/jars/javax.inject.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/aopalliance/aopalliance/1.0/jars/aopalliance.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.google.inject.extensions/guice-assistedinject/4.0/jars/guice-assistedinject.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.jolbox/bonecp/0.8.0.RELEASE/bundles/bonecp.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.zaxxer/HikariCP/2.5.1/bundles/HikariCP.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.googlecode.usc/jdbcdslog/1.0.6.2/jars/jdbcdslog.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.h2database/h2/1.4.192/jars/h2.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/tyrex/tyrex/1.0.1/jars/tyrex.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-java_2.11/jars/play-java_2.11-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.yaml/snakeyaml/1.16/bundles/snakeyaml.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.hibernate/hibernate-validator/5.2.4.Final/jars/hibernate-validator.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/javax.validation/validation-api/1.1.0.Final/jars/validation-api.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.jboss.logging/jboss-logging/3.2.1.Final/jars/jboss-logging.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.fasterxml/classmate/1.1.0/bundles/classmate.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/javax.el/javax.el-api/3.0.0/jars/javax.el-api.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.springframework/spring-context/4.2.7.RELEASE/jars/spring-context.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.springframework/spring-core/4.2.7.RELEASE/jars/spring-core.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.springframework/spring-beans/4.2.7.RELEASE/jars/spring-beans.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.reflections/reflections/0.9.10/jars/reflections.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.google.guava/guava/19.0/bundles/guava.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/net.jodah/typetools/0.4.4/bundles/typetools.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.google.code.findbugs/jsr305/3.0.1/jars/jsr305.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.apache.tomcat/tomcat-servlet-api/8.0.33/jars/tomcat-servlet-api.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-jdbc-evolutions_2.11/jars/play-jdbc-evolutions_2.11-2.5.0.jar:/home/phillip/.ivy2/cache/org.avaje.ebeanorm/avaje-ebeanorm/jars/avaje-ebeanorm-6.18.1.jar:/home/phillip/.ivy2/cache/org.jetbrains/annotations/jars/annotations-13.0.jar:/home/phillip/.ivy2/cache/javax.persistence/persistence-api/jars/persistence-api-1.0.jar:/home/phillip/.ivy2/cache/org.avaje.ebeanorm/avaje-ebeanorm-agent/jars/avaje-ebeanorm-agent-4.9.1.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-server_2.11/jars/play-server_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-netty-server_2.11/jars/play-netty-server_2.11-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.typesafe.netty/netty-reactive-streams-http/1.0.8/jars/netty-reactive-streams-http.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.typesafe.netty/netty-reactive-streams/1.0.8/jars/netty-reactive-streams.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-handler/4.0.41.Final/jars/netty-handler.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-buffer/4.0.41.Final/jars/netty-buffer.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-common/4.0.41.Final/jars/netty-common.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-transport/4.0.41.Final/jars/netty-transport.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-codec/4.0.41.Final/jars/netty-codec.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-codec-http/4.0.41.Final/jars/netty-codec-http.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-transport-native-epoll/4.0.41.Final/jars/netty-transport-native-epoll-linux-x86_64.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-logback_2.11/jars/play-logback_2.11-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/ch.qos.logback/logback-classic/1.1.7/jars/logback-classic.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/ch.qos.logback/logback-core/1.1.7/jars/logback-core.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-cache_2.11/jars/play-cache_2.11-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/net.sf.ehcache/ehcache-core/2.6.11/jars/ehcache-core.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-java-ws_2.11/jars/play-java-ws_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-ws_2.11/jars/play-ws_2.11-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.asynchttpclient/async-http-client/2.0.11/jars/async-http-client.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.asynchttpclient/netty-resolver-dns/2.0.11/jars/netty-resolver-dns.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.asynchttpclient/netty-resolver/2.0.11/jars/netty-resolver.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.asynchttpclient/netty-codec-dns/2.0.11/jars/netty-codec-dns.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.javassist/javassist/3.20.0-GA/bundles/javassist.jar:/home/phillip/.ivy2/cache/oauth.signpost/signpost-core/jars/signpost-core-1.2.1.2.jar:/home/phillip/.ivy2/cache/oauth.signpost/signpost-commonshttp4/jars/signpost-commonshttp4-1.2.1.2.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.apache.httpcomponents/httpcore/4.0.1/jars/httpcore.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.apache.httpcomponents/httpclient/4.0.1/jars/httpclient.jar:/home/phillip/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-java-jpa_2.11/jars/play-java-jpa_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/org.hibernate.javax.persistence/hibernate-jpa-2.1-api/jars/hibernate-jpa-2.1-api-1.0.0.Final.jar
-Scala compilation took 11.487360287 s
-Attempting to call com.sun.tools.javac.api.JavacTool@1526614a directly...
-Read from stdout: /media/sf_phillsShared/play project/play-java/app/controllers/ScoreBoardController.java:23: cannot find symbol
-Read from stdout: symbol:   variable User
-Read from stdout: location: class controllers.ScoreBoardController
-/media/sf_phillsShared/play project/play-java/app/controllers/ScoreBoardController.java:23: cannot find symbol
-  symbol:   variable User
-  location: class controllers.ScoreBoardController
-Read from stdout: User
-User
-Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
-(compile:compileIncremental) javac returned nonzero exit code
-Total time: 19 s, completed 14-Mar-2017 15:05:23
-> server-post-command-error-handler
-> server-post-command-cleanup
-> server-handle-next-server-request
 > compile
 Evaluating tasks: compile:compile
-Running task... Cancel: sbt.server.ServerTaskCancellation@3c022f1f, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@783cd33c, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -212,7 +94,7 @@ Default repositories:
 Getting compiler-interface from component compiler for Scala 2.11.7
 Other repositories:
 Default repositories:
-Running cached compiler 1c3be387, interfacing (CompilerInterface) with Scala compiler version 2.11.7
+Running cached compiler e79c4b6, interfacing (CompilerInterface) with Scala compiler version 2.11.7
 Calling Scala compiler with arguments  (CompilerInterface):
 	-deprecation
 	-unchecked
@@ -222,28 +104,269 @@ Calling Scala compiler with arguments  (CompilerInterface):
 	/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.scala-lang/scala-library/2.11.7/jars/scala-library.jar
 	-classpath
 	/media/sf_phillsShared/play project/play-java/target/scala-2.11/classes:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.typesafe.play/play-enhancer/1.1.0/jars/play-enhancer.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.typesafe.play/twirl-api_2.11/1.1.1/jars/twirl-api_2.11.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.apache.commons/commons-lang3/3.4/jars/commons-lang3.jar:/home/phillip/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.1.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-ebean_2.11/jars/play-ebean_2.11-3.0.0.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/jars/play-java-jdbc_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-jdbc_2.11/jars/play-jdbc_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-jdbc-api_2.11/jars/play-jdbc-api_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/build-link/jars/build-link-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-exceptions/jars/play-exceptions-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/jars/play-iteratees_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/org.scala-stm/scala-stm_2.11/jars/scala-stm_2.11-0.7.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.typesafe/config/1.3.0/bundles/config.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-json_2.11/jars/play-json_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-functional_2.11/jars/play-functional_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/jars/play-datacommons_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.9.6.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.joda/joda-convert/1.8.1/jars/joda-convert.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.scala-lang/scala-reflect/2.11.7/jars/scala-reflect.jar:/home/phillip/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.7.8.jar:/home/phillip/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.7.8.jar:/home/phillip/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.7.8.jar:/home/phillip/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/bundles/jackson-datatype-jdk8-2.7.8.jar:/home/phillip/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/bundles/jackson-datatype-jsr310-2.7.8.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-netty-utils/jars/play-netty-utils-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.slf4j/slf4j-api/1.7.21/jars/slf4j-api.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.slf4j/jul-to-slf4j/1.7.21/jars/jul-to-slf4j.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.slf4j/jcl-over-slf4j/1.7.21/jars/jcl-over-slf4j.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-streams_2.11/jars/play-streams_2.11-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.reactivestreams/reactive-streams/1.0.0/jars/reactive-streams.jar:/home/phillip/.ivy2/cache/com.typesafe.akka/akka-stream_2.11/jars/akka-stream_2.11-2.4.12.jar:/home/phillip/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.4.12.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.scala-lang.modules/scala-java8-compat_2.11/0.7.0/bundles/scala-java8-compat_2.11.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.typesafe/ssl-config-core_2.11/0.2.1/bundles/ssl-config-core_2.11.jar:/home/phillip/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.4.jar:/home/phillip/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.11/jars/akka-slf4j_2.11-2.4.12.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/commons-codec/commons-codec/1.10/jars/commons-codec.jar:/home/phillip/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.11.0.jar:/home/phillip/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.4.01.jar:/home/phillip/.ivy2/cache/javax.transaction/jta/jars/jta-1.1.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.google.inject/guice/4.0/jars/guice.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/javax.inject/javax.inject/1/jars/javax.inject.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/aopalliance/aopalliance/1.0/jars/aopalliance.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.google.inject.extensions/guice-assistedinject/4.0/jars/guice-assistedinject.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.jolbox/bonecp/0.8.0.RELEASE/bundles/bonecp.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.zaxxer/HikariCP/2.5.1/bundles/HikariCP.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.googlecode.usc/jdbcdslog/1.0.6.2/jars/jdbcdslog.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.h2database/h2/1.4.192/jars/h2.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/tyrex/tyrex/1.0.1/jars/tyrex.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-java_2.11/jars/play-java_2.11-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.yaml/snakeyaml/1.16/bundles/snakeyaml.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.hibernate/hibernate-validator/5.2.4.Final/jars/hibernate-validator.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/javax.validation/validation-api/1.1.0.Final/jars/validation-api.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.jboss.logging/jboss-logging/3.2.1.Final/jars/jboss-logging.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.fasterxml/classmate/1.1.0/bundles/classmate.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/javax.el/javax.el-api/3.0.0/jars/javax.el-api.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.springframework/spring-context/4.2.7.RELEASE/jars/spring-context.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.springframework/spring-core/4.2.7.RELEASE/jars/spring-core.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.springframework/spring-beans/4.2.7.RELEASE/jars/spring-beans.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.reflections/reflections/0.9.10/jars/reflections.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.google.guava/guava/19.0/bundles/guava.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/net.jodah/typetools/0.4.4/bundles/typetools.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.google.code.findbugs/jsr305/3.0.1/jars/jsr305.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.apache.tomcat/tomcat-servlet-api/8.0.33/jars/tomcat-servlet-api.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-jdbc-evolutions_2.11/jars/play-jdbc-evolutions_2.11-2.5.0.jar:/home/phillip/.ivy2/cache/org.avaje.ebeanorm/avaje-ebeanorm/jars/avaje-ebeanorm-6.18.1.jar:/home/phillip/.ivy2/cache/org.jetbrains/annotations/jars/annotations-13.0.jar:/home/phillip/.ivy2/cache/javax.persistence/persistence-api/jars/persistence-api-1.0.jar:/home/phillip/.ivy2/cache/org.avaje.ebeanorm/avaje-ebeanorm-agent/jars/avaje-ebeanorm-agent-4.9.1.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-server_2.11/jars/play-server_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-netty-server_2.11/jars/play-netty-server_2.11-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.typesafe.netty/netty-reactive-streams-http/1.0.8/jars/netty-reactive-streams-http.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.typesafe.netty/netty-reactive-streams/1.0.8/jars/netty-reactive-streams.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-handler/4.0.41.Final/jars/netty-handler.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-buffer/4.0.41.Final/jars/netty-buffer.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-common/4.0.41.Final/jars/netty-common.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-transport/4.0.41.Final/jars/netty-transport.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-codec/4.0.41.Final/jars/netty-codec.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-codec-http/4.0.41.Final/jars/netty-codec-http.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-transport-native-epoll/4.0.41.Final/jars/netty-transport-native-epoll-linux-x86_64.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-logback_2.11/jars/play-logback_2.11-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/ch.qos.logback/logback-classic/1.1.7/jars/logback-classic.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/ch.qos.logback/logback-core/1.1.7/jars/logback-core.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-cache_2.11/jars/play-cache_2.11-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/net.sf.ehcache/ehcache-core/2.6.11/jars/ehcache-core.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-java-ws_2.11/jars/play-java-ws_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-ws_2.11/jars/play-ws_2.11-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.asynchttpclient/async-http-client/2.0.11/jars/async-http-client.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.asynchttpclient/netty-resolver-dns/2.0.11/jars/netty-resolver-dns.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.asynchttpclient/netty-resolver/2.0.11/jars/netty-resolver.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.asynchttpclient/netty-codec-dns/2.0.11/jars/netty-codec-dns.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.javassist/javassist/3.20.0-GA/bundles/javassist.jar:/home/phillip/.ivy2/cache/oauth.signpost/signpost-core/jars/signpost-core-1.2.1.2.jar:/home/phillip/.ivy2/cache/oauth.signpost/signpost-commonshttp4/jars/signpost-commonshttp4-1.2.1.2.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.apache.httpcomponents/httpcore/4.0.1/jars/httpcore.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.apache.httpcomponents/httpclient/4.0.1/jars/httpclient.jar:/home/phillip/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-java-jpa_2.11/jars/play-java-jpa_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/org.hibernate.javax.persistence/hibernate-jpa-2.1-api/jars/hibernate-jpa-2.1-api-1.0.0.Final.jar
-Scala compilation took 9.718132804 s
-Attempting to call com.sun.tools.javac.api.JavacTool@1f1ba70f directly...
-Read from stdout: /media/sf_phillsShared/play project/play-java/app/controllers/ScoreBoardController.java:23: method getLoggedIn in class models.User cannot be applied to given types;
-Read from stdout: required: java.lang.String
-Read from stdout: found: java.lang.String,java.util.List<models.Player>
-Read from stdout: reason: actual and formal argument lists differ in length
-/media/sf_phillsShared/play project/play-java/app/controllers/ScoreBoardController.java:23: method getLoggedIn in class models.User cannot be applied to given types;
-  required: java.lang.String
-  found: java.lang.String,java.util.List<models.Player>
-  reason: actual and formal argument lists differ in length
-Read from stdout: User.getLoggedIn
-User.getLoggedIn
-Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
-(compile:compileIncremental) javac returned nonzero exit code
-Total time: 16 s, completed 14-Mar-2017 15:05:50
+Scala compilation took 16.113819139 s
+Attempting to call com.sun.tools.javac.api.JavacTool@1cd5c773 directly...
+Java compilation took 1.858194572 s
+Java analysis took 3.560524581 s
+Java compile + analysis took 6.313554467 s
+Invalidating /media/sf_phillsShared/play project/play-java/target/scala-2.11/twirl/main/views/html/ScoreBoard.template.scala...
+Invalidating (transitively) by inheritance from /media/sf_phillsShared/play project/play-java/target/scala-2.11/twirl/main/views/html/ScoreBoard.template.scala...
+Initial set of included nodes: Set(/media/sf_phillsShared/play project/play-java/target/scala-2.11/twirl/main/views/html/ScoreBoard.template.scala)
+Invalidated by transitive inheritance dependency: Set(/media/sf_phillsShared/play project/play-java/target/scala-2.11/twirl/main/views/html/ScoreBoard.template.scala)
+The /media/sf_phillsShared/play project/play-java/target/scala-2.11/twirl/main/views/html/ScoreBoard.template.scala source file has the following regular definitions changed:
+	ScoreBoard, apply, render, f.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: /media/sf_phillsShared/play project/play-java/app/controllers/ScoreBoardController.java
+New invalidations:
+	Set(/media/sf_phillsShared/play project/play-java/app/controllers/ScoreBoardController.java)
+Initial set of included nodes: Set(/media/sf_phillsShared/play project/play-java/app/controllers/ScoreBoardController.java)
+Including /media/sf_phillsShared/play project/play-java/target/scala-2.11/routes/main/router/Routes.scala by /media/sf_phillsShared/play project/play-java/app/controllers/ScoreBoardController.java
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+For input string: ""
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:601)
+	at java.lang.Long.parseLong(Long.java:631)
+	at scala.collection.immutable.StringLike$class.toLong(StringLike.scala:230)
+	at scala.collection.immutable.StringOps.toLong(StringOps.scala:31)
+	at com.typesafe.play.sbt.enhancer.PlayEnhancer$$anonfun$bytecodeEnhance$1$$anonfun$apply$2.apply(PlayEnhancer.scala:58)
+	at com.typesafe.play.sbt.enhancer.PlayEnhancer$$anonfun$bytecodeEnhance$1$$anonfun$apply$2.apply(PlayEnhancer.scala:48)
+	at com.typesafe.play.sbt.enhancer.PlayEnhancer$$anonfun$scopedSettings$2.apply(PlayEnhancer.scala:38)
+	at com.typesafe.play.sbt.enhancer.PlayEnhancer$$anonfun$scopedSettings$2.apply(PlayEnhancer.scala:34)
+	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47)
+	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40)
+	at sbt.std.Transform$$anon$4.work(System.scala:63)
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:226)
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:226)
+	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17)
+	at sbt.Execute.work(Execute.scala:235)
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:226)
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:226)
+	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159)
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Read from stdout: (compile:manipulateBytecode) java.lang.NumberFormatException: For input string: ""
+(compile:manipulateBytecode) java.lang.NumberFormatException: For input string: ""
+Total time: 28 s, completed 14-Mar-2017 15:08:36
 > server-post-command-error-handler
 > server-post-command-cleanup
 > server-handle-next-server-request
-Done executing sbt server engine, result Right(Exit(0))
-Closing listening server socket
-Waiting for socket thread
-Waiting for request processor thread
-Waiting for command engine result
-Returning control to sbt launcher with result Exit(0)
-Closing the 5913@phills logs at Tue Mar 14 15:07:44 GMT 2017, goodbye.
+> {file:/media/sf_phillsShared/play%20project/play-java/}myProject/compile:mainClass
+Evaluating tasks: compile:mainClass
+Running task... Cancel: sbt.server.ServerTaskCancellation@3c0114a9, check cycles: false
+Total time: 0 s, completed 14-Mar-2017 15:08:36
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/media/sf_phillsShared/play%20project/play-java/}myProject/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@654e8f1c, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(/media/sf_phillsShared/play project/play-java/app/controllers/ScoreBoardController.java, /media/sf_phillsShared/play project/play-java/target/scala-2.11/twirl/main/views/html/ScoreBoard.template.scala)
+Removed products: Set(/media/sf_phillsShared/play project/play-java/target/scala-2.11/classes/views/html/ScoreBoard_Scope0$ScoreBoard.class, /media/sf_phillsShared/play project/play-java/target/scala-2.11/classes/views/html/ScoreBoard_Scope0$ScoreBoard$$anonfun$f$1.class, /media/sf_phillsShared/play project/play-java/target/scala-2.11/classes/views/html/ScoreBoard_Scope0$ScoreBoard$$anonfun$apply$1.class, /media/sf_phillsShared/play project/play-java/target/scala-2.11/classes/views/html/ScoreBoard_Scope0.class, /media/sf_phillsShared/play project/play-java/target/scala-2.11/classes/views/html/ScoreBoard$.class, /media/sf_phillsShared/play project/play-java/target/scala-2.11/classes/controllers/ScoreBoardController.class, /media/sf_phillsShared/play project/play-java/target/scala-2.11/classes/views/html/ScoreBoard_Scope0$.class, /media/sf_phillsShared/play project/play-java/target/scala-2.11/classes/views/html/ScoreBoard.class)
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(/media/sf_phillsShared/play project/play-java/app/controllers/ScoreBoardController.java, /media/sf_phillsShared/play project/play-java/target/scala-2.11/twirl/main/views/html/ScoreBoard.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set(/media/sf_phillsShared/play project/play-java/target/scala-2.11/twirl/main/views/html/ScoreBoard.template.scala, /media/sf_phillsShared/play project/play-java/app/controllers/ScoreBoardController.java)
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(/media/sf_phillsShared/play project/play-java/app/controllers/ScoreBoardController.java, /media/sf_phillsShared/play project/play-java/target/scala-2.11/twirl/main/views/html/ScoreBoard.template.scala)
+
+Read from stdout: Compiling 1 Scala source and 1 Java source to /media/sf_phillsShared/play project/play-java/target/scala-2.11/classes...
+Compiling 1 Scala source and 1 Java source to /media/sf_phillsShared/play project/play-java/target/scala-2.11/classes...
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Running cached compiler 4afcfd41, interfacing (CompilerInterface) with Scala compiler version 2.11.7
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.scala-lang/scala-library/2.11.7/jars/scala-library.jar
+	-classpath
+	/media/sf_phillsShared/play project/play-java/target/scala-2.11/classes:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.typesafe.play/play-enhancer/1.1.0/jars/play-enhancer.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.typesafe.play/twirl-api_2.11/1.1.1/jars/twirl-api_2.11.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.apache.commons/commons-lang3/3.4/jars/commons-lang3.jar:/home/phillip/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.1.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-ebean_2.11/jars/play-ebean_2.11-3.0.0.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/jars/play-java-jdbc_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-jdbc_2.11/jars/play-jdbc_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-jdbc-api_2.11/jars/play-jdbc-api_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/build-link/jars/build-link-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-exceptions/jars/play-exceptions-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/jars/play-iteratees_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/org.scala-stm/scala-stm_2.11/jars/scala-stm_2.11-0.7.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.typesafe/config/1.3.0/bundles/config.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-json_2.11/jars/play-json_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-functional_2.11/jars/play-functional_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/jars/play-datacommons_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.9.6.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.joda/joda-convert/1.8.1/jars/joda-convert.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.scala-lang/scala-reflect/2.11.7/jars/scala-reflect.jar:/home/phillip/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.7.8.jar:/home/phillip/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.7.8.jar:/home/phillip/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.7.8.jar:/home/phillip/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/bundles/jackson-datatype-jdk8-2.7.8.jar:/home/phillip/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/bundles/jackson-datatype-jsr310-2.7.8.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-netty-utils/jars/play-netty-utils-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.slf4j/slf4j-api/1.7.21/jars/slf4j-api.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.slf4j/jul-to-slf4j/1.7.21/jars/jul-to-slf4j.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.slf4j/jcl-over-slf4j/1.7.21/jars/jcl-over-slf4j.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-streams_2.11/jars/play-streams_2.11-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.reactivestreams/reactive-streams/1.0.0/jars/reactive-streams.jar:/home/phillip/.ivy2/cache/com.typesafe.akka/akka-stream_2.11/jars/akka-stream_2.11-2.4.12.jar:/home/phillip/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.4.12.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.scala-lang.modules/scala-java8-compat_2.11/0.7.0/bundles/scala-java8-compat_2.11.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.typesafe/ssl-config-core_2.11/0.2.1/bundles/ssl-config-core_2.11.jar:/home/phillip/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.4.jar:/home/phillip/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.11/jars/akka-slf4j_2.11-2.4.12.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/commons-codec/commons-codec/1.10/jars/commons-codec.jar:/home/phillip/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.11.0.jar:/home/phillip/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.4.01.jar:/home/phillip/.ivy2/cache/javax.transaction/jta/jars/jta-1.1.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.google.inject/guice/4.0/jars/guice.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/javax.inject/javax.inject/1/jars/javax.inject.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/aopalliance/aopalliance/1.0/jars/aopalliance.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.google.inject.extensions/guice-assistedinject/4.0/jars/guice-assistedinject.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.jolbox/bonecp/0.8.0.RELEASE/bundles/bonecp.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.zaxxer/HikariCP/2.5.1/bundles/HikariCP.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.googlecode.usc/jdbcdslog/1.0.6.2/jars/jdbcdslog.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.h2database/h2/1.4.192/jars/h2.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/tyrex/tyrex/1.0.1/jars/tyrex.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-java_2.11/jars/play-java_2.11-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.yaml/snakeyaml/1.16/bundles/snakeyaml.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.hibernate/hibernate-validator/5.2.4.Final/jars/hibernate-validator.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/javax.validation/validation-api/1.1.0.Final/jars/validation-api.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.jboss.logging/jboss-logging/3.2.1.Final/jars/jboss-logging.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.fasterxml/classmate/1.1.0/bundles/classmate.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/javax.el/javax.el-api/3.0.0/jars/javax.el-api.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.springframework/spring-context/4.2.7.RELEASE/jars/spring-context.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.springframework/spring-core/4.2.7.RELEASE/jars/spring-core.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.springframework/spring-beans/4.2.7.RELEASE/jars/spring-beans.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.reflections/reflections/0.9.10/jars/reflections.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.google.guava/guava/19.0/bundles/guava.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/net.jodah/typetools/0.4.4/bundles/typetools.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.google.code.findbugs/jsr305/3.0.1/jars/jsr305.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.apache.tomcat/tomcat-servlet-api/8.0.33/jars/tomcat-servlet-api.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-jdbc-evolutions_2.11/jars/play-jdbc-evolutions_2.11-2.5.0.jar:/home/phillip/.ivy2/cache/org.avaje.ebeanorm/avaje-ebeanorm/jars/avaje-ebeanorm-6.18.1.jar:/home/phillip/.ivy2/cache/org.jetbrains/annotations/jars/annotations-13.0.jar:/home/phillip/.ivy2/cache/javax.persistence/persistence-api/jars/persistence-api-1.0.jar:/home/phillip/.ivy2/cache/org.avaje.ebeanorm/avaje-ebeanorm-agent/jars/avaje-ebeanorm-agent-4.9.1.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-server_2.11/jars/play-server_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-netty-server_2.11/jars/play-netty-server_2.11-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.typesafe.netty/netty-reactive-streams-http/1.0.8/jars/netty-reactive-streams-http.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.typesafe.netty/netty-reactive-streams/1.0.8/jars/netty-reactive-streams.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-handler/4.0.41.Final/jars/netty-handler.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-buffer/4.0.41.Final/jars/netty-buffer.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-common/4.0.41.Final/jars/netty-common.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-transport/4.0.41.Final/jars/netty-transport.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-codec/4.0.41.Final/jars/netty-codec.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-codec-http/4.0.41.Final/jars/netty-codec-http.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-transport-native-epoll/4.0.41.Final/jars/netty-transport-native-epoll-linux-x86_64.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-logback_2.11/jars/play-logback_2.11-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/ch.qos.logback/logback-classic/1.1.7/jars/logback-classic.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/ch.qos.logback/logback-core/1.1.7/jars/logback-core.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-cache_2.11/jars/play-cache_2.11-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/net.sf.ehcache/ehcache-core/2.6.11/jars/ehcache-core.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-java-ws_2.11/jars/play-java-ws_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-ws_2.11/jars/play-ws_2.11-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.asynchttpclient/async-http-client/2.0.11/jars/async-http-client.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.asynchttpclient/netty-resolver-dns/2.0.11/jars/netty-resolver-dns.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.asynchttpclient/netty-resolver/2.0.11/jars/netty-resolver.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.asynchttpclient/netty-codec-dns/2.0.11/jars/netty-codec-dns.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.javassist/javassist/3.20.0-GA/bundles/javassist.jar:/home/phillip/.ivy2/cache/oauth.signpost/signpost-core/jars/signpost-core-1.2.1.2.jar:/home/phillip/.ivy2/cache/oauth.signpost/signpost-commonshttp4/jars/signpost-commonshttp4-1.2.1.2.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.apache.httpcomponents/httpcore/4.0.1/jars/httpcore.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.apache.httpcomponents/httpclient/4.0.1/jars/httpclient.jar:/home/phillip/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-java-jpa_2.11/jars/play-java-jpa_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/org.hibernate.javax.persistence/hibernate-jpa-2.1-api/jars/hibernate-jpa-2.1-api-1.0.0.Final.jar
+Scala compilation took 12.422023094 s
+Attempting to call com.sun.tools.javac.api.JavacTool@664bbddd directly...
+Java compilation took 1.700542965 s
+Java analysis took 2.012490496 s
+Java compile + analysis took 4.254614476 s
+Invalidating /media/sf_phillsShared/play project/play-java/target/scala-2.11/twirl/main/views/html/ScoreBoard.template.scala...
+Invalidating (transitively) by inheritance from /media/sf_phillsShared/play project/play-java/target/scala-2.11/twirl/main/views/html/ScoreBoard.template.scala...
+Initial set of included nodes: Set(/media/sf_phillsShared/play project/play-java/target/scala-2.11/twirl/main/views/html/ScoreBoard.template.scala)
+Invalidated by transitive inheritance dependency: Set(/media/sf_phillsShared/play project/play-java/target/scala-2.11/twirl/main/views/html/ScoreBoard.template.scala)
+The /media/sf_phillsShared/play project/play-java/target/scala-2.11/twirl/main/views/html/ScoreBoard.template.scala source file has the following regular definitions changed:
+	ScoreBoard, apply, render, f.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: /media/sf_phillsShared/play project/play-java/app/controllers/ScoreBoardController.java
+New invalidations:
+	Set(/media/sf_phillsShared/play project/play-java/app/controllers/ScoreBoardController.java)
+Initial set of included nodes: Set(/media/sf_phillsShared/play project/play-java/app/controllers/ScoreBoardController.java)
+Including /media/sf_phillsShared/play project/play-java/target/scala-2.11/routes/main/router/Routes.scala by /media/sf_phillsShared/play project/play-java/app/controllers/ScoreBoardController.java
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+For input string: ""
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:601)
+	at java.lang.Long.parseLong(Long.java:631)
+	at scala.collection.immutable.StringLike$class.toLong(StringLike.scala:230)
+	at scala.collection.immutable.StringOps.toLong(StringOps.scala:31)
+	at com.typesafe.play.sbt.enhancer.PlayEnhancer$$anonfun$bytecodeEnhance$1$$anonfun$apply$2.apply(PlayEnhancer.scala:58)
+	at com.typesafe.play.sbt.enhancer.PlayEnhancer$$anonfun$bytecodeEnhance$1$$anonfun$apply$2.apply(PlayEnhancer.scala:48)
+	at com.typesafe.play.sbt.enhancer.PlayEnhancer$$anonfun$scopedSettings$2.apply(PlayEnhancer.scala:38)
+	at com.typesafe.play.sbt.enhancer.PlayEnhancer$$anonfun$scopedSettings$2.apply(PlayEnhancer.scala:34)
+	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47)
+	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40)
+	at sbt.std.Transform$$anon$4.work(System.scala:63)
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:226)
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:226)
+	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17)
+	at sbt.Execute.work(Execute.scala:235)
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:226)
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:226)
+	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159)
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Read from stdout: (compile:manipulateBytecode) java.lang.NumberFormatException: For input string: ""
+(compile:manipulateBytecode) java.lang.NumberFormatException: For input string: ""
+Total time: 21 s, completed 14-Mar-2017 15:08:57
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/media/sf_phillsShared/play%20project/play-java/}myProject/compile:mainClass
+Evaluating tasks: compile:mainClass
+Running task... Cancel: sbt.server.ServerTaskCancellation@67495dff, check cycles: false
+Total time: 0 s, completed 14-Mar-2017 15:08:57
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/media/sf_phillsShared/play%20project/play-java/}myProject/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@417e2f2a, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(/media/sf_phillsShared/play project/play-java/app/controllers/ScoreBoardController.java, /media/sf_phillsShared/play project/play-java/target/scala-2.11/twirl/main/views/html/ScoreBoard.template.scala)
+Removed products: Set(/media/sf_phillsShared/play project/play-java/target/scala-2.11/classes/views/html/ScoreBoard_Scope0$ScoreBoard.class, /media/sf_phillsShared/play project/play-java/target/scala-2.11/classes/views/html/ScoreBoard_Scope0$ScoreBoard$$anonfun$f$1.class, /media/sf_phillsShared/play project/play-java/target/scala-2.11/classes/views/html/ScoreBoard_Scope0$ScoreBoard$$anonfun$apply$1.class, /media/sf_phillsShared/play project/play-java/target/scala-2.11/classes/views/html/ScoreBoard_Scope0.class, /media/sf_phillsShared/play project/play-java/target/scala-2.11/classes/views/html/ScoreBoard$.class, /media/sf_phillsShared/play project/play-java/target/scala-2.11/classes/controllers/ScoreBoardController.class, /media/sf_phillsShared/play project/play-java/target/scala-2.11/classes/views/html/ScoreBoard_Scope0$.class, /media/sf_phillsShared/play project/play-java/target/scala-2.11/classes/views/html/ScoreBoard.class)
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(/media/sf_phillsShared/play project/play-java/app/controllers/ScoreBoardController.java, /media/sf_phillsShared/play project/play-java/target/scala-2.11/twirl/main/views/html/ScoreBoard.template.scala)
+
+Sources indirectly invalidated by:
+	product: Set(/media/sf_phillsShared/play project/play-java/target/scala-2.11/twirl/main/views/html/ScoreBoard.template.scala, /media/sf_phillsShared/play project/play-java/app/controllers/ScoreBoardController.java)
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(/media/sf_phillsShared/play project/play-java/app/controllers/ScoreBoardController.java, /media/sf_phillsShared/play project/play-java/target/scala-2.11/twirl/main/views/html/ScoreBoard.template.scala)
+
+Read from stdout: Compiling 1 Scala source and 1 Java source to /media/sf_phillsShared/play project/play-java/target/scala-2.11/classes...
+Compiling 1 Scala source and 1 Java source to /media/sf_phillsShared/play project/play-java/target/scala-2.11/classes...
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.7
+Other repositories:
+Default repositories:
+Running cached compiler 53c3449e, interfacing (CompilerInterface) with Scala compiler version 2.11.7
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.scala-lang/scala-library/2.11.7/jars/scala-library.jar
+	-classpath
+	/media/sf_phillsShared/play project/play-java/target/scala-2.11/classes:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.typesafe.play/play-enhancer/1.1.0/jars/play-enhancer.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.typesafe.play/twirl-api_2.11/1.1.1/jars/twirl-api_2.11.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.apache.commons/commons-lang3/3.4/jars/commons-lang3.jar:/home/phillip/.ivy2/cache/org.scala-lang.modules/scala-xml_2.11/bundles/scala-xml_2.11-1.0.1.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-ebean_2.11/jars/play-ebean_2.11-3.0.0.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-java-jdbc_2.11/jars/play-java-jdbc_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-jdbc_2.11/jars/play-jdbc_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-jdbc-api_2.11/jars/play-jdbc-api_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/build-link/jars/build-link-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-exceptions/jars/play-exceptions-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-iteratees_2.11/jars/play-iteratees_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/org.scala-stm/scala-stm_2.11/jars/scala-stm_2.11-0.7.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.typesafe/config/1.3.0/bundles/config.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-json_2.11/jars/play-json_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-functional_2.11/jars/play-functional_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-datacommons_2.11/jars/play-datacommons_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.9.6.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.joda/joda-convert/1.8.1/jars/joda-convert.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.scala-lang/scala-reflect/2.11.7/jars/scala-reflect.jar:/home/phillip/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.7.8.jar:/home/phillip/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.7.8.jar:/home/phillip/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.7.8.jar:/home/phillip/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/bundles/jackson-datatype-jdk8-2.7.8.jar:/home/phillip/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/bundles/jackson-datatype-jsr310-2.7.8.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-netty-utils/jars/play-netty-utils-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.slf4j/slf4j-api/1.7.21/jars/slf4j-api.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.slf4j/jul-to-slf4j/1.7.21/jars/jul-to-slf4j.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.slf4j/jcl-over-slf4j/1.7.21/jars/jcl-over-slf4j.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-streams_2.11/jars/play-streams_2.11-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.reactivestreams/reactive-streams/1.0.0/jars/reactive-streams.jar:/home/phillip/.ivy2/cache/com.typesafe.akka/akka-stream_2.11/jars/akka-stream_2.11-2.4.12.jar:/home/phillip/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.4.12.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.scala-lang.modules/scala-java8-compat_2.11/0.7.0/bundles/scala-java8-compat_2.11.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.typesafe/ssl-config-core_2.11/0.2.1/bundles/ssl-config-core_2.11.jar:/home/phillip/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.4.jar:/home/phillip/.ivy2/cache/com.typesafe.akka/akka-slf4j_2.11/jars/akka-slf4j_2.11-2.4.12.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/commons-codec/commons-codec/1.10/jars/commons-codec.jar:/home/phillip/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.11.0.jar:/home/phillip/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.4.01.jar:/home/phillip/.ivy2/cache/javax.transaction/jta/jars/jta-1.1.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.google.inject/guice/4.0/jars/guice.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/javax.inject/javax.inject/1/jars/javax.inject.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/aopalliance/aopalliance/1.0/jars/aopalliance.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.google.inject.extensions/guice-assistedinject/4.0/jars/guice-assistedinject.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.jolbox/bonecp/0.8.0.RELEASE/bundles/bonecp.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.zaxxer/HikariCP/2.5.1/bundles/HikariCP.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.googlecode.usc/jdbcdslog/1.0.6.2/jars/jdbcdslog.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.h2database/h2/1.4.192/jars/h2.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/tyrex/tyrex/1.0.1/jars/tyrex.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-java_2.11/jars/play-java_2.11-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.yaml/snakeyaml/1.16/bundles/snakeyaml.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.hibernate/hibernate-validator/5.2.4.Final/jars/hibernate-validator.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/javax.validation/validation-api/1.1.0.Final/jars/validation-api.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.jboss.logging/jboss-logging/3.2.1.Final/jars/jboss-logging.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.fasterxml/classmate/1.1.0/bundles/classmate.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/javax.el/javax.el-api/3.0.0/jars/javax.el-api.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.springframework/spring-context/4.2.7.RELEASE/jars/spring-context.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.springframework/spring-core/4.2.7.RELEASE/jars/spring-core.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.springframework/spring-beans/4.2.7.RELEASE/jars/spring-beans.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.reflections/reflections/0.9.10/jars/reflections.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.google.guava/guava/19.0/bundles/guava.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/net.jodah/typetools/0.4.4/bundles/typetools.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.google.code.findbugs/jsr305/3.0.1/jars/jsr305.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.apache.tomcat/tomcat-servlet-api/8.0.33/jars/tomcat-servlet-api.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-jdbc-evolutions_2.11/jars/play-jdbc-evolutions_2.11-2.5.0.jar:/home/phillip/.ivy2/cache/org.avaje.ebeanorm/avaje-ebeanorm/jars/avaje-ebeanorm-6.18.1.jar:/home/phillip/.ivy2/cache/org.jetbrains/annotations/jars/annotations-13.0.jar:/home/phillip/.ivy2/cache/javax.persistence/persistence-api/jars/persistence-api-1.0.jar:/home/phillip/.ivy2/cache/org.avaje.ebeanorm/avaje-ebeanorm-agent/jars/avaje-ebeanorm-agent-4.9.1.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-server_2.11/jars/play-server_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-netty-server_2.11/jars/play-netty-server_2.11-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.typesafe.netty/netty-reactive-streams-http/1.0.8/jars/netty-reactive-streams-http.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/com.typesafe.netty/netty-reactive-streams/1.0.8/jars/netty-reactive-streams.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-handler/4.0.41.Final/jars/netty-handler.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-buffer/4.0.41.Final/jars/netty-buffer.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-common/4.0.41.Final/jars/netty-common.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-transport/4.0.41.Final/jars/netty-transport.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-codec/4.0.41.Final/jars/netty-codec.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-codec-http/4.0.41.Final/jars/netty-codec-http.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/io.netty/netty-transport-native-epoll/4.0.41.Final/jars/netty-transport-native-epoll-linux-x86_64.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-logback_2.11/jars/play-logback_2.11-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/ch.qos.logback/logback-classic/1.1.7/jars/logback-classic.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/ch.qos.logback/logback-core/1.1.7/jars/logback-core.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-cache_2.11/jars/play-cache_2.11-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/net.sf.ehcache/ehcache-core/2.6.11/jars/ehcache-core.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-java-ws_2.11/jars/play-java-ws_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-ws_2.11/jars/play-ws_2.11-2.5.10.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.asynchttpclient/async-http-client/2.0.11/jars/async-http-client.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.asynchttpclient/netty-resolver-dns/2.0.11/jars/netty-resolver-dns.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.asynchttpclient/netty-resolver/2.0.11/jars/netty-resolver.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.asynchttpclient/netty-codec-dns/2.0.11/jars/netty-codec-dns.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.javassist/javassist/3.20.0-GA/bundles/javassist.jar:/home/phillip/.ivy2/cache/oauth.signpost/signpost-core/jars/signpost-core-1.2.1.2.jar:/home/phillip/.ivy2/cache/oauth.signpost/signpost-commonshttp4/jars/signpost-commonshttp4-1.2.1.2.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.apache.httpcomponents/httpcore/4.0.1/jars/httpcore.jar:/home/phillip/Desktop/act/activator-dist-1.3.12/repository/org.apache.httpcomponents/httpclient/4.0.1/jars/httpclient.jar:/home/phillip/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar:/home/phillip/.ivy2/cache/com.typesafe.play/play-java-jpa_2.11/jars/play-java-jpa_2.11-2.5.10.jar:/home/phillip/.ivy2/cache/org.hibernate.javax.persistence/hibernate-jpa-2.1-api/jars/hibernate-jpa-2.1-api-1.0.0.Final.jar
+Scala compilation took 12.059420082 s
+Attempting to call com.sun.tools.javac.api.JavacTool@671796a directly...
+Java compilation took 0.814551495 s
+Java analysis took 1.843601579 s
+Java compile + analysis took 3.058054407 s
+Invalidating /media/sf_phillsShared/play project/play-java/target/scala-2.11/twirl/main/views/html/ScoreBoard.template.scala...
+Invalidating (transitively) by inheritance from /media/sf_phillsShared/play project/play-java/target/scala-2.11/twirl/main/views/html/ScoreBoard.template.scala...
+Initial set of included nodes: Set(/media/sf_phillsShared/play project/play-java/target/scala-2.11/twirl/main/views/html/ScoreBoard.template.scala)
+Invalidated by transitive inheritance dependency: Set(/media/sf_phillsShared/play project/play-java/target/scala-2.11/twirl/main/views/html/ScoreBoard.template.scala)
+The /media/sf_phillsShared/play project/play-java/target/scala-2.11/twirl/main/views/html/ScoreBoard.template.scala source file has the following regular definitions changed:
+	ScoreBoard, apply, render, f.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: /media/sf_phillsShared/play project/play-java/app/controllers/ScoreBoardController.java
+New invalidations:
+	Set(/media/sf_phillsShared/play project/play-java/app/controllers/ScoreBoardController.java)
+Initial set of included nodes: Set(/media/sf_phillsShared/play project/play-java/app/controllers/ScoreBoardController.java)
+Including /media/sf_phillsShared/play project/play-java/target/scala-2.11/routes/main/router/Routes.scala by /media/sf_phillsShared/play project/play-java/app/controllers/ScoreBoardController.java
+Previously invalidated, but (transitively) depend on new invalidations:
+	Set()
+All newly invalidated sources after taking into account (previously) recompiled sources:Set()
+For input string: ""
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:601)
+	at java.lang.Long.parseLong(Long.java:631)
+	at scala.collection.immutable.StringLike$class.toLong(StringLike.scala:230)
+	at scala.collection.immutable.StringOps.toLong(StringOps.scala:31)
+	at com.typesafe.play.sbt.enhancer.PlayEnhancer$$anonfun$bytecodeEnhance$1$$anonfun$apply$2.apply(PlayEnhancer.scala:58)
+	at com.typesafe.play.sbt.enhancer.PlayEnhancer$$anonfun$bytecodeEnhance$1$$anonfun$apply$2.apply(PlayEnhancer.scala:48)
+	at com.typesafe.play.sbt.enhancer.PlayEnhancer$$anonfun$scopedSettings$2.apply(PlayEnhancer.scala:38)
+	at com.typesafe.play.sbt.enhancer.PlayEnhancer$$anonfun$scopedSettings$2.apply(PlayEnhancer.scala:34)
+	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47)
+	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40)
+	at sbt.std.Transform$$anon$4.work(System.scala:63)
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:226)
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:226)
+	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17)
+	at sbt.Execute.work(Execute.scala:235)
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:226)
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:226)
+	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159)
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Read from stdout: (compile:manipulateBytecode) java.lang.NumberFormatException: For input string: ""
+(compile:manipulateBytecode) java.lang.NumberFormatException: For input string: ""
+Total time: 19 s, completed 14-Mar-2017 15:09:17
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> backgroundRun
+Evaluating tasks: compile:backgroundRun
+Running task... Cancel: sbt.server.ServerTaskCancellation@77766507, check cycles: false
+Total time: 1 s, completed 14-Mar-2017 15:09:18
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/media/sf_phillsShared/play%20project/play-java/}myProject/*:playForkConfig
+Evaluating tasks: *:playForkConfig
+Running task... Cancel: sbt.server.ServerTaskCancellation@7c95b214, check cycles: false
+Total time: 2 s, completed 14-Mar-2017 15:09:24
+> server-post-command-cleanup
+> server-handle-next-server-request
+> myProject/playForkNotifyStart http://localhost:9000
+Evaluating tasks: *:playForkNotifyStart
+Running task... Cancel: sbt.server.ServerTaskCancellation@5ae56a8, check cycles: false
+Total time: 0 s, completed 14-Mar-2017 15:09:28
+> server-post-command-cleanup
+> server-handle-next-server-request

@@ -31,7 +31,11 @@
       background-color: #f2f2f2;
       padding: 25px;
     }
+.adminButton{
+	padding:5%;
+	margin-left:5%
 	
+}
 .btn-custom{
   background-color: black;
   color: white;

@@ -38,6 +38,27 @@ public class userRegisterController extends Controller {
 			}
 			return ok(register.render(newRegisterForm));
 	 }
-	
-	
+	 
+	 
+	 public Result submitEditPlayer(Long id) { //Processes the edit player form and saves the changes to the database
+        Form<Player> editPlayerForm = Form.form(Player.class).bindFromRequest();
+        //Creates a list of players
+        List<Player> players = Player.findAll();
+        Player player = editPlayerForm.get();
+        if (editPlayerForm.hasErrors()) {
+            return redirect("/);
+        }else{
+               
+      
+                   
+                        Players.get(i).setPlayerEmail(player.email);
+						Players.get(i).setPlayerName(player.loginName);
+						Players.get(i).setPlayerPassword(player.password);
+                        Players.get(i).update();
+                }
+				return redirect("/admin");
+            }
+        
+        
+
 }
