@@ -16,17 +16,9 @@ import com.google.inject.Inject;
 
 public class Admin extends User{
 	
-	public int score;
-	
-	@Constraints.Required
-	public String loginName;
-	
-	
 	
 	public Admin(String email,String password){
-		super(email, password);
-	
-		
+		super(email, password);	
 	}
 	
 	public static Finder<Long, Admin> find = new Finder<Long,Admin>(Admin.class);

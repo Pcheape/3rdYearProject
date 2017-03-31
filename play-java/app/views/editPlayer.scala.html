@@ -1,12 +1,13 @@
-@(user: models.User, editPlayerForm: Form[models.User], userCur: models.User)
+@(user: models.User, editPlayerForm: Form[models.Player], playerCur: models.Player)
 
     @import helper._
 
     @main("Edit Player!") {
         <h3> Edit a Player</h3>   
-        @form(action = routes.AdminController.submitEditUser(userCur.email), 'class -> "form-horizontal", 'role -> "form") {
+        @form(action = routes.AdminController.submitEditPlayer(playerCur.email), 'class -> "form-horizontal", 'role -> "form") {
 		
             @inputText(editPlayerForm("email"), '_label -> "Email")
+			@inputText(editPlayerForm("loginName"), '_label -> "LoginName")
 			@inputText(editPlayerForm("password"),'_laber -> "Password")
      
 

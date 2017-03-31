@@ -36,4 +36,18 @@ public class Player extends User{
 	public static List<Player> findAll(){
 		return Player.find.all();
 	}
+	
+	
+	public void setPlayerEmail(String email){
+	   
+	   super.setUserEmail(email);
+   }
+   
+   public void setPlayerPassword(String password){
+	   super.setUserPassword(password);
+   }
+   
+   public void setPlayerName(String loginName){
+	   this.loginName = loginName;
+   }
 }

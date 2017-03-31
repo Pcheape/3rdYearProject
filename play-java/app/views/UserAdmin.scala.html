@@ -22,11 +22,14 @@
 					<td>@user.email		
 						@if(user.getUserType() == "player"){
 						<td>@user.asInstanceOf[Player].loginName</td>
-						<td> @helper.form(action=routes.AdminController.editUser(user.email)){
+						<td> @helper.form(action=routes.AdminController.editPlayer(user.email)){
                                 <input class="btn-xs btn-danger" type="submit" value="Edit" >
-								}
+								}</td>
 						}else{
 						<td>Admin</td>
+						<td> @helper.form(action=routes.AdminController.editUser(user.email)){
+                                <input class="btn-xs btn-danger" type="submit" value="Edit" >
+								}</td>
 						}
 						
 						</td>
