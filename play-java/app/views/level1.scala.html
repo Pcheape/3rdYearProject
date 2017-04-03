@@ -27,10 +27,11 @@
 	<div class ="col col-sm-9">
 	
 	 <p> Stuck click the hint to get a hint. Click again to get a solution . If you take a hint you get half the points . </p>
-     <button onclick="@routes.assets.javaScript.levelOneHint.js" class="btn btn-custom" >hint</button>
-	   <div id="levelOneHint">
+     <button onclick='@routes.Assets.versioned("javascripts/levelOneHint.hintLevelOne()")' class="btn btn-custom" >hint</button>
+	 
+	   <div id="levelOneHint" type="hidden">
 		 <p>Hint sometimes webDesigners like to leave notes to themselves in the comments</p>
-	</div>
+		</div>
 									<!-- Hint sometimes webDesigners like to leave notes to themselves in the comments -->
 	<div class ="col col-sm-9">
 	<div class ="actions">
