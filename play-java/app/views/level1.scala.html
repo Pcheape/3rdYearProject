@@ -1,5 +1,5 @@
-@(user: models.User)
-
+@(user: models.User , levelForm: Form[models.Level])
+@import helper._
 @main("Security App"){
 
 <p> Welcome to level one. A simple one to get you started. Just put in the password to go to the next level.</p>
@@ -9,16 +9,25 @@
 
   																
                                
+		@form(action = routes.GameController.authenticate()) {
+<div class="col col-sm-9">
+																	
+                                @inputPassword(levelForm("password"),
+                                    '_label -> "Password",
+                                    '_showConstraints -> false,
+									'class -> "form-control")
 									
 									<div class="actions">
                                     <button type="submit" value="Submit" class="btn btn-custom" >Signin</button>
 									</div>
     </div>
-	<div class ="col col-sm-9">
+	 }
+</div>
 	
+	<div class ="col col-sm-9">
 	<div class="actions">
-									<p> Stuck click the hint to get a hint. Click again to get a solution . If you take a hint you get half the points . </p>
-                                    <button type="submit" value="Submit" class="btn btn-custom" >hint</button>
+	 <p> Stuck click the hint to get a hint. Click again to get a solution . If you take a hint you get half the points . </p>
+     <button type="submit" value="Submit" class="btn btn-custom" >hint</button>
 	</div>
 	</div>
 									<!-- Hint sometimes webDesigners like to leave notes to themselves in the comments -->

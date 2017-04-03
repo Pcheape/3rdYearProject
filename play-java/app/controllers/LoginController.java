@@ -17,23 +17,17 @@ public class LoginController extends Controller {
     }
 
 	  // Process the user login form
-                public Result authenticate() {
-                    // Bind form instance to the values submitted from the form
-                    Form<Login> loginForm = Form.form(Login.class).bindFromRequest();
+   public Result authenticate() {
+   // Bind form instance to the values submitted from the form
+      Form<Login> loginForm = Form.form(Login.class).bindFromRequest();		
 					
-					
-					
-
-                    // Check for errors
-                    // Uses the validate method defined in the Login class , User.getLoggedIn(session().get("email")
-                    if (loginForm.hasErrors()) {
-                        // If errors, show the form again
-						System.out.println("bad request Login ");
-                        return badRequest(login.render(loginForm));
-                    }
-                    
-                    else {
-						
+  //User.getLoggedIn(session().get("email"));
+			//the has Errors checks the validate function in login if it returns anything but null it has errors 		
+      if (loginForm.hasErrors()) {
+         // If errors, show the form again
+			System.out.println("bad request Login ");
+            return badRequest(login.render(loginForm));
+            }else {						
             // SuperUser Logged in sucessfully
             // Clear the existing session
             session().clear();

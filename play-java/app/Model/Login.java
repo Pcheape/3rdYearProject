@@ -12,7 +12,7 @@ public class Login {
 	}
 
     public String validate() {
-
+         
         /*CalcSHA cs = new CalcSHA();
         String md = cs.calcPassword(this.password);
         this.password = md;*/
