@@ -18,12 +18,14 @@ GET     /scoreboard                 controllers.ScoreBoardController.ScoreBoard(
 #
 GET     /admin						controllers.AdminController.index()
 GET     /getUserAdmin               controllers.AdminController.getUsers()
+GET     /resetScore                 controllers.AdminController.resetScoreboard()
+GET     /deletePlayer               controllers.AdminController.deletePlayers()
 
 POST    /editUser                   controllers.AdminController.editUser(id: String)
 POST    /SubmitEditUser             controllers.AdminController.submitEditUser(id: String)
 POST    /editPlayer                   controllers.AdminController.editPlayer(id: String)
 POST    /SubmitEditPlayer             controllers.AdminController.submitEditPlayer(id: String)
-GET     /resetScore                   controllers.AdminController.resetScoreboard()
+
 
 POST /registerFormSubmit 			controllers.userRegisterController.registerFormSubmit()
 POST /authenticate       			controllers.LoginController.authenticate()

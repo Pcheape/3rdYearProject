@@ -141,5 +141,16 @@ public class AdminController extends Controller {
 				}
 				return redirect("/admin");
 			}
+			
+			public Result deletePlayers(){
+				
+				List<Player> player = Player.find.all();
+				
+				for(int i =0; i < player.size();i++)
+				{
+					player.get(i).delete();
+				}
+				return redirect("/admin");
+			}
 		}
 	
