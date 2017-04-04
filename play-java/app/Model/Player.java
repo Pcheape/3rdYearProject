@@ -22,6 +22,7 @@ public class Player extends User{
 	public String loginName;
 	public int level;
 	public int hint;
+	public int solution;
 	
 	
 	
@@ -31,6 +32,7 @@ public class Player extends User{
 		this.loginName = loginName;
 		level = 1;
 		hint = 0;
+		solution=1;
 		
 	}
 	

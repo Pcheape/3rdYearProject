@@ -27,7 +27,7 @@
 	
 	<div class ="col col-sm-9">
 	
-	 <
+	 
 	<form action = "/hint" method = "GET">
 			<button type="submit" formaction = "/hint:@user.email" value="Submit" class="btn btn-custom" >Hint</button>
 	</form>
@@ -37,12 +37,15 @@
 		 <p>Hint sometimes webDesigners like to leave notes to themselves in the comments</p>
 		
 		}
+		
+		<form action = "/solution" method = "GET">
+			<button type="submit" formaction = "/solution:@user.email" value="Submit" class="btn btn-custom" >Solution</button>
+	</form>
 									
-	<div class ="col col-sm-9">
-	<div class ="actions">
-	<p>Get the solution and we take half the questions points from your score</p>
-		<button type="submit" value="Submit" class="btn btn-custom">Solution</button> 
-		<!-- solution is to right click on the page and view the source--> 
+	 @if(user.asInstanceOf[Player].solution==1){
+		
+		<p>solution is to right click on the page and view the source</p> 
+		}
 		</div>
 		</div> 
 

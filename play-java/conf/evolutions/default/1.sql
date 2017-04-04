@@ -21,6 +21,7 @@ create table user (
   login_name                    varchar(255),
   level                         integer,
   hint                          integer,
+  solution                      integer,
   constraint pk_user primary key (email)
 );
 

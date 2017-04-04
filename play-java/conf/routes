@@ -18,6 +18,7 @@ GET     /scoreboard                 controllers.ScoreBoardController.ScoreBoard(
 
 GET 	/level1 						controllers.GameController.Level1()
 GET 	/hint:user					 controllers.GameController.hint(user: String)
+GET 	/solution:user					 controllers.GameController.solution(user: String)
 
 #
 GET     /admin						controllers.AdminController.index()

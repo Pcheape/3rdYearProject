@@ -36,7 +36,7 @@ public class GameController extends Controller {
 						play.score += 10;
 						play.update();
 						System.out.println("level sucessfull ");
-							// Return to home page
+							
 						return redirect("/level1");
         }
     }
@@ -46,6 +46,17 @@ public class GameController extends Controller {
 		if(player.hint == 0){
 		player.hint = 1;
 		player.score -= 5;
+		player.update();
+		}
+		
+		return redirect("/level1");
+	}
+	
+		public Result  solution(String email){
+		Player player = (Player)User.getLoggedIn(session().get("email"));
+		if(player.solution == 0){
+		player.solution = 1;
+		player.score -= 10;
 		player.update();
 		}
 		
