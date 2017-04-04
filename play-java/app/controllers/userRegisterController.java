@@ -14,8 +14,9 @@ public class userRegisterController extends Controller {
     public Result register() {
        
         Form<Player> registerForm = Form.form(Player.class);
+		User user = User.getLoggedIn(session().get("email"));
         
-        return ok(register.render(registerForm));  
+        return ok(register.render(user, registerForm));  
 	}
 	
 	
@@ -25,18 +26,18 @@ public class userRegisterController extends Controller {
 	 public Result registerFormSubmit() {
 		 
 			Form<Player> newRegisterForm = Form.form(Player.class).bindFromRequest();
-			
+			User user = User.getLoggedIn(session().get("email"));
 			
 		   if (newRegisterForm.hasErrors()) {
 				//Display the form again
 				System.out.println("badRequest Outputting to log ");
 			
-				return badRequest(register.render(newRegisterForm));
+				return badRequest(register.render(user,newRegisterForm));
 			}else{
 				Player player = newRegisterForm.get();
 				player.save();
 			}
-			return ok(register.render(newRegisterForm));
+			return ok(register.render(user,newRegisterForm));
 	 }
 	 
 	 

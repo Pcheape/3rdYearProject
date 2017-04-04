@@ -13,7 +13,8 @@ public class LoginController extends Controller {
     public Result login() {
 		
 		Form<Login> loginForm = Form.form(Login.class);
-        return ok(login.render(loginForm));
+		User user = User.getLoggedIn(session().get("email"));
+        return ok(login.render(user,loginForm));
     }
 
 	  // Process the user login form
@@ -26,7 +27,8 @@ public class LoginController extends Controller {
       if (loginForm.hasErrors()) {
          // If errors, show the form again
 			System.out.println("bad request Login ");
-            return badRequest(login.render(loginForm));
+			User user =User.getLoggedIn(session().get("email"));
+            return badRequest(login.render(user,loginForm));
             }else {						
             // SuperUser Logged in sucessfully
             // Clear the existing session

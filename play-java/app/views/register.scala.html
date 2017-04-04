@@ -1,6 +1,4 @@
-
-
-@(registerForm: Form[models.Player])
+@(user: models.User,registerForm: Form[models.Player])
 @import helper._
 
 
@@ -9,7 +7,7 @@
  * argument is a `String` with the title of the page, the second
  * argument is an `Html` object containing the body of the page.
  *@
-@main("Security App") {
+@main("Security App",user) {
 
 	  <div class="col col-sm-9">
 	  <div class="form-register">

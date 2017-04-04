@@ -2,7 +2,7 @@
 
     @import helper._
 
-    @main("Edit Player!") {
+    @main("Edit Player!",user) {
         <h3> Edit a Player</h3>   
         @form(action = routes.AdminController.submitEditUser(userCur.email), 'class -> "form-horizontal", 'role -> "form") {
 		

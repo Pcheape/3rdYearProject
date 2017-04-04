@@ -4,7 +4,7 @@
  * two arguments, a `String` for the title of the page and an `Html`
  * object to insert into the body of the page.
  *@
-@(title: String)(content: Html)
+@(title: String,user: models.User)(content: Html)
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,12 +32,28 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li><a href="/">Home</a></li>
+		@if(user == null){
 		<li><a href="/register">Register</a></li>
 		<li><a href="/login">Login</a></li>
+		}
 		<li><a href="/scoreboard">ScoreBoard</a></li>
+		@if(user !=null){
+		@if(user.getUserType().equalsIgnoreCase("admin")){
+		<li><a href="/admin">Administration</a></li>
+		}
+		@if(user.getUserType().equalsIgnoreCase("player")){
+		<li><a href="/level1">Game</a></li>
+		}
         
       </ul>
       <ul class="nav navbar-nav navbar-right">
+	  
+	  @if(user.getUserType().equalsIgnoreCase("player")){
+		<li><a href="/scoreboard">@user.email</a></li>
+		
+		}
+		<li><a href="/logout">Logout</a></li>
+	  }
        
       </ul>
     </div>
