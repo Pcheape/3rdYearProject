@@ -17,13 +17,19 @@ public boolean firstSolved;
 public boolean secondSolved;
 public int points;
 
-public Level(){
-	   id=1; //need to change to auto generate
-	   firstSolved = false;
-	   secondSolved = false;
-	   points = 10;
-	   password = "insecure";
+
+
+public static Finder<String,Level> find = new Finder<String,Level>(Level.class);
+
+public Level(int id , String password , boolean firstSolved , boolean secondSolved, int points ){
+	id = this.id;
+	password = this.password;
+	firstSolved = this.firstSolved;
+	secondSolved = this.secondSolved;
+	points = this.points;   
 	}
+	
+	
 	
 	    public String validate() {
          
@@ -46,5 +52,8 @@ public Level(){
 		}else{
 			 return null;
 			 }
-		}	
+		}
+			
+	
+
 }

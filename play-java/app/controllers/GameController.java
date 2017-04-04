@@ -40,4 +40,15 @@ public class GameController extends Controller {
 						return redirect("/level1");
         }
     }
+	
+	public Result  hint(String email){
+		Player player = (Player)User.getLoggedIn(session().get("email"));
+		if(player.hint == 0){
+		player.hint = 1;
+		player.score -= 5;
+		player.update();
+		}
+		
+		return redirect("/level1");
+	}
 }

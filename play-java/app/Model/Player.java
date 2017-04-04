@@ -20,6 +20,8 @@ public class Player extends User{
 	
 	@Constraints.Required
 	public String loginName;
+	public int level;
+	public int hint;
 	
 	
 	
@@ -27,6 +29,8 @@ public class Player extends User{
 		super(email, password);
 		score = 0;
 		this.loginName = loginName;
+		level = 1;
+		hint = 0;
 		
 	}
 	

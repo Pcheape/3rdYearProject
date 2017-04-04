@@ -19,6 +19,8 @@ create table user (
   password                      varchar(255),
   score                         integer,
   login_name                    varchar(255),
+  level                         integer,
+  hint                          integer,
   constraint pk_user primary key (email)
 );
 

@@ -16,7 +16,8 @@ GET     /logout                      controllers.LoginController.logout
 GET     /register                   controllers.userRegisterController.register()
 GET     /scoreboard                 controllers.ScoreBoardController.ScoreBoard()
 
-GET /level1 						controllers.GameController.Level1()
+GET 	/level1 						controllers.GameController.Level1()
+GET 	/hint:user					 controllers.GameController.hint(user: String)
 
 #
 GET     /admin						controllers.AdminController.index()
