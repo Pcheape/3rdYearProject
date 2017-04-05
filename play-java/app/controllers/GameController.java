@@ -4,7 +4,7 @@ import java.util.*;
 import play.mvc.*;
 import play.data.*;
 
-import views.html.*;
+import views.html.levels.*;
 import models.*;
 /**
  * This controller contains an action to handle HTTP requests
@@ -15,9 +15,20 @@ public class GameController extends Controller {
  //@Security.Authenticated(Secured.class)
  //@With(CheckIfAdmin.class)
  
-    public Result Level1() {
+    public Result Level() {
 		Form<Level> levelForm = Form.form(Level.class);
-        return ok(views.html.level1.render(User.getLoggedIn(session().get("email")),levelForm));
+		Player play = (Player)User.getLoggedIn(session().get("email"));
+		
+		switch(play.level){
+			case 1:
+				return ok(level1.render(User.getLoggedIn(session().get("email")),levelForm));
+			
+			case 2:
+				return ok(level2.render(User.getLoggedIn(session().get("email")),levelForm));
+			
+		}
+		return ok();
+			
 	}
 	
 	
@@ -27,17 +38,18 @@ public class GameController extends Controller {
                       // User user = User.getLoggedIn(session().get("email"))
                     if (levelForm.hasErrors()) {
                         // If errors, show the form again
-						System.out.println("bad request Level1");
+						System.out.println("bad request Level");
                         return badRequest(level1.render(User.getLoggedIn(session().get("email")),levelForm));
                     }
                     
                     else {
 						Player play = (Player)User.getLoggedIn(session().get("email"));
 						play.score += 10;
+						play.level++;
 						play.update();
 						System.out.println("level sucessfull ");
 							
-						return redirect("/level1");
+						return redirect("/level");
         }
     }
 	
@@ -49,7 +61,7 @@ public class GameController extends Controller {
 		player.update();
 		}
 		
-		return redirect("/level1");
+		return redirect("/level");
 	}
 	
 		public Result  solution(String email){
@@ -60,6 +72,6 @@ public class GameController extends Controller {
 		player.update();
 		}
 		
-		return redirect("/level1");
+		return redirect("/level");
 	}
 }
