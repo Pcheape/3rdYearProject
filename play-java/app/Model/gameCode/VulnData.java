@@ -19,10 +19,6 @@ Public class VulnData extends Model{
 	public String type;
 	public String UserName;
 	public String password;
-	@Transient
-	public List injectionReturn = Null;
-	
-	
 
 
 public List sqlInjection(String query){
