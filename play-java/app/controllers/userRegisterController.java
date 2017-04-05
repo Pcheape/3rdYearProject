@@ -35,6 +35,10 @@ public class userRegisterController extends Controller {
 				return badRequest(register.render(user,newRegisterForm));
 			}else{
 				Player player = newRegisterForm.get();
+				player.score=0;
+				player.level=1;
+				player.hint=0;
+				player.solution=0;
 				player.save();
 			}
 			return ok(register.render(user,newRegisterForm));

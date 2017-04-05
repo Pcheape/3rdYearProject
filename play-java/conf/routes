@@ -25,6 +25,7 @@ GET     /admin						controllers.AdminController.index()
 GET     /getUserAdmin               controllers.AdminController.getUsers()
 GET     /resetScore                 controllers.AdminController.resetScoreboard()
 GET     /deletePlayer               controllers.AdminController.deletePlayers()
+GET     /configGame               	controllers.AdminController.configGame()
 
 POST    /editUser                   controllers.AdminController.editUser(id: String)
 POST    /SubmitEditUser             controllers.AdminController.submitEditUser(id: String)

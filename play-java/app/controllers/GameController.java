@@ -39,14 +39,23 @@ public class GameController extends Controller {
                     if (levelForm.hasErrors()) {
                         // If errors, show the form again
 						System.out.println("bad request Level");
-                        return badRequest(level1.render(User.getLoggedIn(session().get("email")),levelForm));
+                        return badRequest("/level");
                     }
                     
                     else {
-						Player play = (Player)User.getLoggedIn(session().get("email"));
-						play.score += 10;
-						play.level++;
-						play.update();
+						Player player = (Player)User.getLoggedIn(session().get("email"));
+						Level level = Level.getUserLevel(player.level);
+						player.score += level.points;
+						if(!level.firstSolved){
+							level.firstSolved = true;
+							level.points --;
+						}else if (level.firstSolved && !level.secondSolved){
+							level.secondSolved = true;
+							level.points --;
+						}
+					    level.update();		
+						player.level++;
+						player.update();
 						System.out.println("level sucessfull ");
 							
 						return redirect("/level");
@@ -55,9 +64,10 @@ public class GameController extends Controller {
 	
 	public Result  hint(String email){
 		Player player = (Player)User.getLoggedIn(session().get("email"));
+		Level level = Level.getUserLevel(player.level);
 		if(player.hint == 0){
 		player.hint = 1;
-		player.score -= 5;
+		player.score -= (level.points/2);
 		player.update();
 		}
 		
@@ -66,9 +76,10 @@ public class GameController extends Controller {
 	
 		public Result  solution(String email){
 		Player player = (Player)User.getLoggedIn(session().get("email"));
+		Level level = Level.getUserLevel(player.level);
 		if(player.solution == 0){
 		player.solution = 1;
-		player.score -= 10;
+		player.score -= level.points;
 		player.update();
 		}
 		

@@ -17,23 +17,24 @@ import com.google.inject.Inject;
 public class Player extends User{
 	
 	public int score;
-	
-	@Constraints.Required
-	public String loginName;
 	public int level;
 	public int hint;
 	public int solution;
+	
+	@Constraints.Required
+	public String loginName;
+	
 	
 	
 	
 	public Player(String email,String loginName, String password){
 		super(email, password);
-		score = 0;
 		this.loginName = loginName;
-		level = 1;
-		hint = 0;
-		solution=1;
-		
+		this.score=0;
+		this.level=1;
+		this.hint=0;
+		this.solution=0;
+		System.out.println("constructor called player"+level);	
 	}
 	
 	public static Finder<Long, Player> find = new Finder<Long,Player>(Player.class);

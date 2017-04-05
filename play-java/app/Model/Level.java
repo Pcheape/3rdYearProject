@@ -23,10 +23,12 @@ public static Finder<String,Level> find = new Finder<String,Level>(Level.class);
 
 public Level(int id , String password , boolean firstSolved , boolean secondSolved, int points ){
 	id = this.id;
-	password = this.password;
-	firstSolved = this.firstSolved;
-	secondSolved = this.secondSolved;
-	points = this.points;   
+	this.password = password;
+	this.firstSolved = firstSolved;
+	this.secondSolved = secondSolved;
+	this.points = points; 
+	System.out.println("level constructor called");
+	this.save();
 	}
 	
 	
@@ -52,6 +54,14 @@ public Level(int id , String password , boolean firstSolved , boolean secondSolv
 		}else{
 			 return null;
 			 }
+		}
+		
+		public static Level getUserLevel(int id) {
+        if (id == 0)
+                return null;
+        else
+            // Find user by id and return object
+            return find.where().eq("id", id).findUnique();
 		}
 			
 	
