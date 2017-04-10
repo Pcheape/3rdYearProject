@@ -19,7 +19,7 @@ GET     /scoreboard                 controllers.ScoreBoardController.ScoreBoard(
 GET 	/level 						controllers.GameController.Level()
 GET 	/hint:user					controllers.GameController.hint(user: String)
 GET 	/solution:user				controllers.GameController.solution(user: String)
-GET 	/Level2						controllers.GameController.Level2()
+POST	/Level2						controllers.GameController.Level2()
 
 #
 GET     /admin						controllers.AdminController.index()

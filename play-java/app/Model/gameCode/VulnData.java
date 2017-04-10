@@ -10,6 +10,7 @@ import com.google.inject.Inject;
 import models.*;
 
 
+@Entity
 
 public class VulnData  extends Model {
 	
@@ -18,16 +19,9 @@ public class VulnData  extends Model {
 	public String type;
 	public String UserName;
 	public String password;
-	public List injectionReturn ;
+    
 	
 	
 
-
-public List sqlInjection(String query){
-	
-	
-		//this.injectionReturn = Ebean.find(VulnData.class).where().eq("user",type).eq(query,UserName).findList();
-		return this.injectionReturn;
-	}
 	
 }

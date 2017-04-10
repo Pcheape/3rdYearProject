@@ -12,7 +12,8 @@ libraryDependencies ++= Seq(
   javaJdbc,
   cache,
   javaWs,
-  javaJpa
+  javaJpa,
+  "org.hibernate" % "hibernate-entitymanager" % "5.1.0.Final"
 )
 
 routesGenerator := InjectedRoutesGenerator
