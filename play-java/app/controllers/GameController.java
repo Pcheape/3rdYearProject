@@ -62,6 +62,13 @@ public class GameController extends Controller {
         }
     }
 	
+	public Result Level2(){
+		
+		System.out.println();
+		
+		return redirect("/level");
+	}
+	
 	public Result  hint(String email){
 		Player player = (Player)User.getLoggedIn(session().get("email"));
 		Level level = Level.getUserLevel(player.level);

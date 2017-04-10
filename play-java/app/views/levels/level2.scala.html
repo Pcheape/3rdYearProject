@@ -1,4 +1,4 @@
-@(user: models.User , levelForm: Form[models.Level], data :List<VulnData>)
+@(user: models.User , levelForm: Form[models.Level])
 @import helper._
 @import models.Player;
 @main("Security App",user){
@@ -7,9 +7,9 @@
 
 
 
-<form action = "@routes.gameController.level2()" method = "POST">
+<form action = "@routes.GameController.Level2()" method = "POST">
 			<input type="text" name="query"><br>
-			<button type="submit" formaction = "@routes.gameController.level2(query)" value="Submit" class="btn btn-custom" >query</button>
+			<button type="submit" formaction = "@routes.GameController.Level2()" value="Submit" class="btn btn-custom" >query</button>
 </form>
 
 
@@ -21,7 +21,7 @@
 
   																
                                
-		@form(action = routes.GameController.authenticate()) {
+		@form(action = routes.GameController.authenticate()){
 <div class="col col-sm-9">
 																	
                                 @inputPassword(levelForm("password"),
@@ -38,6 +38,6 @@
 
 
 
-	 }
+	 
 
 }

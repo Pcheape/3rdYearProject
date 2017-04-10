@@ -1,6 +1,7 @@
 package models;
 
 import java.util.*;
+import java.sql.*;
 import javax.persistence.*;
 import play.data.format.*;
 import play.data.validation.*;
@@ -9,26 +10,24 @@ import com.google.inject.Inject;
 import models.*;
 
 
-@Entity
-@Table(name="user")
 
-Public class VulnData extends Model{
+public class VulnData  extends Model {
 	
 	@Id
 	public long id;
 	public String type;
 	public String UserName;
 	public String password;
+	public List injectionReturn ;
+	
+	
 
 
 public List sqlInjection(String query){
 	
-	try{
-		this.injectionReturn = Ebean.find(Level2.class).where().eq("type",user).eq("UserName",query).findList();
-	}catch(SQLException e){
-		System.out.println("Sql injection"+e);
-	}
 	
-}
+		//this.injectionReturn = Ebean.find(VulnData.class).where().eq("user",type).eq(query,UserName).findList();
+		return this.injectionReturn;
+	}
 	
 }
