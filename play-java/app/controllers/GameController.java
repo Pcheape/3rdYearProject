@@ -1,15 +1,23 @@
 package controllers;
 
 import java.util.*;
-import play.mvc.*;
+
 import play.data.*;
 
 import views.html.levels.*;
 import models.*;
 import play.db.jpa.*;
 import play.db.jpa.JPAApi;
-import javax.persistence.*;
+
+
 import com.avaje.ebean.*;
+import javax.inject.Inject;
+import javax.persistence.Query;
+import javax.persistence.EntityManager;
+import play.mvc.*;
+import play.db.jpa.Transactional;
+
+
 /**
  * This controller contains an action to handle HTTP requests
  * to the application's home page.
@@ -18,7 +26,11 @@ public class GameController extends Controller {
  // Display an empty form in the view
  //@Security.Authenticated(Secured.class)
  //@With(CheckIfAdmin.class)
- 
+  private JPAApi jpaApi;
+ @Inject
+	public GameController(JPAApi api) {
+		this.jpaApi = api;
+	}
     public Result Level() {
 		Form<Level> levelForm = Form.form(Level.class);
 		Player play = (Player)User.getLoggedIn(session().get("email"));
@@ -29,7 +41,7 @@ public class GameController extends Controller {
 				return ok(level1.render(User.getLoggedIn(session().get("email")),levelForm));
 			
 			case 2:
-			List<VulnData> results = null;
+			List<Vulndata> results = null;
 				return ok(level2.render(User.getLoggedIn(session().get("email")),levelForm,results));
 			
 		}
@@ -71,32 +83,34 @@ public class GameController extends Controller {
     }
 	
 	
-	
+	@Transactional
 	public Result Level2(){
 		DynamicForm bindedQuery  = Form.form().bindFromRequest();
 		String query = bindedQuery.get("query");
 		System.out.println(query+"Query");
 		Form<Level> levelForm = Form.form(Level.class);
 		Player play = (Player)User.getLoggedIn(session().get("email"));
-		List<VulnData> results = GameController.sqlInjection(query);	
+		List<Vulndata> results = this.sqlInjection(query);	
 		
 		return ok(level2.render(User.getLoggedIn(session().get("email")),levelForm,results));
 	}
 	
 	
 	
+	@Transactional
+	public  List sqlInjection(String input){
 	
-	public static  List sqlInjection(String input){
 	
+		EntityManager em = jpaApi.em();
 	
 		//List<VulnData> results = Ebean.find(VulnData.class).where().eq("UserName",input).findList();
-		List<VulnData> results = session.createQuery("from VulnData as VulnData where VulunData.UserName = " + input).list();
-		
+		Query query = em.createQuery("Select username,password from Vulndata WHERE username = '" + input+"'");
+		List  results = query.getResultList();
 		System.out.println("RESULTS HERE"+input);
 		for(int i = 0; i < results.size();i++){
 			System.out.println(results.get(i));
 		}
-		//List<VulnData> results = JPA.em().createQuery("SELECT * from Stuff WHERE type=" + theType);
+		//List<VulnData> results = JPA.em().createQuery("SELECT * from Stuff WHERE type= " + theType);
 
 		return results;
 	}

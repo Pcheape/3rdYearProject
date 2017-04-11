@@ -16,6 +16,11 @@ libraryDependencies ++= Seq(
   "org.hibernate" % "hibernate-entitymanager" % "5.1.0.Final"
 )
 
+def excludeJPAPersistence(module: ModuleID): ModuleID =
+  module.excludeAll(ExclusionRule("javax.persistence","persistence-api"))
+
+libraryDependencies ~= (_.map(excludeJPAPersistence))
+
 routesGenerator := InjectedRoutesGenerator
 fork in run := true
 

@@ -12,12 +12,12 @@ import models.*;
 
 @Entity
 
-public class VulnData  extends Model {
+public class Vulndata  extends Model {
 	
 	@Id
 	public long id;
 	public String type;
-	public String UserName;
+	public String username;
 	public String password;
     
 	

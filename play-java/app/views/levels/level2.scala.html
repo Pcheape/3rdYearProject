@@ -1,4 +1,4 @@
-@(user: models.User , levelForm: Form[models.Level],result: List[models.VulnData])
+@(user: models.User , levelForm: Form[models.Level],result: List[models.Vulndata])
 @import helper._
 @import models.Player;
 @main("Security App",user){
@@ -26,7 +26,7 @@
  <tbody>
 					@for(r <- result){
 					<tr>
-					<td>@r.UserName</td>
+					<td>@r.username</td>
 					<td>@r.password</td> 
 					</tr>
 					}	
