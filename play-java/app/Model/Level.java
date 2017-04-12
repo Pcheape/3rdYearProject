@@ -40,14 +40,19 @@ public int points;
 
 
 public static Finder<Long,Level> find = new Finder<Long,Level>(Level.class);
-
+public Level(){
+	id=0;
+	password = "";
+	firstSolved = false;
+	secondSolved = false;
+	points = 0;
+}
 public Level(int id , String password , boolean firstSolved , boolean secondSolved, int points ){
-	id = this.id;
+	this.id = id;
 	this.password = password;
 	this.firstSolved = firstSolved;
 	this.secondSolved = secondSolved;
 	this.points = points; 
-	this.save();
 	}
 	
 	
@@ -57,10 +62,12 @@ public Level(int id , String password , boolean firstSolved , boolean secondSolv
         /*CalcSHA cs = new CalcSHA();
         String md = cs.calcPassword(this.password);
         this.password = md;*/
-
+		
         if (Level.authenticate(id, password) == null) {
+			System.out.println("invalid form");
             return "Invalid user or password";
         } else {
+			System.out.println("validation passed");
             return null;
         }
     }
@@ -73,6 +80,7 @@ public Level(int id , String password , boolean firstSolved , boolean secondSolv
 		{
         return "Sucess";
 		}else{
+			System.out.println("invalid auth");
 			 return null;
 			 }
 		}

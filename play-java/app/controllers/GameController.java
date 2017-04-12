@@ -32,7 +32,9 @@ public class GameController extends Controller {
     public Result Level() {
 		Form<Level> levelForm = Form.form(Level.class);
 		Player play = (Player)User.getLoggedIn(session().get("email"));
-		
+		//Level tempLevel = new Level();
+		//tempLevel.id = play.level;
+		//levelForm.fill(tempLevel);
 		
 		switch(play.level){
 			case 1:
@@ -40,6 +42,7 @@ public class GameController extends Controller {
 			
 			case 2:
 			List<Vulndata> results = null;
+			
 				return ok(level2.render(User.getLoggedIn(session().get("email")),levelForm,results));
 			
 		}
@@ -51,10 +54,10 @@ public class GameController extends Controller {
 	
 	
 	 public Result authenticate() {
+					System.out.println("Hit auth");
                     // Bind form instance to the values submitted from the form
                     Form<Level> levelForm = Form.form(Level.class).bindFromRequest();
-                      // User user = User.getLoggedIn(session().get("email"))
-					  //Player player = (Player)User.getLoggedIn(session().get("email"));
+                      System.out.println("checking for errors ");
                     if (levelForm.hasErrors()) {
                         // If errors, show the form again
 						System.out.println("bad request Level");
