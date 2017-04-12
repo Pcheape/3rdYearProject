@@ -7,6 +7,26 @@ import play.data.validation.*;
 import com.avaje.ebean.*;
 import com.google.inject.Inject;
 import models.*;
+
+
+import java.sql.*;
+import java.sql.Connection;
+import java.util.*;
+import play.data.*;
+import views.html.levels.*;
+import models.*;
+import play.db.jpa.*;
+import play.db.jpa.JPAApi;
+import com.avaje.ebean.*;
+
+import javax.persistence.Query;
+import javax.persistence.EntityManager;
+import play.mvc.*;
+import play.db.jpa.Transactional;
+
+
+
+
 @Entity
 @Table(name ="Level")
 public class Level extends Model{
@@ -19,7 +39,7 @@ public int points;
 
 
 
-public static Finder<String,Level> find = new Finder<String,Level>(Level.class);
+public static Finder<Long,Level> find = new Finder<Long,Level>(Level.class);
 
 public Level(int id , String password , boolean firstSolved , boolean secondSolved, int points ){
 	id = this.id;
@@ -27,7 +47,6 @@ public Level(int id , String password , boolean firstSolved , boolean secondSolv
 	this.firstSolved = firstSolved;
 	this.secondSolved = secondSolved;
 	this.points = points; 
-	System.out.println("level constructor called");
 	this.save();
 	}
 	
@@ -39,16 +58,18 @@ public Level(int id , String password , boolean firstSolved , boolean secondSolv
         String md = cs.calcPassword(this.password);
         this.password = md;*/
 
-        if (Level.authenticate(password) == null) {
+        if (Level.authenticate(id, password) == null) {
             return "Invalid user or password";
         } else {
             return null;
         }
     }
 	
-	public static String authenticate(String password) {
-        // If found return the user object with matching username and password
-		if(password.equals("insecure"))
+	public static String authenticate(int id , String password) {
+    
+		
+		Level level = find.where().eq("id", id).eq("password", password).findUnique();
+		if(password.equals(level.password))
 		{
         return "Sucess";
 		}else{

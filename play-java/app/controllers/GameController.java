@@ -54,6 +54,7 @@ public class GameController extends Controller {
                     // Bind form instance to the values submitted from the form
                     Form<Level> levelForm = Form.form(Level.class).bindFromRequest();
                       // User user = User.getLoggedIn(session().get("email"))
+					  //Player player = (Player)User.getLoggedIn(session().get("email"));
                     if (levelForm.hasErrors()) {
                         // If errors, show the form again
 						System.out.println("bad request Level");
@@ -74,7 +75,7 @@ public class GameController extends Controller {
 					    level.update();		
 						player.level++;
 						player.update();
-						System.out.println("level sucessfull ");
+						System.out.println("level sucessful");
 							
 						return redirect("/level");
         }
@@ -83,10 +84,11 @@ public class GameController extends Controller {
 	
 	@Transactional
 	public Result Level2(){
+		
+		
 		List<Vulndata> results = null;
 		DynamicForm bindedQuery  = Form.form().bindFromRequest();
 		String query = bindedQuery.get("query");
-		System.out.println(query+"Query");
 		Form<Level> levelForm = Form.form(Level.class);
 		Player play = (Player)User.getLoggedIn(session().get("email"));
 		try{
