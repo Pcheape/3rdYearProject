@@ -1,11 +1,21 @@
 package controllers;
 
+import java.sql.*;
+import java.sql.Connection;
 import java.util.*;
-import play.mvc.*;
 import play.data.*;
-
 import views.html.levels.*;
 import models.*;
+import play.db.jpa.*;
+import play.db.jpa.JPAApi;
+import com.avaje.ebean.*;
+import javax.inject.Inject;
+import javax.persistence.Query;
+import javax.persistence.EntityManager;
+import play.mvc.*;
+import play.db.jpa.Transactional;
+
+
 /**
  * This controller contains an action to handle HTTP requests
  * to the application's home page.
@@ -14,22 +24,30 @@ public class GameController extends Controller {
  // Display an empty form in the view
  //@Security.Authenticated(Secured.class)
  //@With(CheckIfAdmin.class)
- 
+  private JPAApi jpaApi;
+ @Inject
+	public GameController(JPAApi api) {
+		this.jpaApi = api;
+	}
     public Result Level() {
 		Form<Level> levelForm = Form.form(Level.class);
 		Player play = (Player)User.getLoggedIn(session().get("email"));
+		
 		
 		switch(play.level){
 			case 1:
 				return ok(level1.render(User.getLoggedIn(session().get("email")),levelForm));
 			
 			case 2:
-				return ok(level2.render(User.getLoggedIn(session().get("email")),levelForm));
+			List<Vulndata> results = null;
+				return ok(level2.render(User.getLoggedIn(session().get("email")),levelForm,results));
 			
 		}
 		return ok();
 			
 	}
+	
+
 	
 	
 	 public Result authenticate() {
@@ -61,6 +79,56 @@ public class GameController extends Controller {
 						return redirect("/level");
         }
     }
+	
+	
+	@Transactional
+	public Result Level2(){
+		List<Vulndata> results = null;
+		DynamicForm bindedQuery  = Form.form().bindFromRequest();
+		String query = bindedQuery.get("query");
+		System.out.println(query+"Query");
+		Form<Level> levelForm = Form.form(Level.class);
+		Player play = (Player)User.getLoggedIn(session().get("email"));
+		try{
+		results = this.sqlInjection(query);	
+		}catch(SQLException e){
+			
+			System.out.println("ERROR"+e);
+		}
+		
+		return ok(level2.render(User.getLoggedIn(session().get("email")),levelForm,results));
+	}
+	
+	
+	
+	@Transactional
+	public  List sqlInjection(String input) throws SQLException{
+	
+	
+		EntityManager em = jpaApi.em();
+		List<Vulndata> results = new ArrayList<Vulndata>();
+	
+				Connection conn = play.db.DB.getConnection();
+		
+				
+				String stm = "Select * from Vulndata WHERE type= 'user' AND username = '"+input+"'";		
+				System.out.println(stm);
+				
+				ResultSet query = conn.createStatement().executeQuery(stm);
+				
+				
+				while(query.next()){
+					int id = query.getInt(1);
+					String type = query.getString(2);
+					String username = query.getString(3);
+					String password = query.getString(4);
+					Vulndata addNew = new Vulndata(id,type,username,password);
+					results.add(addNew);
+				}
+							
+					conn.close();
+		return results;
+	}
 	
 	public Result  hint(String email){
 		Player player = (Player)User.getLoggedIn(session().get("email"));

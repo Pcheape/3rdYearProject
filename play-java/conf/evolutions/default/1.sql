@@ -25,6 +25,15 @@ create table user (
   constraint pk_user primary key (email)
 );
 
+create table vulndata (
+  id                            integer not null,
+  type                          varchar(255),
+  username                      varchar(255),
+  password                      varchar(255),
+  constraint pk_vulndata primary key (id)
+);
+create sequence vulndata_seq;
+
 
 # --- !Downs
 
@@ -32,4 +41,7 @@ drop table if exists level;
 drop sequence if exists Level_seq;
 
 drop table if exists user;
+
+drop table if exists vulndata;
+drop sequence if exists vulndata_seq;
 

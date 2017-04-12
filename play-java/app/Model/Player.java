@@ -14,7 +14,7 @@ import com.google.inject.Inject;
 
 
 
-public class Player extends User{
+public class Player extends User implements Comparable<Player>{
 	
 	public int score;
 	public int level;
@@ -57,4 +57,9 @@ public class Player extends User{
    public void setPlayerName(String loginName){
 	   this.loginName = loginName;
    }
+   
+      public int compareTo (Player play) {
+		  System.out.println("running compare");
+        return play.score-this.score;
+	}
 }

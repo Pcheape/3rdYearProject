@@ -12,13 +12,14 @@ GET     /                           controllers.HomeController.index
 
 GET     /                           controllers.HomeController.index
 GET     /login                      controllers.LoginController.login
-GET     /logout                      controllers.LoginController.logout
+GET     /logout                     controllers.LoginController.logout
 GET     /register                   controllers.userRegisterController.register()
 GET     /scoreboard                 controllers.ScoreBoardController.ScoreBoard()
 
 GET 	/level 						controllers.GameController.Level()
 GET 	/hint:user					controllers.GameController.hint(user: String)
 GET 	/solution:user				controllers.GameController.solution(user: String)
+POST	/Level2						controllers.GameController.Level2()
 
 #
 GET     /admin						controllers.AdminController.index()
