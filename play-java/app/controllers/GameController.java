@@ -130,7 +130,7 @@ public class GameController extends Controller {
 		return results;
 	}
 	
-	public Result  hint(String email){
+	public Result hint(String email){
 		Player player = (Player)User.getLoggedIn(session().get("email"));
 		Level level = Level.getUserLevel(player.level);
 		if(player.hint == 0){
@@ -142,7 +142,7 @@ public class GameController extends Controller {
 		return redirect("/level");
 	}
 	
-		public Result  solution(String email){
+		public Result solution(String email){
 		Player player = (Player)User.getLoggedIn(session().get("email"));
 		Level level = Level.getUserLevel(player.level);
 		if(player.solution == 0){
