@@ -15,11 +15,17 @@ import models.*;
 public class Vulndata  extends Model {
 	
 	@Id
-	public long id;
+	public int id;
 	public String type;
 	public String username;
 	public String password;
     
+	public Vulndata(int id , String type, String username, String password){
+		this.id = id;
+		this.type = type;
+		this.username = username; 
+		this.password = password; 
+	}
 	
 	
 

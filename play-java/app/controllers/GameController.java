@@ -1,15 +1,13 @@
 package controllers;
 
+import java.sql.*;
+import java.sql.Connection;
 import java.util.*;
-
 import play.data.*;
-
 import views.html.levels.*;
 import models.*;
 import play.db.jpa.*;
 import play.db.jpa.JPAApi;
-
-
 import com.avaje.ebean.*;
 import javax.inject.Inject;
 import javax.persistence.Query;
@@ -85,12 +83,18 @@ public class GameController extends Controller {
 	
 	@Transactional
 	public Result Level2(){
+		List<Vulndata> results = null;
 		DynamicForm bindedQuery  = Form.form().bindFromRequest();
 		String query = bindedQuery.get("query");
 		System.out.println(query+"Query");
 		Form<Level> levelForm = Form.form(Level.class);
 		Player play = (Player)User.getLoggedIn(session().get("email"));
-		List<Vulndata> results = this.sqlInjection(query);	
+		try{
+		results = this.sqlInjection(query);	
+		}catch(SQLException e){
+			
+			System.out.println("ERROR"+e);
+		}
 		
 		return ok(level2.render(User.getLoggedIn(session().get("email")),levelForm,results));
 	}
@@ -98,20 +102,31 @@ public class GameController extends Controller {
 	
 	
 	@Transactional
-	public  List sqlInjection(String input){
+	public  List sqlInjection(String input) throws SQLException{
 	
 	
 		EntityManager em = jpaApi.em();
+		List<Vulndata> results = new ArrayList<Vulndata>();
 	
-		//List<VulnData> results = Ebean.find(VulnData.class).where().eq("UserName",input).findList();
-		Query query = em.createQuery("Select username,password from Vulndata WHERE username = '" + input+"'");
-		List  results = query.getResultList();
-		System.out.println("RESULTS HERE"+input);
-		for(int i = 0; i < results.size();i++){
-			System.out.println(results.get(i));
-		}
-		//List<VulnData> results = JPA.em().createQuery("SELECT * from Stuff WHERE type= " + theType);
-
+				Connection conn = play.db.DB.getConnection();
+		
+				
+				String stm = "Select * from Vulndata WHERE type= 'user' AND username = '"+input+"'";		
+				System.out.println(stm);
+				
+				ResultSet query = conn.createStatement().executeQuery(stm);
+				
+				
+				while(query.next()){
+					int id = query.getInt(1);
+					String type = query.getString(2);
+					String username = query.getString(3);
+					String password = query.getString(4);
+					Vulndata addNew = new Vulndata(id,type,username,password);
+					results.add(addNew);
+				}
+							
+					conn.close();
 		return results;
 	}
 	

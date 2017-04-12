@@ -26,7 +26,7 @@ create table user (
 );
 
 create table vulndata (
-  id                            bigint not null,
+  id                            integer not null,
   type                          varchar(255),
   username                      varchar(255),
   password                      varchar(255),
