@@ -53,14 +53,16 @@
 		@form(action = routes.GameController.authenticate()){
 <div class="col col-sm-9">
 																	
-                                @inputPassword(levelForm("password"),
+                                <input type="hidden" name="id" value="@user.asInstanceOf[Player].level" />
+								@inputPassword(levelForm("password"),
                                     '_label -> "Password",
                                     '_showConstraints -> false,
 									'class -> "form-control")
+								
 									
-									<div class="actions">
-                                    <button type="submit" value="Submit" class="btn btn-custom" >Signin</button>
-									</div>
+<div class="actions">
+ <button type="submit" value="Submit" class="btn btn-custom" >Signin</button>
+	</div>
     </div>
 	 }
 </div>

@@ -58,12 +58,12 @@ public Level(int id , String password , boolean firstSolved , boolean secondSolv
 	
 	
 	    public String validate() {
-         
+         System.out.println("hit VALIDATE");
         /*CalcSHA cs = new CalcSHA();
         String md = cs.calcPassword(this.password);
         this.password = md;*/
 		
-        if (Level.authenticate(id, password) == null) {
+        if (Level.authenticate(id,password) == null) {
 			System.out.println("invalid form");
             return "Invalid user or password";
         } else {
@@ -72,10 +72,12 @@ public Level(int id , String password , boolean firstSolved , boolean secondSolv
         }
     }
 	
-	public static String authenticate(int id , String password) {
+	public static String authenticate(int id, String password) {
     
+		System.out.println("the id is "+id);
 		
-		Level level = find.where().eq("id", id).eq("password", password).findUnique();
+		Level level = find.where().eq("id",id).findUnique();
+		
 		if(password.equals(level.password))
 		{
         return "Sucess";
@@ -84,6 +86,8 @@ public Level(int id , String password , boolean firstSolved , boolean secondSolv
 			 return null;
 			 }
 		}
+		
+		
 		
 		public static Level getUserLevel(int id) {
         if (id == 0)

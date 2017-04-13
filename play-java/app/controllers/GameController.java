@@ -30,11 +30,13 @@ public class GameController extends Controller {
 		this.jpaApi = api;
 	}
     public Result Level() {
-		Form<Level> levelForm = Form.form(Level.class);
+		
+		
 		Player play = (Player)User.getLoggedIn(session().get("email"));
-		//Level tempLevel = new Level();
-		//tempLevel.id = play.level;
-		//levelForm.fill(tempLevel);
+		Level tempLevel = new Level();
+		tempLevel.id = play.level;
+		Form<Level> levelForm = Form.form(Level.class).fill(tempLevel);
+		System.out.println("levelForm : "+levelForm.field("id").value());
 		
 		switch(play.level){
 			case 1:
@@ -54,19 +56,20 @@ public class GameController extends Controller {
 	
 	
 	 public Result authenticate() {
-					System.out.println("Hit auth");
+					System.out.println("Hit auth I did ");
                     // Bind form instance to the values submitted from the form
                     Form<Level> levelForm = Form.form(Level.class).bindFromRequest();
                       System.out.println("checking for errors ");
+					  Player player = (Player)User.getLoggedIn(session().get("email"));
+					  Level level = Level.getUserLevel(player.level);
                     if (levelForm.hasErrors()) {
                         // If errors, show the form again
 						System.out.println("bad request Level");
-                        return badRequest("/level");
+                        return redirect("/level");
                     }
                     
                     else {
-						Player player = (Player)User.getLoggedIn(session().get("email"));
-						Level level = Level.getUserLevel(player.level);
+						
 						player.score += level.points;
 						if(!level.firstSolved){
 							level.firstSolved = true;
@@ -94,6 +97,10 @@ public class GameController extends Controller {
 		String query = bindedQuery.get("query");
 		Form<Level> levelForm = Form.form(Level.class);
 		Player play = (Player)User.getLoggedIn(session().get("email"));
+		
+		Level tempLevel = new Level();
+		tempLevel.id = play.level;
+		
 		try{
 		results = this.sqlInjection(query);	
 		}catch(SQLException e){

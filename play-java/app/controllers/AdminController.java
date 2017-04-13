@@ -156,8 +156,8 @@ public class AdminController extends Controller {
 			public Result configGame(){
 				Level level1 = new Level(1,"insecure",false,false,12);
 				Level level2 = new Level(2,"fuzzy blue cheese",false,false,12);
-				level1.update();
-				level2.update();
+				level1.save();
+				level2.save();
 				return redirect("/admin");
 			}
 		}
