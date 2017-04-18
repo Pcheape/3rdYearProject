@@ -3,14 +3,10 @@
 @import models.Player;
 @main("Security App",user){
 
-<p> Welcome to level Three User this sql is validated badly</p>
+<p> Welcome to level four same as the last except the validation has been taken off the page</p>
 
 
 <p>Hit submit to get a list of users and their passwords only admins can see admin passwords </p> 
-<form action = "@routes.GameController.Level3()" method = "POST">
-			<input type="hidden" name="type" value="user" />
-			<button type="submit" formaction = "@routes.GameController.Level3()" value="query" class="btn btn-custom" >Submit</button>
-</form>
 
 
 
@@ -77,7 +73,7 @@
 	 
 	 @if(user.asInstanceOf[Player].hint==1){
 	   
-		 <p>The sql is validated so injection wont work but a look at the source will show what will </p>
+		 <p>Maybe a proxy app would help </p>
 		
 		
 		
@@ -88,7 +84,7 @@
 									
 	 @if(user.asInstanceOf[Player].solution==1){
 		
-		<p>solution go to development tools in your browser and change user to admin then do a search for the admin password</p> 
+		<p>solution download burp and capture the information you are sending to the server change the user query to admin </p> 
 		}
 	}
 		</div>
