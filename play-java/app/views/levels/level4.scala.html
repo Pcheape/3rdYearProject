@@ -8,7 +8,10 @@
 
 <p>Hit submit to get a list of users and their passwords only admins can see admin passwords </p> 
 
-
+<form action = "@routes.GameController.Level3()" method = "POST">
+			<input type="hidden" name="type" value="user" />
+			<button type="submit" formaction = "@routes.GameController.Level3()" value="query" class="btn btn-custom" >Submit</button>
+</form>
 
 @if(result != null){
 <div class="row">
