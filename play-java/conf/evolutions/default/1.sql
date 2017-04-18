@@ -13,6 +13,15 @@ create table level (
 );
 create sequence Level_seq;
 
+create table level3data (
+  id                            integer not null,
+  type                          varchar(255),
+  username                      varchar(255),
+  password                      varchar(255),
+  constraint pk_level3data primary key (id)
+);
+create sequence level3data_seq;
+
 create table user (
   usertype                      varchar(31) not null,
   email                         varchar(255) not null,
@@ -39,6 +48,9 @@ create sequence vulndata_seq;
 
 drop table if exists level;
 drop sequence if exists Level_seq;
+
+drop table if exists level3data;
+drop sequence if exists level3data_seq;
 
 drop table if exists user;
 

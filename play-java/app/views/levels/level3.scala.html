@@ -1,0 +1,101 @@
+@(user: models.User , levelForm: Form[models.Level],result: List[models.Level3data])
+@import helper._
+@import models.Player;
+@main("Security App",user){
+
+<p> Welcome to level Three User this sql is validated badly</p>
+
+
+<p>Please enter a users name to get their password</p> 
+<form action = "@routes.GameController.Level3()" method = "POST">
+			<input type="text" name="query"><br>
+			<input type="hidden" name="type" value="user" />
+			<button type="submit" formaction = "@routes.GameController.Level3()" value="query" class="btn btn-custom" >query</button>
+</form>
+
+
+
+@if(result != null){
+<div class="row">
+<div class="col-lg-12">
+<div class= "panel-body">
+	<div class ="table-responsive" >
+		<table class = "table table-striped table-bordered table-hover">
+<thead>
+
+				<tr>
+					<th>Name</th>
+					<th>Password</th>
+				</tr>
+</thead>
+
+ <tbody>
+					@for(r <- result){
+					<tr>
+					<td>@r.username</td>
+					<td>@r.password</td> 
+					</tr>
+					}	
+</tbody>
+		</table>
+	</div>
+</div>
+</div>
+</div>
+}					
+
+
+
+
+<div class="col col-sm-9">
+
+  																
+                               
+		@form(action = routes.GameController.authenticate()){
+<div class="col col-sm-9">
+																	
+                                <input type="hidden" name="id" value="@user.asInstanceOf[Player].level" />
+								@inputPassword(levelForm("password"),
+                                    '_label -> "Password",
+                                    '_showConstraints -> false,
+									'class -> "form-control")
+								
+									
+<div class="actions">
+ <button type="submit" value="Submit" class="btn btn-custom" >Signin</button>
+	</div>
+    </div>
+	 }
+</div>
+
+<div class ="col col-sm-9">
+	
+	 @if(user.asInstanceOf[Player].hint==0){
+	<form action = "/hint" method = "GET">
+			<button type="submit" formaction = "/hint:@user.email" value="Submit" class="btn btn-custom" >Hint</button>
+	</form>
+	}
+	 
+	 @if(user.asInstanceOf[Player].hint==1){
+	   
+		 <p>The sql is validated so injection wont work but a look at the source will show what will </p>
+		
+		
+		
+		<form action = "/solution" method = "GET">
+			<button type="submit" formaction = "/solution:@user.email" value="Submit" class="btn btn-custom" >Solution</button>
+	</form>
+	
+									
+	 @if(user.asInstanceOf[Player].solution==1){
+		
+		<p>solution go to development tools in your browser and change user to admin then do a search for the admin password</p> 
+		}
+	}
+		</div>
+
+
+
+	 
+
+}

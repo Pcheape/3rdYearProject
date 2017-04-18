@@ -63,7 +63,7 @@ public Level(int id , String password , boolean firstSolved , boolean secondSolv
         String md = cs.calcPassword(this.password);
         this.password = md;*/
 		
-        if (Level.authenticate(id,password) == null) {
+        if (password == null) {
 			System.out.println("invalid form");
             return "Invalid user or password";
         } else {
@@ -72,7 +72,7 @@ public Level(int id , String password , boolean firstSolved , boolean secondSolv
         }
     }
 	
-	public static String authenticate(int id, String password) {
+	public static boolean authenticate(int id, String password) {
     
 		System.out.println("the id is "+id);
 		
@@ -80,10 +80,10 @@ public Level(int id , String password , boolean firstSolved , boolean secondSolv
 		
 		if(password.equals(level.password))
 		{
-        return "Sucess";
+        return true;
 		}else{
 			System.out.println("invalid auth");
-			 return null;
+			 return false;
 			 }
 		}
 		

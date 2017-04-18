@@ -46,11 +46,17 @@ public class GameController extends Controller {
 			List<Vulndata> results = null;
 			
 				return ok(level2.render(User.getLoggedIn(session().get("email")),levelForm,results));
+			case 3:
+			List<Level3data> results3 = null;
+				return ok(level3.render(User.getLoggedIn(session().get("email")),levelForm,results3));
 			
 		}
 		return ok();
 			
 	}
+	
+	
+	
 	
 
 	
@@ -67,8 +73,10 @@ public class GameController extends Controller {
 						System.out.println("bad request Level");
                         return redirect("/level");
                     }
+					
+					else if(level.authenticate(player.level,levelForm.get().password)){
                     
-                    else {
+                    
 						
 						player.score += level.points;
 						if(!level.firstSolved){
@@ -85,6 +93,7 @@ public class GameController extends Controller {
 							
 						return redirect("/level");
         }
+		return redirect("/level");
     }
 	
 	
@@ -109,6 +118,13 @@ public class GameController extends Controller {
 		}
 		
 		return ok(level2.render(User.getLoggedIn(session().get("email")),levelForm,results));
+	}
+	
+	public Result Level3(){
+		
+		
+	return redirect("/level");
+		
 	}
 	
 	
