@@ -1,16 +1,12 @@
-@(user: models.User , levelForm: Form[models.Level],result: List[models.Vulndata])
+@(user: models.User , levelForm: Form[models.Level],result: List[models.Level3data])
 @import helper._
 @import models.Player;
 @main("Security App",user){
 
-<p> Welcome to level Two simply get the admin password  </p>
+<p> Welcome to level four same as the last except the validation has been taken off the page</p>
 
 
-<p>Please enter a users name to get their password</p> 
-<form action = "@routes.GameController.Level2()" method = "POST">
-			<input type="text" name="query"><br>
-			<button type="submit" formaction = "@routes.GameController.Level2()" value="query" class="btn btn-custom" >query</button>
-</form>
+<p>Hit submit to get a list of users and their passwords only admins can see admin passwords </p> 
 
 
 
@@ -77,7 +73,7 @@
 	 
 	 @if(user.asInstanceOf[Player].hint==1){
 	   
-		 <p>A simple sql injection the box sql looks like "Select * from Vulndata WHERE type= 'user' AND username = '"+input+"'" make it equal always true so that it gets all the data from the data base </p>
+		 <p>Maybe a proxy app would help </p>
 		
 		
 		
@@ -88,7 +84,7 @@
 									
 	 @if(user.asInstanceOf[Player].solution==1){
 		
-		<p>solution is to enter 1' OR 'hacked' = 'hacked</p> 
+		<p>solution download burp and capture the information you are sending to the server change the user query to admin </p> 
 		}
 	}
 		</div>

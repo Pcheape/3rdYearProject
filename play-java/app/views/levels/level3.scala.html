@@ -1,15 +1,15 @@
-@(user: models.User , levelForm: Form[models.Level],result: List[models.Vulndata])
+@(user: models.User , levelForm: Form[models.Level],result: List[models.Level3data])
 @import helper._
 @import models.Player;
 @main("Security App",user){
 
-<p> Welcome to level Two simply get the admin password  </p>
+<p> Welcome to level Three User this sql is validated badly</p>
 
 
-<p>Please enter a users name to get their password</p> 
-<form action = "@routes.GameController.Level2()" method = "POST">
-			<input type="text" name="query"><br>
-			<button type="submit" formaction = "@routes.GameController.Level2()" value="query" class="btn btn-custom" >query</button>
+<p>Hit submit to get a list of users and their passwords only admins can see admin passwords </p> 
+<form action = "@routes.GameController.Level3()" method = "POST">
+			<input type="hidden" name="type" value="user" />
+			<button type="submit" formaction = "@routes.GameController.Level3()" value="query" class="btn btn-custom" >Submit</button>
 </form>
 
 
@@ -77,7 +77,7 @@
 	 
 	 @if(user.asInstanceOf[Player].hint==1){
 	   
-		 <p>A simple sql injection the box sql looks like "Select * from Vulndata WHERE type= 'user' AND username = '"+input+"'" make it equal always true so that it gets all the data from the data base </p>
+		 <p>The sql is validated so injection wont work but a look at the source will show what will </p>
 		
 		
 		
@@ -88,7 +88,7 @@
 									
 	 @if(user.asInstanceOf[Player].solution==1){
 		
-		<p>solution is to enter 1' OR 'hacked' = 'hacked</p> 
+		<p>solution go to development tools in your browser and change user to admin then do a search for the admin password</p> 
 		}
 	}
 		</div>
