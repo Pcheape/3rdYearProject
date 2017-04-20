@@ -2,16 +2,15 @@
 @import helper._
 @import models.Player;
 @main("Security App",user){
-
+<script>@routes.Assets.versioned("javascripts/hello.js")</script>
 <p> Welcome to level four same as the last except the validation has been taken off the page</p>
 
 
 <p>Hit submit to get a list of users and their passwords only admins can see admin passwords </p> 
 
-<form action = @routes.Assets.versioned("javascripts/test.js")>
-			<input type="hidden" name="type" value="user" />
-			<button type="submit" formaction = @routes.Assets.versioned("javascripts/hello.js") value="query" class="btn btn-custom" >Submit</button>
-</form>
+
+			<button type="submit" onclick = "myfunction()" value="query" class="btn btn-custom" >Submit</button>
+
  
 @if(result != null){
 <div class="row">
