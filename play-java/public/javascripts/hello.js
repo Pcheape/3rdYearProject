@@ -1,6 +1,3 @@
 function myfunction(){
-if (window.console) {
-  console.log("Welcome to your Play application's JavaScript!");
-	}
-
+  alert("Welcome to your Play application's JavaScript!");
 }
