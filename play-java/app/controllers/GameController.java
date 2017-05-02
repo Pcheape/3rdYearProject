@@ -49,6 +49,10 @@ public class GameController extends Controller {
 			case 3:
 			List<Level3data> results3 = null;
 				return ok(level3.render(User.getLoggedIn(session().get("email")),levelForm,results3));
+			case 4:
+			List<Level3data> results4 = null;
+				return ok(level4.render(User.getLoggedIn(session().get("email")),levelForm,results4));
+			
 			
 		}
 		return ok();
@@ -217,4 +221,6 @@ public class GameController extends Controller {
 		
 		return redirect("/level");
 	}
+	
+
 }
