@@ -58,7 +58,7 @@ public Level(int id , String password , boolean firstSolved , boolean secondSolv
 	
 	
 	    public String validate() {
-         System.out.println("hit VALIDATE");
+         
         /*CalcSHA cs = new CalcSHA();
         String md = cs.calcPassword(this.password);
         this.password = md;*/

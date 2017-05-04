@@ -9,7 +9,12 @@
 <p>Hit submit to get a list of users and their passwords only admins can see admin passwords </p> 
 
 <script src = @routes.Assets.versioned("javascripts/hello.js")></script> 
-			<button type="submit" onclick = myfunction()  value = myfunction() class="btn btn-custom" >Submit</button>
+<form name="levelForm" action = "@routes.GameController.Level3()" method = "POST">
+<input type="hidden" name="type" value="user" />			
+</form>
+<button  value="query" class="btn btn-custom" onclick = myfunction() >Submit</button>
+
+
 
 
 @if(result != null){
