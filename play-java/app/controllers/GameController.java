@@ -52,6 +52,9 @@ public class GameController extends Controller {
 			case 4:
 			List<Level4data> results4 = null;
 				return ok(level4.render(User.getLoggedIn(session().get("email")),levelForm,results4));
+			case 5:
+				List<Vulndata> results5 = null;
+				return ok(level5.render(User.getLoggedIn(session().get("email")),levelForm,results));
 			
 			
 		}
@@ -212,6 +215,29 @@ public class GameController extends Controller {
 	}
 	
 	
+	@Transactional
+	public Result Level5(){
+		
+		
+		List<Vulndata> results = null;
+		DynamicForm bindedQuery  = Form.form().bindFromRequest();
+		String query = bindedQuery.get("query");
+		Form<Level> levelForm = Form.form(Level.class);
+		Player play = (Player)User.getLoggedIn(session().get("email"));
+		
+		Level tempLevel = new Level();
+		tempLevel.id = play.level;
+		
+		try{
+		results = this.sqlInjectionRevisited(query);	
+		}catch(SQLException e){
+			
+			System.out.println("ERROR"+e);
+		}
+		
+		return ok(level5.render(User.getLoggedIn(session().get("email")),levelForm,results));
+	}
+	
 	
 	@Transactional
 	public  List sqlInjection(String input) throws SQLException{
@@ -226,6 +252,30 @@ public class GameController extends Controller {
 				String stm = "Select * from Vulndata WHERE type= 'user' AND username = '"+input+"'";		
 				System.out.println(stm);
 				
+				ResultSet query = conn.createStatement().executeQuery(stm);
+				
+				
+				while(query.next()){
+					int id = query.getInt(1);
+					String type = query.getString(2);
+					String username = query.getString(3);
+					String password = query.getString(4);
+					Vulndata addNew = new Vulndata(id,type,username,password);
+					results.add(addNew);
+				}
+							
+					conn.close();
+		return results;
+	}
+	
+	@Transactional
+	public  List sqlInjectionRevisited(String input) throws SQLException{
+	
+		EntityManager em = jpaApi.em();
+		List<Vulndata> results = new ArrayList<Vulndata>();
+				Connection conn = play.db.DB.getConnection();
+				String stm = "Select * from Vulndata WHERE type= 'user' AND username = '"+input+"'";	
+				System.out.println(stm);
 				ResultSet query = conn.createStatement().executeQuery(stm);
 				
 				
