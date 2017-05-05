@@ -6,12 +6,12 @@
 <p> Welcome to level Five</p>
 
 
-<p>Please enter a users name to get their password</p> 
-<form action = "@routes.GameController.Level2()" method = "POST">
-			<input type="text" name="query"><br>
-			<button type="submit" formaction = "@routes.GameController.Level5()" value="query" class="btn btn-custom" >query</button>
+<p>Please enter a users email to get their password</p> 
+<script src = @routes.Assets.versioned("javascripts/email.js")></script> 
+<form action = "@routes.GameController.Level5()" method = "POST">
+			<input type="email" name="query"><br>			
 </form>
-
+<button value="query" class="btn btn-custom" onclick = validate() >query</button>
 
 
 @if(result != null){
@@ -77,7 +77,7 @@
 	 
 	 @if(user.asInstanceOf[Player].hint==1){
 	   
-		 <p>A simple sql injection the box sql looks like "Select * from Vulndata WHERE type= 'user' AND username = '"+input+"'" make it equal always true so that it gets all the data from the data base </p>
+		 <p>A simple sql injection the box sql looks like "Select * from Vulndata WHERE type= 'user' AND username = '"+input+"'" make it equal always true so that it gets all the data from the data base.</p>
 		
 		
 		

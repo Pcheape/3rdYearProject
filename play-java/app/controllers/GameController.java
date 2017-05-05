@@ -54,7 +54,7 @@ public class GameController extends Controller {
 				return ok(level4.render(User.getLoggedIn(session().get("email")),levelForm,results4));
 			case 5:
 				List<Vulndata> results5 = null;
-				return ok(level5.render(User.getLoggedIn(session().get("email")),levelForm,results));
+				return ok(level5.render(User.getLoggedIn(session().get("email")),levelForm,results5));
 			
 			
 		}
