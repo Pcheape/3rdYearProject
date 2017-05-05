@@ -50,7 +50,7 @@ public class GameController extends Controller {
 			List<Level3data> results3 = null;
 				return ok(level3.render(User.getLoggedIn(session().get("email")),levelForm,results3));
 			case 4:
-			List<Level3data> results4 = null;
+			List<Level4data> results4 = null;
 				return ok(level4.render(User.getLoggedIn(session().get("email")),levelForm,results4));
 			
 			
@@ -164,6 +164,50 @@ public class GameController extends Controller {
 					conn.close();
 			
 			return ok (level3.render(User.getLoggedIn(session().get("email")),levelForm,results));
+		
+	}
+	
+	@Transactional
+	public Result Level4()  throws SQLException{
+		
+			List<Level4data> results = null;
+			Form<Level> levelForm = Form.form(Level.class);
+			DynamicForm bindedQuery  = Form.form().bindFromRequest();
+			String query = bindedQuery.get("type");
+			String stm = "";
+			
+			if(query.equals("admin")){
+				System.out.println("this will be admin sql " +query);
+				 stm = "Select * from Level4data WHERE type= 'admin'";	
+			}else{
+				System.out.println("this will be user sql" +query);
+				stm = "Select * from Level4data WHERE type= 'user'";
+			}
+			
+				EntityManager em = jpaApi.em();
+				results = new ArrayList<Level4data>();
+	
+				Connection conn = play.db.DB.getConnection();
+		
+				
+						
+				System.out.println(stm);
+				
+				ResultSet answer = conn.createStatement().executeQuery(stm);
+				
+				
+				while(answer.next()){
+					int id = answer.getInt(1);
+					String type = answer.getString(2);
+					String username = answer.getString(3);
+					String password = answer.getString(4);
+					Level4data addNew = new Level4data(id,type,username,password);
+					results.add(addNew);
+				}
+							
+					conn.close();
+			
+			return ok (level4.render(User.getLoggedIn(session().get("email")),levelForm,results));
 		
 	}
 	

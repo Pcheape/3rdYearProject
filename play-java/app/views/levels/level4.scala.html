@@ -1,4 +1,4 @@
-@(user: models.User , levelForm: Form[models.Level],result: List[models.Level3data])
+@(user: models.User , levelForm: Form[models.Level],result: List[models.Level4data])
 @import helper._
 @import models.Player;
 @main("Security App",user){
@@ -9,7 +9,7 @@
 <p>Hit submit to get a list of users and their passwords only admins can see admin passwords </p> 
 
 <script src = @routes.Assets.versioned("javascripts/hello.js")></script> 
-<form name="levelForm" action = "@routes.GameController.Level3()" method = "POST">
+<form name="levelForm" action = "@routes.GameController.Level4()" method = "POST">
 <input type="hidden" name="type" value="user" />			
 </form>
 <button  value="query" class="btn btn-custom" onclick = myfunction() >Submit</button>
