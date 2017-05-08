@@ -1,0 +1,103 @@
+@(user: models.User , levelForm: Form[models.Level],result: List[models.Level6data])
+@import helper._
+@import models.Player;
+@main("Security App",user){
+
+<p> Welcome to level four same as the last except the validation has been taken off the page</p>
+
+
+<p>Hit submit to get a list of users and their passwords only admins can see admin passwords </p> 
+
+<script src = @routes.Assets.versioned("javascripts/hello.js")></script> 
+<form name="levelForm" action = "@routes.GameController.Level4()" method = "POST">
+<input type="hidden" name="type" value="user" />			
+</form>
+<button  value="query" class="btn btn-custom" onclick = myfunction() >Submit</button>
+
+
+
+
+@if(result != null){
+<div class="row">
+<div class="col-lg-12">
+<div class= "panel-body">
+	<div class ="table-responsive" >
+		<table class = "table table-striped table-bordered table-hover">
+<thead>
+
+				<tr>
+					<th>Name</th>
+					<th>Password</th>
+				</tr>
+</thead>
+
+ <tbody>
+					@for(r <- result){
+					<tr>
+					<td>@r.username</td>
+					<td>@r.password</td> 
+					</tr>
+					}	
+</tbody>
+		</table>
+	</div>
+</div>
+</div>
+</div>
+}					
+
+
+
+
+<div class="col col-sm-9">
+
+  																
+                               
+		@form(action = routes.GameController.authenticate()){
+<div class="col col-sm-9">
+																	
+                                <input type="hidden" name="id" value="@user.asInstanceOf[Player].level" />
+								@inputPassword(levelForm("password"),
+                                    '_label -> "Password",
+                                    '_showConstraints -> false,
+									'class -> "form-control")
+								
+									
+<div class="actions">
+ <button type="submit" value="Submit" class="btn btn-custom" >Signin</button>
+	</div>
+    </div>
+	 }
+</div>
+
+<div class ="col col-sm-9">
+	
+	 @if(user.asInstanceOf[Player].hint==0){
+	<form action = "/hint" method = "GET">
+			<button type="submit" formaction = "/hint:@user.email" value="Submit" class="btn btn-custom" >Hint</button>
+	</form>
+	}
+	 
+	 @if(user.asInstanceOf[Player].hint==1){
+	   
+		 <p>Maybe a proxy app would help </p>
+		
+		
+		
+		<form action = "/solution" method = "GET">
+			<button type="submit" formaction = "/solution:@user.email" value="Submit" class="btn btn-custom" >Solution</button>
+	</form>
+	
+									
+	 @if(user.asInstanceOf[Player].solution==1){
+		
+		<p>solution download burp and capture the information you are sending to the server change the user query to admin </p> 
+		}
+	}
+		</div>
+
+
+
+	 
+
+}

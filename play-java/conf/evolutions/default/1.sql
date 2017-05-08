@@ -31,6 +31,15 @@ create table level4data (
 );
 create sequence level4data_seq;
 
+create table level6data (
+  id                            integer not null,
+  type                          varchar(255),
+  username                      varchar(255),
+  password                      varchar(255),
+  constraint pk_level6data primary key (id)
+);
+create sequence level6data_seq;
+
 create table user (
   usertype                      varchar(31) not null,
   email                         varchar(255) not null,
@@ -63,6 +72,9 @@ drop sequence if exists level3data_seq;
 
 drop table if exists level4data;
 drop sequence if exists level4data_seq;
+
+drop table if exists level6data;
+drop sequence if exists level6data_seq;
 
 drop table if exists user;
 

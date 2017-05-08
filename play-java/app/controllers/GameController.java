@@ -15,6 +15,9 @@ import javax.persistence.EntityManager;
 import play.mvc.*;
 import play.db.jpa.Transactional;
 
+import play.api.mvc.DiscardingCookie;
+import play.mvc.Http.*;
+
 
 /**
  * This controller contains an action to handle HTTP requests
@@ -55,6 +58,13 @@ public class GameController extends Controller {
 			case 5:
 				List<Vulndata> results5 = null;
 				return ok(level5.render(User.getLoggedIn(session().get("email")),levelForm,results5));
+			case 6:
+				List<Level6data> results6 =null;
+				ctx().response().setCookie("type", "user");
+				
+				
+				return ok(level6.render(User.getLoggedIn(session().get("email")),levelForm,results6));
+				
 			
 			
 		}
@@ -237,6 +247,49 @@ public class GameController extends Controller {
 		
 		return ok(level5.render(User.getLoggedIn(session().get("email")),levelForm,results));
 	}
+	
+	public Result Level6()throws SQLException{
+		
+		
+		
+		Form<Level> levelForm = Form.form(Level.class);
+		String type = ctx().request().cookie("type").value();
+		
+		String stm ="";
+		
+			if(type.equals("admin")){
+				System.out.println("this will be admin sql " +type);
+				 stm = "Select * from Level6data WHERE type= 'admin'";	
+			}else{
+				System.out.println("this will be user sql" +type);
+				stm = "Select * from Level6data WHERE type= 'user'";
+			}
+			
+				EntityManager em = jpaApi.em();
+				List results = new ArrayList<Level6data>();
+	
+				Connection conn = play.db.DB.getConnection();
+		
+				
+						
+				System.out.println(stm);
+				
+				ResultSet answer = conn.createStatement().executeQuery(stm);
+				
+				
+				while(answer.next()){
+					int id = answer.getInt(1);
+					String userType = answer.getString(2);
+					String username = answer.getString(3);
+					String password = answer.getString(4);
+					Level6data addNew = new Level6data(id,userType,username,password);
+					results.add(addNew);
+				}
+							
+					conn.close();
+		return ok(level6.render(User.getLoggedIn(session().get("email")),levelForm,results));
+	}
+	
 	
 	
 	@Transactional

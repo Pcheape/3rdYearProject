@@ -23,6 +23,7 @@ POST	/Level2						controllers.GameController.Level2()
 POST	/Level3						controllers.GameController.Level3()
 POST	/Level4						controllers.GameController.Level4()
 POST	/Level5						controllers.GameController.Level5()
+POST	/Level6						controllers.GameController.Level5()
 
 #
 GET     /admin						controllers.AdminController.index()
