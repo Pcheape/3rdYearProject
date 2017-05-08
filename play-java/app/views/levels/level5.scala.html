@@ -8,7 +8,7 @@
 
 <p>Please enter a users email to get their password</p> 
 <script src = @routes.Assets.versioned("javascripts/email.js")></script> 
-<form action = "@routes.GameController.Level5()" method = "POST">
+<form name="levelForm" action = "@routes.GameController.Level5()" method = "POST">
 			<input type="email" name="query"><br>			
 </form>
 <button value="query" class="btn btn-custom" onclick = validate() >query</button>
@@ -77,7 +77,9 @@
 	 
 	 @if(user.asInstanceOf[Player].hint==1){
 	   
-		 <p>A simple sql injection the box sql looks like "Select * from Vulndata WHERE type= 'user' AND username = '"+input+"'" make it equal always true so that it gets all the data from the data base.</p>
+		 <p>A javascript validated sql injection the box sql looks like "Select * from Vulndata WHERE type= 'user' AND username = '"+input+"'" make it equal always true so that it gets all the data from the data base.
+		 find out what a valid query looks like then build the injection around it .
+		 </p>
 		
 		
 		
@@ -88,7 +90,8 @@
 									
 	 @if(user.asInstanceOf[Player].solution==1){
 		
-		<p>solution is to enter 1' OR 'hacked' = 'hacked</p> 
+		<p>solution is to enter 1' OR 'hacked' = 'hacked' --someemail@someplace.com</p>
+		<p>the -- is a sql comment so wont be executed in the sql </p>		
 		}
 	}
 		</div>
