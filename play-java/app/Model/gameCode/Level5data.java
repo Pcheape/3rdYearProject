@@ -12,7 +12,7 @@ import models.*;
 
 @Entity
 
-public class Vulndata  extends Model {
+public class Level5data  extends Model {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,7 +21,7 @@ public class Vulndata  extends Model {
 	public String username;
 	public String password;
     
-	public Vulndata(int id , String type, String username, String password){
+	public Level5data(int id , String type, String username, String password){
 		this.id = id;
 		this.type = type;
 		this.username = username; 

@@ -56,7 +56,7 @@ public class GameController extends Controller {
 			List<Level4data> results4 = null;
 				return ok(level4.render(User.getLoggedIn(session().get("email")),levelForm,results4));
 			case 5:
-				List<Vulndata> results5 = null;
+				List<Level5data> results5 = null;
 				return ok(level5.render(User.getLoggedIn(session().get("email")),levelForm,results5));
 			case 6:
 				List<Level6data> results6 =null;
@@ -79,11 +79,11 @@ public class GameController extends Controller {
 	
 	
 	 public Result authenticate() {
-					System.out.println("Hit auth I did ");
-                    // Bind form instance to the values submitted from the form
+					// Bind form instance to the values submitted from the form
                     Form<Level> levelForm = Form.form(Level.class).bindFromRequest();
                       System.out.println("checking for errors ");
 					  Player player = (Player)User.getLoggedIn(session().get("email"));
+					  System.out.println("got to here ");
 					  Level level = Level.getUserLevel(player.level);
                     if (levelForm.hasErrors()) {
                         // If errors, show the form again
@@ -92,8 +92,7 @@ public class GameController extends Controller {
                     }
 					
 					else if(level.authenticate(player.level,levelForm.get().password)){
-                    
-                    
+                                     
 						
 						player.score += level.points;
 						if(!level.firstSolved){
@@ -136,6 +135,8 @@ public class GameController extends Controller {
 		
 		return ok(level2.render(User.getLoggedIn(session().get("email")),levelForm,results));
 	}
+	
+	
 	@Transactional
 	public Result Level3()  throws SQLException{
 		
@@ -229,7 +230,7 @@ public class GameController extends Controller {
 	public Result Level5(){
 		
 		
-		List<Vulndata> results = null;
+		List<Level5data> results = null;
 		DynamicForm bindedQuery  = Form.form().bindFromRequest();
 		String query = bindedQuery.get("query");
 		Form<Level> levelForm = Form.form(Level.class);
@@ -248,6 +249,9 @@ public class GameController extends Controller {
 		return ok(level5.render(User.getLoggedIn(session().get("email")),levelForm,results));
 	}
 	
+	
+	
+	@Transactional
 	public Result Level6()throws SQLException{
 		
 		
@@ -325,9 +329,9 @@ public class GameController extends Controller {
 	public  List sqlInjectionRevisited(String input) throws SQLException{
 	
 		EntityManager em = jpaApi.em();
-		List<Vulndata> results = new ArrayList<Vulndata>();
+		List<Level5data> results = new ArrayList<Level5data>();
 				Connection conn = play.db.DB.getConnection();
-				String stm = "Select * from Vulndata WHERE type= 'user' AND username = '"+input+"'";	
+				String stm = "Select * from Level5data WHERE type= 'user' AND username = '"+input+"'";	
 				System.out.println(stm);
 				ResultSet query = conn.createStatement().executeQuery(stm);
 				
@@ -337,7 +341,7 @@ public class GameController extends Controller {
 					String type = query.getString(2);
 					String username = query.getString(3);
 					String password = query.getString(4);
-					Vulndata addNew = new Vulndata(id,type,username,password);
+					 Level5data addNew = new Level5data(id,type,username,password);
 					results.add(addNew);
 				}
 							

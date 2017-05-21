@@ -15,6 +15,7 @@ import models.*;
 public class Level3data  extends Model {
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public int id;
 	public String type;
 	public String username;

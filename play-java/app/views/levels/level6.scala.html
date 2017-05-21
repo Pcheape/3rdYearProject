@@ -3,16 +3,16 @@
 @import models.Player;
 @main("Security App",user){
 
-<p> Welcome to level four same as the last except the validation has been taken off the page</p>
+<p> Welcome to level six</p>
 
 
 <p>Hit submit to get a list of users and their passwords only admins can see admin passwords </p> 
 
-<script src = @routes.Assets.versioned("javascripts/hello.js")></script> 
-<form name="levelForm" action = "@routes.GameController.Level4()" method = "POST">
-<input type="hidden" name="type" value="user" />			
+<form name="levelForm" action = "@routes.GameController.Level6()" method = "POST">
+<input type="hidden" name="type" value="user" />	
+<button  value="query" class="btn btn-custom"  >Submit</button>		
 </form>
-<button  value="query" class="btn btn-custom" onclick = myfunction() >Submit</button>
+
 
 
 

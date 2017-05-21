@@ -14,31 +14,36 @@ create table level (
 create sequence Level_seq;
 
 create table level3data (
-  id                            integer not null,
+  id                            integer auto_increment not null,
   type                          varchar(255),
   username                      varchar(255),
   password                      varchar(255),
   constraint pk_level3data primary key (id)
 );
-create sequence level3data_seq;
 
 create table level4data (
-  id                            integer not null,
+  id                            integer auto_increment not null,
   type                          varchar(255),
   username                      varchar(255),
   password                      varchar(255),
   constraint pk_level4data primary key (id)
 );
-create sequence level4data_seq;
+
+create table level5data (
+  id                            integer auto_increment not null,
+  type                          varchar(255),
+  username                      varchar(255),
+  password                      varchar(255),
+  constraint pk_level5data primary key (id)
+);
 
 create table level6data (
-  id                            integer not null,
+  id                            integer auto_increment not null,
   type                          varchar(255),
   username                      varchar(255),
   password                      varchar(255),
   constraint pk_level6data primary key (id)
 );
-create sequence level6data_seq;
 
 create table user (
   usertype                      varchar(31) not null,
@@ -53,13 +58,12 @@ create table user (
 );
 
 create table vulndata (
-  id                            integer not null,
+  id                            integer auto_increment not null,
   type                          varchar(255),
   username                      varchar(255),
   password                      varchar(255),
   constraint pk_vulndata primary key (id)
 );
-create sequence vulndata_seq;
 
 
 # --- !Downs
@@ -68,16 +72,14 @@ drop table if exists level;
 drop sequence if exists Level_seq;
 
 drop table if exists level3data;
-drop sequence if exists level3data_seq;
 
 drop table if exists level4data;
-drop sequence if exists level4data_seq;
+
+drop table if exists level5data;
 
 drop table if exists level6data;
-drop sequence if exists level6data_seq;
 
 drop table if exists user;
 
 drop table if exists vulndata;
-drop sequence if exists vulndata_seq;
 
