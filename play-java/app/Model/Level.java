@@ -57,11 +57,9 @@ public Level(int id , String password , boolean firstSolved , boolean secondSolv
 	
 	
 	
-	    public String validate() {
+	/*    public String validate() {
          
-        /*CalcSHA cs = new CalcSHA();
-        String md = cs.calcPassword(this.password);
-        this.password = md;*/
+        
 		
         if (password == null) {
 			System.out.println("invalid form");
@@ -70,7 +68,7 @@ public Level(int id , String password , boolean firstSolved , boolean secondSolv
 			System.out.println("validation passed");
             return null;
         }
-    }
+    } */
 	
 	public static boolean authenticate(int id, String password) {
     
