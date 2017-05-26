@@ -60,7 +60,7 @@ public class GameController extends Controller {
 				return ok(level5.render(User.getLoggedIn(session().get("email")),levelForm,results5));
 			case 6:
 				List<Level6data> results6 =null;
-				ctx().response().setCookie("type", "user");
+				ctx().response().setCookie("dHlwZQ==", "dXNlcg==");
 				
 				
 				return ok(level6.render(User.getLoggedIn(session().get("email")),levelForm,results6));
@@ -95,6 +95,8 @@ public class GameController extends Controller {
                                      
 						
 						player.score += level.points;
+						player.hint = 0;
+						player.solution = 0;
 						if(!level.firstSolved){
 							level.firstSolved = true;
 							level.points --;
@@ -257,11 +259,11 @@ public class GameController extends Controller {
 		
 		
 		Form<Level> levelForm = Form.form(Level.class);
-		String type = ctx().request().cookie("type").value();
+		String type = ctx().request().cookie("dHlwZQ==").value();
 		
 		String stm ="";
 		
-			if(type.equals("admin")){
+			if(type.equals("dXNlcg==")){
 				System.out.println("this will be admin sql " +type);
 				 stm = "Select * from Level6data WHERE type= 'admin'";	
 			}else{
