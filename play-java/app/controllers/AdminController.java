@@ -11,9 +11,9 @@ import models.*;
  * to the application's home page.
  */
 public class AdminController extends Controller {
- // Display an empty form in the view
- //@Security.Authenticated(Secured.class)
- //@With(CheckIfAdmin.class)
+
+ @Security.Authenticated(Secured.class)
+ @With(CheckIfAdmin.class)
  
     public Result index() {
 		

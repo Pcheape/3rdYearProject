@@ -27,7 +27,7 @@ public class LoginController extends Controller {
       if (loginForm.hasErrors()) {
          // If errors, show the form again
 			System.out.println("bad request Login ");
-			User user =User.getLoggedIn(session().get("email"));
+			User user = User.getLoggedIn(session().get("email"));
             return badRequest(login.render(user,loginForm));
             }else {						
             // SuperUser Logged in sucessfully
@@ -40,7 +40,7 @@ public class LoginController extends Controller {
             User u = User.getLoggedIn(loginForm.get().email);
             // If admin - go to admin section
             if (u != null && "admin".equals(u.getUserType())) {
-                return redirect("/");
+                return redirect("/admin");
             }
             System.out.println("login sucessfull");
             // Return to home page

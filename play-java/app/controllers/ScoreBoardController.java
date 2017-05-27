@@ -20,9 +20,6 @@ import play.mvc.LegacyWebSocket;
  * to the application's home page.
  */
 public class ScoreBoardController extends Controller {
- // Display an empty form in the view
- @Security.Authenticated(Secured.class)
- 
  
     public Result ScoreBoard() {
 		

@@ -3,6 +3,7 @@ package controllers;
 import play.mvc.*;
 import play.data.*;
 
+import java.util.*;
 import views.html.*;
 import models.*;
 /**
@@ -24,7 +25,8 @@ public class userRegisterController extends Controller {
 	
 	
 	 public Result registerFormSubmit() {
-		 
+		    boolean userFound = false;
+			List<User> userList = User.find.all();
 			Form<Player> newRegisterForm = Form.form(Player.class).bindFromRequest();
 			User user = User.getLoggedIn(session().get("email"));
 			
@@ -33,15 +35,29 @@ public class userRegisterController extends Controller {
 				System.out.println("badRequest Outputting to log ");
 			
 				return badRequest(register.render(user,newRegisterForm));
+				
 			}else{
 				Player player = newRegisterForm.get();
-				player.score=0;
-				player.level=1;
-				player.hint=0;
-				player.solution=0;
-				player.save();
+				for(int i = 0 ; i < userList.size();i++){
+				        
+						if(userList.get(i).getEmail().equals(player.getEmail())){
+							
+							userFound = true;
+						}
+					}
+				if(!userFound){	
+					
+					player.score=0;
+					player.level=1;
+					player.hint=0;
+					player.solution=0;
+					player.save();
+				}else{
+					return badRequest(register.render(user,newRegisterForm));
+				}
 			}
-			return ok(register.render(user,newRegisterForm));
+			Form<Login> loginForm = Form.form(Login.class);
+			return ok(login.render(user,loginForm));
 	 }
 	 
 	 

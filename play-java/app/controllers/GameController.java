@@ -23,15 +23,23 @@ import play.mvc.Http.*;
  * This controller contains an action to handle HTTP requests
  * to the application's home page.
  */
+ 
+  @Security.Authenticated(Secured.class)
+ @With(CheckIfPlayer.class)
 public class GameController extends Controller {
- // Display an empty form in the view
- //@Security.Authenticated(Secured.class)
- //@With(CheckIfAdmin.class)
+
+
+  
+  
+  
   private JPAApi jpaApi;
  @Inject
 	public GameController(JPAApi api) {
 		this.jpaApi = api;
 	}
+	
+	
+	
     public Result Level() {
 		
 		
@@ -60,7 +68,7 @@ public class GameController extends Controller {
 				return ok(level5.render(User.getLoggedIn(session().get("email")),levelForm,results5));
 			case 6:
 				List<Level6data> results6 =null;
-				ctx().response().setCookie("dHlwZQ==", "dXNlcg==");
+				ctx().response().setCookie("type", "dXNlcg==");
 				
 				
 				return ok(level6.render(User.getLoggedIn(session().get("email")),levelForm,results6));
@@ -99,13 +107,18 @@ public class GameController extends Controller {
 						player.solution = 0;
 						if(!level.firstSolved){
 							level.firstSolved = true;
+							player.firstSolve++;
 							level.points --;
 						}else if (level.firstSolved && !level.secondSolved){
+							
 							level.secondSolved = true;
+							player.secondSolve++;
 							level.points --;
 						}
 					    level.update();		
 						player.level++;
+						
+						
 						player.update();
 						System.out.println("level sucessful");
 							
@@ -259,7 +272,7 @@ public class GameController extends Controller {
 		
 		
 		Form<Level> levelForm = Form.form(Level.class);
-		String type = ctx().request().cookie("dHlwZQ==").value();
+		String type = ctx().request().cookie("type").value();
 		
 		String stm ="";
 		

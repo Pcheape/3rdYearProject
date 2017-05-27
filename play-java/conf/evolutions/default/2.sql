@@ -2,6 +2,8 @@
 
 # --- !Ups
 
+INSERT INTO User (usertype,email,password) values ('admin','admin','admin');
+
 INSERT INTO Vulndata (type,username) values ('user','fred');
 INSERT INTO Vulndata (type,username) values ('user','bart');
 INSERT INTO Vulndata (type,username) values ('user','phill');

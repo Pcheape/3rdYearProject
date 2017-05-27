@@ -53,6 +53,8 @@ create table user (
   level                         integer,
   hint                          integer,
   solution                      integer,
+  first_solve                   integer,
+  second_solve                  integer,
   login_name                    varchar(255),
   constraint pk_user primary key (email)
 );

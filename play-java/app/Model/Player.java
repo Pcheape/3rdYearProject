@@ -20,6 +20,8 @@ public class Player extends User implements Comparable<Player>{
 	public int level;
 	public int hint;
 	public int solution;
+	public int firstSolve;
+	public int secondSolve;
 	
 	@Constraints.Required
 	public String loginName;
@@ -34,7 +36,9 @@ public class Player extends User implements Comparable<Player>{
 		this.level=1;
 		this.hint=0;
 		this.solution=0;
-		System.out.println("constructor called player"+level);	
+		this.firstSolve=0;
+		this.secondSolve=0;
+		
 	}
 	
 	public static Finder<Long, Player> find = new Finder<Long,Player>(Player.class);
@@ -59,7 +63,6 @@ public class Player extends User implements Comparable<Player>{
    }
    
       public int compareTo (Player play) {
-		  System.out.println("running compare");
         return play.score-this.score;
 	}
 }
