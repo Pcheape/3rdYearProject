@@ -29,6 +29,11 @@ public class Level6data  extends Model {
 	}
 	
 	
-
+public static Level6data getAdmin()
+	{
+	  Level6data admin = Ebean.find(Level6data.class).where().eq("type","admin").findUnique();
+	  return admin;
+	}
+	
 	
 }

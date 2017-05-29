@@ -29,6 +29,13 @@ public class Vulndata  extends Model {
 	}
 	
 	
+	
+	public static Vulndata getAdmin()
+	{
+	  Vulndata admin = Ebean.find(Vulndata.class).where().eq("type","admin").findUnique();
+	  return admin;
+	}
+	
 
 	
 }

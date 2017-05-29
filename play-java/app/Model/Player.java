@@ -62,7 +62,17 @@ public class Player extends User implements Comparable<Player>{
 	   this.loginName = loginName;
    }
    
-      public int compareTo (Player play) {
+   public int compareTo (Player play) {
         return play.score-this.score;
+	}
+	
+	public void setPassword(String password)
+	{
+		super.password = password;
+	}
+	
+	public String getPassword()
+	{
+		return super.password;
 	}
 }

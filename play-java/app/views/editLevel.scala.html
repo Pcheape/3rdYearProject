@@ -1,0 +1,21 @@
+@(user: models.User, editLevelForm: Form[models.Level], LevelCur: models.Level)
+
+    @import helper._
+
+    @main("Edit Level!",user) {
+        <h3> Edit a Level</h3>   
+        @form(action = routes.AdminController.submitEditLevel(LevelCur.id), 'class -> "form-horizontal", 'role -> "form") {
+		
+        
+			@inputText(editLevelForm("password"),'_label -> "Password")
+     
+
+
+            <div class="actions">
+                <input type="submit" value="Edit Level" class="btn primary">
+
+            </div>
+
+
+        }
+}

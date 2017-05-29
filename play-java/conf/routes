@@ -25,17 +25,21 @@ POST	/Level4						controllers.GameController.Level4()
 POST	/Level5						controllers.GameController.Level5()
 POST	/Level6						controllers.GameController.Level6()
 
-#
+
 GET     /admin						controllers.AdminController.index()
 GET     /getUserAdmin               controllers.AdminController.getUsers()
+GET     /getLevelAdmin               controllers.AdminController.getLevels()
 GET     /resetScore                 controllers.AdminController.resetScoreboard()
 GET     /deletePlayer               controllers.AdminController.deletePlayers()
 GET     /configGame               	controllers.AdminController.configGame()
+GET     /startGame	                controllers.AdminController.startGame()
 
 POST    /editUser                   controllers.AdminController.editUser(id: String)
+POST    /editLevel                	controllers.AdminController.editLevel(id: Int)
 POST    /SubmitEditUser             controllers.AdminController.submitEditUser(id: String)
-POST    /editPlayer                   controllers.AdminController.editPlayer(id: String)
-POST    /SubmitEditPlayer             controllers.AdminController.submitEditPlayer(id: String)
+POST    /SubmitEditLevel            controllers.AdminController.submitEditLevel(id: Int)
+POST    /editPlayer                 controllers.AdminController.editPlayer(id: String)
+POST    /SubmitEditPlayer           controllers.AdminController.submitEditPlayer(id: String)
 
 
 POST /registerFormSubmit 			controllers.userRegisterController.registerFormSubmit()

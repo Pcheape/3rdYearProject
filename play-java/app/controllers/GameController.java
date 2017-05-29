@@ -47,11 +47,12 @@ public class GameController extends Controller {
 		Level tempLevel = new Level();
 		tempLevel.id = play.level;
 		Form<Level> levelForm = Form.form(Level.class).fill(tempLevel);
-		System.out.println("levelForm : "+levelForm.field("id").value());
+		Level curLevel = Level.getUserLevel(play.level);
 		
+		if(Level.gameOn){
 		switch(play.level){
 			case 1:
-				return ok(level1.render(User.getLoggedIn(session().get("email")),levelForm));
+				return ok(level1.render(User.getLoggedIn(session().get("email")),levelForm,curLevel));
 			
 			case 2:
 			List<Vulndata> results = null;
@@ -69,15 +70,13 @@ public class GameController extends Controller {
 			case 6:
 				List<Level6data> results6 =null;
 				ctx().response().setCookie("type", "dXNlcg==");
-				
-				
 				return ok(level6.render(User.getLoggedIn(session().get("email")),levelForm,results6));
 				
 			
 			
+			}
 		}
-		return ok();
-			
+		return redirect("/");		
 	}
 	
 	

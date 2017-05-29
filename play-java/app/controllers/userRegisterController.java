@@ -46,7 +46,9 @@ public class userRegisterController extends Controller {
 						}
 					}
 				if(!userFound){	
-					
+					Encrypt encryptDigest = new Encrypt();
+					String newPassword = encryptDigest.calcPassword(player.getPassword());
+					player.setPassword(newPassword);
 					player.score=0;
 					player.level=1;
 					player.hint=0;

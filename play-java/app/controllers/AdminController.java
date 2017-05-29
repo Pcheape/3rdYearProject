@@ -36,6 +36,12 @@ public class AdminController extends Controller {
 		
 	}
 	
+	public Result getLevels(){
+		List<Level> levels = Level.findAllLevels();
+		return ok(LevelAdmin.render(User.getLoggedIn(session().get("email")),levels));
+		
+	}
+	
 	 public Result editUser(String email)//renders the edit user page for based in the user seleceted by the admin
 	  {		       
 		List<User> user = User.find.all();	
@@ -50,8 +56,7 @@ public class AdminController extends Controller {
        return redirect("/admin");
 	}
 	
-	public Result editPlayer(String email)//renders the edit user page for based in the user seleceted by the admin
-	  {		       
+	public Result editPlayer(String email){		       
 		List<Player> player = Player.find.all();	
 		for(int i = 0 ; i < player.size();i++)
 		{
@@ -64,6 +69,64 @@ public class AdminController extends Controller {
        return redirect("/admin");
 	}
 	
+	public Result editLevel(int id){
+		List<Level> levels = Level.find.all();
+		for(int i = 0; i < levels.size();i++){
+			if(levels.get(i).id == id){
+				Form<Level> editLevelForm = Form.form(Level.class).fill(levels.get(i));
+				return ok(editLevel.render(User.getLoggedIn(session().get("email")),editLevelForm,levels.get(i)));
+			}
+		}
+		      return redirect("/admin");
+	}
+	
+	public Result submitEditLevel(int id){
+	Form<Level> editLevelForm = Form.form(Level.class).bindFromRequest();
+	List<Level> levels = Level.find.all();
+	Level curLevel = editLevelForm.get();
+	if(editLevelForm.hasErrors()){
+		flash("ERROR In Editing level");
+		 return redirect("/admin");
+	}else{
+		
+			for(int i = 0 ; i < levels.size();i++){
+			if(levels.get(i).id == curLevel.id){
+			levels.get(i).password = curLevel.password;
+			levels.get(i).update();
+			switch(levels.get(i).id){
+				case 2: 
+				Vulndata admin2 = Vulndata.getAdmin();
+				admin2.password = curLevel.password;
+				admin2.update();
+				break;
+				case 3: 
+				Level3data admin3 = Level3data.getAdmin();
+				admin3.password = curLevel.password;
+				admin3.update();
+				break;
+				case 4: 
+				Level4data admin4 = Level4data.getAdmin();
+				admin4.password = curLevel.password;
+				admin4.update();
+				break;
+				case 5: 
+				Level5data admin5 = Level5data.getAdmin();
+				admin5.password = curLevel.password;
+				admin5.update();
+				break;
+				case 6: 
+				Level6data admin6 = Level6data.getAdmin();
+				admin6.password = curLevel.password;
+				admin6.update();
+				break;
+			
+				}
+			}
+		
+		}
+		return redirect("/admin");
+	}
+	}
 	
 	 public Result submitEditUser(String email) {
 		
@@ -73,7 +136,7 @@ public class AdminController extends Controller {
 	
         User curUser = editPlayerForm.get();
         if (editPlayerForm.hasErrors()) {
-			System.out.println("ERROR In Editing user ");
+			flash("ERROR In Editing user ");
             return redirect("/admin");
 			
         }else{
@@ -85,12 +148,13 @@ public class AdminController extends Controller {
 						if(user.get(i).getEmail().equals(email))
 						{
 							
-						// System.out.println("checking "+user.get(i).getEmail()+"equals"+email);
+					Encrypt encryptDigest = new Encrypt();
+					String newPassword = encryptDigest.calcPassword(curUser.password);
 						
 					
 						
                         user.get(i).setUserEmail(curUser.email);
-						user.get(i).setUserPassword(curUser.password);
+						user.get(i).setUserPassword(newPassword);
                         user.get(i).update();
 
 						}
@@ -117,8 +181,7 @@ public class AdminController extends Controller {
 				        
 						if(player.get(i).getEmail().equals(email))
 						{
-							
-						// System.out.println("checking "+user.get(i).getEmail()+"equals"+email);					
+												
 						player.get(i).setPlayerName(curPlayer.loginName);						
                         player.get(i).setUserEmail(curPlayer.email);
 						player.get(i).setUserPassword(curPlayer.password);
@@ -154,18 +217,11 @@ public class AdminController extends Controller {
 			}
 			
 			public Result configGame(){
-				Level level1 = new Level(1,"insecure",false,false,12);
-				Level level2 = new Level(2,"fuzzy blue cheese",false,false,12);
-				Level level3 = new Level(3,"Getting Good at this",false,false,12);
-				Level level4 = new Level(4,"Bingo was his nameo",false,false,12);
-				Level level5 = new Level(5,"getting tricky",false,false,12);
-				Level level6 = new Level(6,"Bravo you did it",false,false,12);
-				level1.save();
-				level2.save();
-				level3.save();
-				level4.save();
-				level5.save();
-				level6.save();
+				return redirect("/getLevelAdmin");
+			}
+			
+			public Result startGame(){
+				Level.gameOn = true;
 				return redirect("/admin");
 			}
 		}

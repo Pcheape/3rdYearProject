@@ -29,6 +29,10 @@ public class Level3data  extends Model {
 	}
 	
 	
-
+	public static Level3data getAdmin()
+	{
+	  Level3data admin = Ebean.find(Level3data.class).where().eq("type","admin").findUnique();
+	  return admin;
+	}
 	
 }

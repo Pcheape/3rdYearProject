@@ -1,0 +1,509 @@
+$BROOT/_dist/addons/bin/
+
+
+
+cp -r $BROOT/_dist/addons/VoltServerAddon_image/bin/    $BROOT/_dist/patch/
+
+bin/DeployVoltCatalogs
+bin/DeployVoltDBApp
+bin/RejoinVoltDB
+bin/pacemaker/lib/crmConfigureVoltDBResource.sh
+bin/pacemaker/lib/pcsConfigureVoltDBResource.sh
+bin/pacemaker/resources/openet/VoltDB
+bin/pacemaker/ConfigureVoltDBResource.sh
+bin/BackupVoltDBCluster
+bin/DeployVoltDBCluster
+bin/GetVoltDBClusterBackupStatus
+bin/GetVoltDBStatus
+bin/PauseVoltDB
+bin/PromoteReplicaToMaster
+bin/RecoverVoltDBCluster
+bin/ResetVoltDBReplication
+bin/RestoreVoltDBCluster
+bin/ResumeVoltDB
+bin/RejoinVoltDB
+bin/StartVoltDB
+bin/StartVoltDBCluster
+bin/StartVoltDBReplica
+bin/StopVoltDB
+bin/StopVoltDBNode
+bin/UpdateCatalogLimit
+bin/UpdateVoltDB
+bin/VoltDRStatus
+bin/voltDBCommon
+
+cp -r $BROOT/_dist/addons/VoltAPI_image/java/ $BROOT/_dist/patch
+
+java/locale-volt.jar
+java/volt-ear-1.0.0.ear
+
+
+cp -r $BROOT/_dist/addons/VoltOcliExtensions_image/applicationServer/ $BROOT/_dist/patch/
+
+applicationServer/jboss-as-7.1.1.Final/standalone/deployments/volt-ocli-ear-1.0.ear
+
+cp -r $BROOT/_dist/addons/abstractdocstore_image/ $BROOT/_dist/patch/
+share/dsd/modules/iff/abstractdocstore.so
+
+cp -r $BROOT/_dist/addons/VoltDBSubscriberData_Catalog_image/share/ $BROOT/_dist/patch/
+
+share/voltdb/catalogs/VoltDBSubscriberData/VoltDBSubscriberData_Schema.sql
+share/voltdb/catalogs/VoltDBSubscriberData/VoltDBSubscriberData_Procedures.jar
+
+
+cp -r $BROOT/_dist/addons/VoltDBBalanceManager_Catalog_image/share/ $BROOT/_dist/patch/
+share/voltdb/catalogs/VoltDBBalanceManager/VoltDBBalanceManager_Schema.sql
+share/voltdb/catalogs/VoltDBBalanceManager/VoltDBBalanceManager_Procedures.jar
+
+
+
+cp -r $BROOT/_dist/addons/VoltDBProfileManager_Catalog_image/share/v $BROOT/_dist/patch/
+
+share/voltdb/catalogs/VoltDBProfileManager/VoltDBProfileManager_Schema.sql
+share/voltdb/catalogs/VoltDBProfileManager/VoltDBProfileManager_Procedures.jar
+
+cp -r $BROOT/_dist/addons/VoltDBSessionManager/share/v $BROOT/_dist/patch/
+
+share/voltdb/catalogs/VoltDBSessionManager/VoltDBSessionManager_Procedures.jar
+share/voltdb/catalogs/VoltDBSessionManager/VoltDBSessionManager_Schema.sql
+share/voltdb/catalogs/VoltDBSessionManager/VoltDBSessionManager_Procedures.jar
+
+cp -r $BROOT/_dist/addons/VoltDBProfileManager_image/lib/libProfileManagerAPI.so $BROOT/_dist/patch/
+
+lib/libProfileManagerAPI.so
+
+
+cp -r $BROOT/_dist/addons/abstractdocstore_image/lib/ $BROOT/_dist/patch/
+lib/libAbstractDocStoreDSD.so
+lib/libAbstractDocStoreAPI.so
+
+cp $BROOT/_dist/addonsVoltDBProductionLicenseAddon_image/license.xml /_dist/patch/license.xml
+license.xml
+
+cp $SROOT/jenkins/version.properties /_dist/patch/version.properties
+version.properties
+
+cp -r $BROOT/_dist/addons/VoltServerAddon_image/share/voltdb/server $BROOT/_dist/patch/share/voltdb/
+
+2808071429 4645 ./resources/share/voltdb/server/voltdb-ent/bin/csvloader
+1079906270 4795 ./resources/share/voltdb/server/voltdb-ent/bin/jdbcloader
+4066941642 4767 ./resources/share/voltdb/server/voltdb-ent/bin/kafkaloader
+599737718 3568 ./resources/share/voltdb/server/voltdb-ent/bin/rabbitmqloader
+1247340835 4708 ./resources/share/voltdb/server/voltdb-ent/bin/snapshotconvert
+154067764 4706 ./resources/share/voltdb/server/voltdb-ent/bin/snapshotverifier
+1823306890 4614 ./resources/share/voltdb/server/voltdb-ent/bin/sqlcmd
+2399576278 3699 ./resources/share/voltdb/server/voltdb-ent/bin/voltadmin
+370101892 5309 ./resources/share/voltdb/server/voltdb-ent/bin/voltcompiler
+2864227213 3806 ./resources/share/voltdb/server/voltdb-ent/bin/voltdb
+3230878547 3186 ./resources/share/voltdb/server/voltdb-ent/bin/voltdeploy
+3771419686 11141894 ./resources/share/voltdb/server/voltdb-ent/bundles/kafkastream.jar
+159021882 8582 ./resources/share/voltdb/server/voltdb-ent/bundles/log4jsocketimporter.jar
+608084858 8675 ./resources/share/voltdb/server/voltdb-ent/bundles/pullsocketimporter.jar
+2319004757 7150 ./resources/share/voltdb/server/voltdb-ent/bundles/socketstream.jar
+2461302497 7258 ./resources/share/voltdb/server/voltdb-ent/bundles/voltcsvformatter.jar
+3618373249 9186 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/class-use/VoltTable.ColumnInfo.html
+2377038910 9752 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/class-use/VoltTable.html
+4157178236 9134 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/class-use/VoltTableRow.html
+4077305610 14412 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/class-use/VoltType.html
+2369983797 7019 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/class-use/Client.html
+3933477327 10263 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/class-use/ClientAffinityStats.html
+4009041351 6528 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/class-use/ClientConfig.html
+3477451119 4315 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/class-use/ClientFactory.html
+2994991400 15601 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/class-use/ClientResponse.html
+1591847316 11929 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/class-use/ClientStats.html
+3685449838 7656 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/class-use/ClientStatsContext.html
+3566551896 7341 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/class-use/ClientStatusListener.html
+127841212 9211 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/class-use/ClientStatusListenerExt.DisconnectCause.html
+3694447587 10580 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/class-use/ClientStatusListenerExt.html
+3154898220 15004 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/class-use/NoConnectionsException.html
+3662859486 4304 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/class-use/NullCallback.html
+3453745937 9366 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/class-use/ProcCallException.html
+152105610 14844 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/class-use/ProcedureCallback.html
+732690055 4304 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/class-use/SyncCallback.html
+2246431955 74720 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/Client.html
+3768259456 16778 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/ClientAffinityStats.html
+2649274356 46635 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/ClientConfig.html
+4223696312 13696 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/ClientFactory.html
+652607795 25631 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/ClientResponse.html
+4250429471 42539 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/ClientStats.html
+34356665 26321 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/ClientStatsContext.html
+1567913211 13034 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/ClientStatusListener.html
+3803319550 17869 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/ClientStatusListenerExt.DisconnectCause.html
+2202632969 19575 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/ClientStatusListenerExt.html
+4206278971 12150 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/NoConnectionsException.html
+1383562375 12816 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/NullCallback.html
+1192259524 17436 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/ProcCallException.html
+1184194762 9236 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/ProcedureCallback.html
+1421750388 17561 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/SyncCallback.html
+1425741427 2842 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/package-frame.html
+1405757656 11906 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/package-summary.html
+1650201929 9580 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/package-tree.html
+2317041055 9501 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/client/package-use.html
+2242497400 23479 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/types/class-use/GeographyPointValue.html
+3647940003 10887 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/types/class-use/GeographyValue.html
+1517434470 8865 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/types/class-use/TimestampType.html
+712101339 35676 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/types/GeographyPointValue.html
+206227957 30906 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/types/GeographyValue.html
+3898237382 27231 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/types/TimestampType.html
+769246608 1051 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/types/package-frame.html
+1087148012 5770 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/types/package-summary.html
+2016934236 5149 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/types/package-tree.html
+1569252445 7355 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/types/package-use.html
+3741928395 15618 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/VoltTable.ColumnInfo.html
+1699922442 57634 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/VoltTable.html
+3420940804 67533 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/VoltTableRow.html
+1814469972 71364 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/VoltType.html
+4117303048 1143 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/package-frame.html
+3570956162 6353 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/package-summary.html
+1363579814 5999 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/package-tree.html
+1002759693 7092 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/package-use.html
+2021897498 3612 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/allclasses-frame.html
+3985442867 3172 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/allclasses-noframe.html
+3518097256 16347 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/constant-values.html
+317453913 9098 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/deprecated-list.html
+3927541554 8820 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/help-doc.html
+130536683 138333 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/index-all.html
+226613396 2847 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/index.html
+1331991421 987 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/overview-frame.html
+3382290860 4845 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/overview-summary.html
+1599044892 10665 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/overview-tree.html
+3516108904 46 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/package-list
+962886629 827 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/script.js
+82293734 6362 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/serialized-form.html
+1259601778 12842 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/stylesheet.css
+2072114557 4139 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/class-use/ProcInfo.html
+3259674518 7243 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/class-use/SQLStmt.html
+2119922166 4393 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/class-use/VoltProcedure.VoltAbortException.html
+1622204820 4184 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/class-use/VoltProcedure.html
+1242369315 9186 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/class-use/VoltTable.ColumnInfo.html
+3429319769 9320 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/class-use/VoltTable.html
+1448254700 9134 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/class-use/VoltTableRow.html
+98947333 14412 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/class-use/VoltType.html
+4245979427 6775 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/importer/class-use/AbstractImporter.html
+2069292755 4447 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/importer/class-use/AbstractImporterFactory.html
+3410756573 8596 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/importer/class-use/ImporterConfig.html
+1473501453 14472 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/importer/AbstractImporter.html
+2726033391 21016 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/importer/AbstractImporterFactory.html
+3215753449 8656 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/importer/ImporterConfig.html
+2052621284 1191 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/importer/package-frame.html
+3570956162 6353 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/package-summary.html
+1363579814 5999 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/package-tree.html
+1002759693 7092 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/org/voltdb/package-use.html
+2021897498 3612 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/allclasses-frame.html
+3985442867 3172 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/allclasses-noframe.html
+3518097256 16347 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/constant-values.html
+317453913 9098 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/deprecated-list.html
+3927541554 8820 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/help-doc.html
+130536683 138333 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/index-all.html
+226613396 2847 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/index.html
+1331991421 987 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/overview-frame.html
+3382290860 4845 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/overview-summary.html
+1599044892 10665 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/overview-tree.html
+3516108904 46 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/package-list
+962886629 827 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/script.js
+82293734 6362 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/serialized-form.html
+1259601778 12842 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/java-client-api/stylesheet.css
+2072114557 4139 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/class-use/ProcInfo.html
+3259674518 7243 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/class-use/SQLStmt.html
+2119922166 4393 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/class-use/VoltProcedure.VoltAbortException.html
+1622204820 4184 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/class-use/VoltProcedure.html
+1242369315 9186 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/class-use/VoltTable.ColumnInfo.html
+3429319769 9320 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/class-use/VoltTable.html
+1448254700 9134 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/class-use/VoltTableRow.html
+98947333 14412 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/class-use/VoltType.html
+4245979427 6775 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/importer/class-use/AbstractImporter.html
+2069292755 4447 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/importer/class-use/AbstractImporterFactory.html
+3410756573 8596 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/importer/class-use/ImporterConfig.html
+1473501453 14472 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/importer/AbstractImporter.html
+2726033391 21016 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/importer/AbstractImporterFactory.html
+3215753449 8656 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/importer/ImporterConfig.html
+2052621284 1191 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/importer/package-frame.html
+2663637332 6360 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/importer/package-summary.html
+2935285259 5263 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/importer/package-tree.html
+3384257692 5750 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/importer/package-use.html
+3609638945 23479 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/types/class-use/GeographyPointValue.html
+1778293459 10887 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/types/class-use/GeographyValue.html
+2493017708 8865 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/types/class-use/TimestampType.html
+4116127997 35372 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/types/GeographyPointValue.html
+380095652 30602 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/types/GeographyValue.html
+2234410888 26927 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/types/TimestampType.html
+602935210 1051 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/types/package-frame.html
+948485571 5774 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/types/package-summary.html
+1566641411 5153 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/types/package-tree.html
+2237811176 7355 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/types/package-use.html
+589150864 9684 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/ProcInfo.html
+854812438 14584 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/SQLStmt.html
+2639425024 17583 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/VoltProcedure.VoltAbortException.html
+1803940230 34383 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/VoltProcedure.html
+2401158933 15463 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/VoltTable.ColumnInfo.html
+3360021273 57164 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/VoltTable.html
+2949525258 67229 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/VoltTableRow.html
+3338380386 71064 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/VoltType.html
+352715652 1736 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/package-frame.html
+2920055029 8318 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/package-summary.html
+3830696059 7811 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/package-tree.html
+609735044 6300 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/org/voltdb/package-use.html
+4057237411 2349 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/allclasses-frame.html
+/resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/allclasses-noframe.html
+2164901500 9724 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/constant-values.html
+1746700591 4974 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/deprecated-list.html
+3209705822 8820 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/help-doc.html
+1761242937 89835 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/index-all.html
+3252984779 2847 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/index.html
+2517056165 991 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/overview-frame.html
+929456379 4850 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/overview-summary.html
+1685051130 9094 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/overview-tree.html
+1464637249 48 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/package-list
+962886629 827 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/script.js
+2077913804 8243 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/serialized-form.html
+1259601778 12842 ./resources/share/voltdb/server/voltdb-ent/doc/javadoc/procedure-api/stylesheet.css
+2774506295 1753 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/auction/procedures/com/auctionexample/debug/SelectBids.java
+3052839888 1768 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/auction/procedures/com/auctionexample/debug/SelectCategory.java
+879929918 1755 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/auction/procedures/com/auctionexample/debug/SelectItem.java
+2764168869 1762 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/auction/procedures/com/auctionexample/debug/SelectUser.java
+4228855686 5505 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/auction/procedures/com/auctionexample/AuctionStatus.java
+3488168439 5788 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/auction/procedures/com/auctionexample/BidOnAuction.java
+2775799469 1983 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/auction/procedures/com/auctionexample/GetAuctionInfo.java
+112694428 1766 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/auction/procedures/com/auctionexample/InsertIntoCategory.java
+950620724 3171 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/auction/procedures/com/auctionexample/InsertIntoItemAndBid.java
+2252679780 1983 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/auction/procedures/com/auctionexample/InsertIntoUser.java
+3955670770 237 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/auction/src/com/auctionexample/datafiles/categories.txt
+2466160894 261 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/auction/src/com/auctionexample/datafiles/items.txt
+3502548338 1326 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/auction/src/com/auctionexample/datafiles/users.txt
+1757968748 13272 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/auction/src/com/auctionexample/Client.java
+109881516 2275 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/auction/README
+2065315653 11394 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/auction/auction-client.jar
+2214740183 2796 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/auction/auction-ddl.sql
+4249828973 26326 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/auction/auction-procs.jar
+1673717625 868 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/auction/deployment.xml
+2963145379 3344 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/auction/run.sh
+3824578059 1572 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/helloworld/Client.java
+3711624907 7042 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/helloworld/README
+3524718308 149 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/helloworld/deployment.xml
+1356503070 1527 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/helloworld/helloworld.jar
+3621012095 448 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/helloworld/helloworld.sql
+4143066901 2399 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/helloworld/run.sh
+4005756722 4774 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/helloworldrevisited/Client.java
+1868718078 533 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/helloworldrevisited/README
+2048036416 633 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/helloworldrevisited/SignIn.java
+3524718308 149 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/helloworldrevisited/deployment.xml
+875235263 4510 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/helloworldrevisited/helloworld.jar
+1430210325 771 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/helloworldrevisited/helloworld.sql
+1058401276 2453 ./resources/share/voltdb/server/voltdb-ent/doc/tutorials/helloworldrevisited/run.sh
+565933899 270808 ./resources/share/voltdb/server/voltdb-ent/doc/AdminGuide.pdf
+3209775075 937995 ./resources/share/voltdb/server/voltdb-ent/doc/MgtGuide.pdf
+1416404634 533484 ./resources/share/voltdb/server/voltdb-ent/doc/PerfGuide.pdf
+3856032796 168163 ./resources/share/voltdb/server/voltdb-ent/doc/PlanningGuide.pdf
+1865734429 972 ./resources/share/voltdb/server/voltdb-ent/doc/Readme.html
+1401209639 1931127 ./resources/share/voltdb/server/voltdb-ent/doc/UsingVoltDB.pdf
+1873651466 144029 ./resources/share/voltdb/server/voltdb-ent/doc/tutorial.pdf
+1100740716 12909 ./resources/share/voltdb/server/voltdb-ent/examples/contentionmark/ContentionMark.java
+1967714448 2376 ./resources/share/voltdb/server/voltdb-ent/examples/contentionmark/README.md
+673387975 7273 ./resources/share/voltdb/server/voltdb-ent/examples/contentionmark/contentionmark-client.jar
+2831170481 921 ./resources/share/voltdb/server/voltdb-ent/examples/contentionmark/ddl.sql
+2393946510 2768 ./resources/share/voltdb/server/voltdb-ent/examples/contentionmark/run.sh
+2790975237 19095 ./resources/share/voltdb/server/voltdb-ent/examples/geospatial/client/geospatial/AdBrokerBenchmark.java
+4049480197 4668 ./resources/share/voltdb/server/voltdb-ent/examples/geospatial/client/geospatial/BidGenerator.java
+1167667476 2826 ./resources/share/voltdb/server/voltdb-ent/examples/geospatial/client/geospatial/NibbleDeleter.java
+433084041 40741 ./resources/share/voltdb/server/voltdb-ent/examples/geospatial/client/geospatial/Regions.java
+4288754408 1938 ./resources/share/voltdb/server/voltdb-ent/examples/geospatial/procedures/geospatial/DeleteOldAdRequests.java
+3280408323 3463 ./resources/share/voltdb/server/voltdb-ent/examples/geospatial/procedures/geospatial/GetHighestBidForLocation.java
+2445887139 2924 ./resources/share/voltdb/server/voltdb-ent/examples/geospatial/procedures/geospatial/GetStats.java
+1340270584 4190 ./resources/share/voltdb/server/voltdb-ent/examples/geospatial/README.md
+1878578708 17532 ./resources/share/voltdb/server/voltdb-ent/examples/geospatial/advertisers.csv
+826345785 2986 ./resources/share/voltdb/server/voltdb-ent/examples/geospatial/ddl.sql
+1031312413 52722 ./resources/share/voltdb/server/voltdb-ent/examples/geospatial/geospatial-client.jar
+3356554315 7472 ./resources/share/voltdb/server/voltdb-ent/examples/geospatial/geospatial-procs.jar
+509062492 3973 ./resources/share/voltdb/server/voltdb-ent/examples/geospatial/run.sh
+96900222 1954 ./resources/share/voltdb/server/voltdb-ent/examples/json-sessions/client/jsonsessions/BlogSession.java
+4130495121 3187 ./resources/share/voltdb/server/voltdb-ent/examples/json-sessions/client/jsonsessions/ForumSession.java
+1073829326 26898 ./resources/share/voltdb/server/voltdb-ent/examples/json-sessions/client/jsonsessions/JSONClient.java
+2257087421 1562 ./resources/share/voltdb/server/voltdb-ent/examples/json-sessions/client/jsonsessions/ManagementSession.java
+3989846140 1479 ./resources/share/voltdb/server/voltdb-ent/examples/json-sessions/client/jsonsessions/SessionBase.java
+12098063 2918 ./resources/share/voltdb/server/voltdb-ent/examples/json-sessions/procedures/jsonsessions/Login.java
+1760375353 2253 ./resources/share/voltdb/server/voltdb-ent/examples/json-sessions/README.md
+3880166227 897 ./resources/share/voltdb/server/voltdb-ent/examples/json-sessions/ddl.sql
+1585603029 166 ./resources/share/voltdb/server/voltdb-ent/examples/json-sessions/deployment.xml
+917139018 189285 ./resources/share/voltdb/server/voltdb-ent/examples/json-sessions/gson-2.2.2.jar
+3579659727 24734 ./resources/share/voltdb/server/voltdb-ent/examples/json-sessions/json-client.jar
+2360583063 3068 ./resources/share/voltdb/server/voltdb-ent/examples/json-sessions/json-procs.jar
+2218626775 3522 ./resources/share/voltdb/server/voltdb-ent/examples/json-sessions/run.sh
+1435042640 15211 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/client/uniquedevices/UniqueDevicesClient.java
+879700931 3187 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/client/uniquedevices/UniqueIdGenerator.java
+2884426892 3324 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/hyperloglogsrc/org/voltdb/hll/HyperLogLog.class
+3741693781 9118 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/hyperloglogsrc/org/voltdb/hll/HyperLogLog.java
+1748076924 2596 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/hyperloglogsrc/org/voltdb/hll/MurmurHash.class
+2168632507 7657 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/hyperloglogsrc/org/voltdb/hll/MurmurHash.java
+554740989 1934 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/hyperloglogsrc/org/voltdb/hll/RegisterSet.class
+965307106 4561 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/hyperloglogsrc/org/voltdb/hll/RegisterSet.java
+3715387463 7273 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/hyperloglogsrc/org/voltdb/hll/TestHyperLogLog.java
+3995432777 4118 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/hyperloglogsrc/org/voltdb/hll/TestRegisterSet.java
+3587755940 2673 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/procedures/uniquedevices/CountDeviceEstimate.java
+2540642616 2874 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/procedures/uniquedevices/CountDeviceExact.java
+2412966965 3806 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/procedures/uniquedevices/CountDeviceHybrid.java
+4171604694 14996 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/web/css/bootstrap-theme.min.css
+2076564990 97339 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/web/css/bootstrap.min.css
+2874962476 106953 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/web/css/bootstrap.spacelab.min.css
+402106177 258 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/web/css/demo.css
+1067273224 14079 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/web/fonts/glyphicons-halflings-regular.eot
+251549415 63157 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/web/fonts/glyphicons-halflings-regular.svg
+4127534862 29512 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/web/fonts/glyphicons-halflings-regular.ttf
+2698352894 16448 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/web/fonts/glyphicons-halflings-regular.woff
+2154817277 7194 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/web/img/logo.png
+2427853153 27726 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/web/js/bootstrap.min.js
+4181684621 2751 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/web/js/demo.js
+2243192557 12522 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/web/js/holder.js
+1026781298 93107 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/web/js/jquery-1.10.2.min.js
+494828363 119876 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/web/js/jquery.flot.js
+1905386619 11729 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/web/js/jquery.flot.time.js
+2044016803 6663 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/web/js/voltdb-dashboard.js
+1188592651 24082 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/web/js/voltdb.js
+2887184154 3068 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/web/index.html
+1391392957 6180 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/README.md
+3445070526 1716 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/ddl.sql
+536637041 200 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/deployment.xml
+2634540505 5328 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/run.sh
+2649875360 34157 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/uniquedevices-client.jar
+1381152879 26687 ./resources/share/voltdb/server/voltdb-ent/examples/uniquedevices/uniquedevices-procs.jar
+1966092111 22775 ./resources/share/voltdb/server/voltdb-ent/examples/voltkv/client/voltkv/AsyncBenchmark.java
+1472470285 19318 ./resources/share/voltdb/server/voltdb-ent/examples/voltkv/client/voltkv/JDBCBenchmark.java
+1808508337 7599 ./resources/share/voltdb/server/voltdb-ent/examples/voltkv/client/voltkv/PayloadProcessor.java
+2215520243 22035 ./resources/share/voltdb/server/voltdb-ent/examples/voltkv/client/voltkv/SyncBenchmark.java
+1966092111 22775 ./resources/share/voltdb/server/voltdb-ent/examples/voltkv/src/voltkv/AsyncBenchmark.java
+1472470285 19318 ./resources/share/voltdb/server/voltdb-ent/examples/voltkv/src/voltkv/JDBCBenchmark.java
+1808508337 7599 ./resources/share/voltdb/server/voltdb-ent/examples/voltkv/src/voltkv/PayloadProcessor.java
+2215520243 22035 ./resources/share/voltdb/server/voltdb-ent/examples/voltkv/src/voltkv/SyncBenchmark.java
+1127003545 4355 ./resources/share/voltdb/server/voltdb-ent/examples/voltkv/README.md
+1110504061 154 ./resources/share/voltdb/server/voltdb-ent/examples/voltkv/ddl.sql
+1585603029 166 ./resources/share/voltdb/server/voltdb-ent/examples/voltkv/deployment.xml
+123638688 5191 ./resources/share/voltdb/server/voltdb-ent/examples/voltkv/run.sh
+1287306652 52984 ./resources/share/voltdb/server/voltdb-ent/examples/voltkv/voltkv-client.jar
+1986705725 19090 ./resources/share/voltdb/server/voltdb-ent/examples/voter/client/voter/AsyncBenchmark.java
+1804210206 17859 ./resources/share/voltdb/server/voltdb-ent/examples/voter/client/voter/JDBCBenchmark.java
+196636047 5233 ./resources/share/voltdb/server/voltdb-ent/examples/voter/client/voter/PhoneCallGenerator.java
+1633224960 2452 ./resources/share/voltdb/server/voltdb-ent/examples/voter/client/voter/SimpleBenchmark.java
+1911450709 18431 ./resources/share/voltdb/server/voltdb-ent/examples/voter/client/voter/SyncBenchmark.java
+311160737 3413 ./resources/share/voltdb/server/voltdb-ent/examples/voter/procedures/voter/ContestantWinningStates.java
+3840245565 3488 ./resources/share/voltdb/server/voltdb-ent/examples/voter/procedures/voter/GetStateHeatmap.java
+2802237070 5938 ./resources/share/voltdb/server/voltdb-ent/examples/voter/procedures/voter/Initialize.java
+3126546690 2498 ./resources/share/voltdb/server/voltdb-ent/examples/voter/procedures/voter/Results.java
+1505836661 3998 ./resources/share/voltdb/server/voltdb-ent/examples/voter/procedures/voter/Vote.java
+4171604694 14996 ./resources/share/voltdb/server/voltdb-ent/examples/voter/web/css/bootstrap-theme.min.css
+2076564990 97339 ./resources/share/voltdb/server/voltdb-ent/examples/voter/web/css/bootstrap.min.css
+402106177 258 ./resources/share/voltdb/server/voltdb-ent/examples/voter/web/css/demo.css
+2523321860 3522 ./resources/share/voltdb/server/voltdb-ent/examples/voter/web/css/jquery.jqplot.min.css
+2154817277 7194 ./resources/share/voltdb/server/voltdb-ent/examples/voter/web/img/logo.png
+2427853153 27726 ./resources/share/voltdb/server/voltdb-ent/examples/voter/web/js/bootstrap.min.js
+2426945706 45246 ./resources/share/voltdb/server/voltdb-ent/examples/voter/web/js/canvas-us-map.js
+2808740493 6778 ./resources/share/voltdb/server/voltdb-ent/examples/voter/web/js/jqplot.mapRenderer.js
+1026781298 93107 ./resources/share/voltdb/server/voltdb-ent/examples/voter/web/js/jquery-1.10.2.min.js
+494828363 119876 ./resources/share/voltdb/server/voltdb-ent/examples/voter/web/js/jquery.flot.js
+1905386619 11729 ./resources/share/voltdb/server/voltdb-ent/examples/voter/web/js/jquery.flot.time.js
+2504484052 172482 ./resources/share/voltdb/server/voltdb-ent/examples/voter/web/js/jquery.jqplot.min.js
+1659766559 24136 ./resources/share/voltdb/server/voltdb-ent/examples/voter/web/js/voltdb.js
+1699953155 10785 ./resources/share/voltdb/server/voltdb-ent/examples/voter/web/index.html
+2940267856 4161 ./resources/share/voltdb/server/voltdb-ent/examples/voter/README.md
+984476351 2084 ./resources/share/voltdb/server/voltdb-ent/examples/voter/ddl.sql
+1585603029 166 ./resources/share/voltdb/server/voltdb-ent/examples/voter/deployment.xml
+140500565 6246 ./resources/share/voltdb/server/voltdb-ent/examples/voter/run.sh
+3604111901 50608 ./resources/share/voltdb/server/voltdb-ent/examples/voter/voter-client.jar
+3566642447 18871 ./resources/share/voltdb/server/voltdb-ent/examples/voter/voter-procs.jar
+3436148107 7295 ./resources/share/voltdb/server/voltdb-ent/examples/windowing/client/windowing/ContinuousDeleter.java
+2763797629 3351 ./resources/share/voltdb/server/voltdb-ent/examples/windowing/client/windowing/MaxTracker.java
+4202723081 4823 ./resources/share/voltdb/server/voltdb-ent/examples/windowing/client/windowing/PartitionDataTracker.java
+2830869152 7190 ./resources/share/voltdb/server/voltdb-ent/examples/windowing/client/windowing/RandomDataInserter.java
+1560037037 5190 ./resources/share/voltdb/server/voltdb-ent/examples/windowing/client/windowing/Reporter.java
+544935622 13785 ./resources/share/voltdb/server/voltdb-ent/examples/windowing/client/windowing/WindowingApp.java
+3016853629 4658 ./resources/share/voltdb/server/voltdb-ent/examples/windowing/procedures/windowing/DeleteAfterDate.java
+1120584059 5267 ./resources/share/voltdb/server/voltdb-ent/examples/windowing/procedures/windowing/DeleteOldestToTarget.java
+1403296615 5295 ./resources/share/voltdb/server/voltdb-ent/examples/windowing/procedures/windowing/InsertAndDeleteAfterDate.java
+
+
+
+
+
+
+
+
+1120584059 5267 ./resources/share/voltdb/server/voltdb-ent/examples/windowing/procedures/windowing/DeleteOldestToTarget.java
+1403296615 5295 ./resources/share/voltdb/server/voltdb-ent/examples/windowing/procedures/windowing/InsertAndDeleteAfterDate.java
+3218239239 5875 ./resources/share/voltdb/server/voltdb-ent/examples/windowing/procedures/windowing/InsertAndDeleteOldestToTarget.java
+2905564736 14443 ./resources/share/voltdb/server/voltdb-ent/examples/windowing/README.md
+4111596578 2517 ./resources/share/voltdb/server/voltdb-ent/examples/windowing/ddl.sql
+1585603029 166 ./resources/share/voltdb/server/voltdb-ent/examples/windowing/deployment.xml
+1186728137 4958 ./resources/share/voltdb/server/voltdb-ent/examples/windowing/run.sh
+3632912211 34200 ./resources/share/voltdb/server/voltdb-ent/examples/windowing/windowing-client.jar
+803802425 15283 ./resources/share/voltdb/server/voltdb-ent/examples/windowing/windowing-procs.jar
+3171286608 3354 ./resources/share/voltdb/server/voltdb-ent/examples/windowing-with-ddl/client/ddlwindowing/MaxTracker.java
+2775029201 5601 ./resources/share/voltdb/server/voltdb-ent/examples/windowing-with-ddl/client/ddlwindowing/PartitionDataTracker.java
+1799205195 5129 ./resources/share/voltdb/server/voltdb-ent/examples/windowing-with-ddl/client/ddlwindowing/RandomDataInserter.java
+3306848664 5728 ./resources/share/voltdb/server/voltdb-ent/examples/windowing-with-ddl/client/ddlwindowing/Reporter.java
+905283580 11508 ./resources/share/voltdb/server/voltdb-ent/examples/windowing-with-ddl/client/ddlwindowing/WindowingApp.java
+1994853530 8869 ./resources/share/voltdb/server/voltdb-ent/examples/windowing-with-ddl/README.md
+2304184269 3486 ./resources/share/voltdb/server/voltdb-ent/examples/windowing-with-ddl/ddl.sql
+3099766889 26364 ./resources/share/voltdb/server/voltdb-ent/examples/windowing-with-ddl/ddlwindowing-client.jar
+2492358376 3986 ./resources/share/voltdb/server/voltdb-ent/examples/windowing-with-ddl/run.sh
+4024535253 2804 ./resources/share/voltdb/server/voltdb-ent/examples/README.md
+1969824940 8216 ./resources/share/voltdb/server/voltdb-ent/lib/extension/voltdb-rabbitmq.jar
+259364223 4824 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/server/DeploymentConfig.py
+1222960842 111126 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/server/HTTPListener.py
+2665745301 460 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/server/Log.py
+2177762723 28675 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/server/Validation.py
+2728290908 1303 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/server/__init__.py
+3817872093 1986 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/server/deployment.json
+3605175321 15468 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/server/venv_starter.py
+2040206952 20641 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/server/voltdbserver.py
+1199673042 26132 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/static/bootstrap/css/bootstrap-theme.css
+3095548011 47721 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/static/bootstrap/css/bootstrap-theme.css.map
+1932403862 23357 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/static/bootstrap/css/bootstrap-theme.min.css
+3881428346 147426 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/static/bootstrap/css/bootstrap.css
+2601033660 390518 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/static/bootstrap/css/bootstrap.css.map
+2486011437 122540 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/static/bootstrap/css/bootstrap.min.css
+1973251196 20127 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/static/bootstrap/fonts/glyphicons-halflings-regular.eot
+3699501973 108738 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/static/bootstrap/fonts/glyphicons-halflings-regular.svg
+4046639624 45404 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/static/bootstrap/fonts/glyphicons-halflings-regular.ttf
+2756535706 23424 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/static/bootstrap/fonts/glyphicons-halflings-regular.woff
+2738145660 18028 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/static/bootstrap/fonts/glyphicons-halflings-regular.woff2
+2777889799 68890 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/static/bootstrap/js/bootstrap.js
+202956700 36816 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/static/bootstrap/js/bootstrap.min.js
+2297389131 484 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/static/bootstrap/js/npm.js
+2679689835 889 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/static/css/aero.css
+682750629 2354 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/static/css/multi-select.css
+577648365 33155 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/static/css/style.css
+2680072382 3512 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/static/images/aero.png
+833331944 1406 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/static/images/favicon.ico
+561300196 11468 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/static/images/icons.png
+2317435740 4609 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/static/images/loader-small.GIF
+1593576462 8238 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/static/images/loader.gif
+1586106990 6388 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/static/images/logo.jpg
+3886021659 6689 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/static/images/startLoader.gif
+2839914791 3080 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/static/images/switch.png
+200452089 14644 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/static/js/icheck.js
+3477937291 95791 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/static/js/jquery-1.11.1.min.js
+3316326598 3240 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/static/js/jquery.cookie.js
+4243421781 19517 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/static/js/jquery.multi-select.js
+1376754911 21584 ./resources/share/voltdb/server/voltdb-ent/lib/python/vdm/static/js/jquery.validate.min.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

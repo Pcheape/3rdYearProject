@@ -36,6 +36,8 @@ public String password;
 public boolean firstSolved;
 public boolean secondSolved;
 public int points;
+@Transient
+public static boolean gameOn = false;
 
 
 
@@ -56,19 +58,10 @@ public Level(int id , String password , boolean firstSolved , boolean secondSolv
 	}
 	
 	
+public static List<Level> findAllLevels(){
+		return Level.find.all();
+	}
 	
-	/*    public String validate() {
-         
-        
-		
-        if (password == null) {
-			System.out.println("invalid form");
-            return "Invalid user or password";
-        } else {
-			System.out.println("validation passed");
-            return null;
-        }
-    } */
 	
 	public static boolean authenticate(int id, String password) {
     
@@ -91,7 +84,7 @@ public Level(int id , String password , boolean firstSolved , boolean secondSolv
         if (id == 0)
                 return null;
         else
-            // Find user by id and return object
+            
             return find.where().eq("id", id).findUnique();
 		}
 			
