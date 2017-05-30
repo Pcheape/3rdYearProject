@@ -3,6 +3,8 @@
 @import models.Player;
 @main("Security App",user){
 
+
+<div class="col col-sm-9">
 <p> Welcome to level four same as the last except the validation has been taken off the page</p>
 
 
@@ -10,7 +12,7 @@
 
 <script src = @routes.Assets.versioned("javascripts/hello.js")></script> 
 <form name="levelForm" action = "@routes.GameController.Level4()" method = "POST">
-<input type="hidden" name="type" value="user" />			
+		
 </form>
 <button  value="query" class="btn btn-custom" onclick = myfunction() >Submit</button>
 
@@ -47,30 +49,29 @@
 }					
 
 
-
+</div>
 
 <div class="col col-sm-9">
 
   																
                                
 		@form(action = routes.GameController.authenticate()){
-<div class="col col-sm-9">
+
 																	
                                 <input type="hidden" name="id" value="@user.asInstanceOf[Player].level" />
 								@inputPassword(levelForm("password"),
                                     '_label -> "Password",
                                     '_showConstraints -> false,
 									'class -> "form-control")
-								
+			
 									
 <div class="actions">
  <button type="submit" value="Submit" class="btn btn-custom" >Signin</button>
-	</div>
-    </div>
+	
+  
 	 }
-</div>
 
-<div class ="col col-sm-9">
+
 	
 	 @if(user.asInstanceOf[Player].hint==0){
 	<form action = "/hint" method = "GET">
@@ -95,7 +96,7 @@
 		}
 	}
 		</div>
-
+</div>
 
 
 	 

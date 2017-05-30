@@ -2,7 +2,8 @@
 @import helper._
 @import models.Player;
 @main("Security App",user){
-
+<div class="col col-sm-9">
+<div class="col col-sm-9">
 <p> Welcome to level six</p>
 
 
@@ -46,14 +47,14 @@
 }					
 
 
-
+</div>
 
 <div class="col col-sm-9">
 
   																
                                
 		@form(action = routes.GameController.authenticate()){
-<div class="col col-sm-9">
+
 																	
                                 <input type="hidden" name="id" value="@user.asInstanceOf[Player].level" />
 								@inputPassword(levelForm("password"),
@@ -64,7 +65,7 @@
 									
 <div class="actions">
  <button type="submit" value="Submit" class="btn btn-custom" >Signin</button>
-	</div>
+	
     </div>
 	 }
 </div>
@@ -95,7 +96,7 @@
 	}
 		</div>
 
-
+</div>
 
 	 
 
