@@ -42,7 +42,6 @@ public class GameController extends Controller {
 	public Result index() {
 		
 		User user = User.getLoggedIn(session().get("email"));
-		System.out.println("got to here");
         return ok(index.render("Security App",user));
     }
 
@@ -125,7 +124,7 @@ public class GameController extends Controller {
 						
 						
 						player.update();
-						System.out.println("level sucessful");
+						
 							
 						return redirect("/level");
         }
@@ -167,10 +166,10 @@ public class GameController extends Controller {
 			String stm = "";
 			
 			if(query.equals("admin")){
-				System.out.println("this will be admin sql"+query);
+				
 				 stm = "Select * from Level3data WHERE type= 'admin'";	
 			}else{
-				System.out.println("this will be user sql"+query);
+				
 				stm = "Select * from Level3data WHERE type= 'user'";
 			}
 			
@@ -178,9 +177,7 @@ public class GameController extends Controller {
 				results = new ArrayList<Level3data>();
 	
 				Connection conn = play.db.DB.getConnection();
-		
-				
-						
+								
 				System.out.println(stm);
 				
 				ResultSet answer = conn.createStatement().executeQuery(stm);
@@ -211,10 +208,10 @@ public class GameController extends Controller {
 			String stm = "";
 			
 			if(query.equals("admin")){
-				System.out.println("this will be admin sql " +query);
+			
 				 stm = "Select * from Level4data WHERE type= 'admin'";	
 			}else{
-				System.out.println("this will be user sql" +query);
+			
 				stm = "Select * from Level4data WHERE type= 'user'";
 			}
 			
@@ -282,10 +279,10 @@ public class GameController extends Controller {
 		String stm ="";
 		
 			if(type.equals("YWRtaW4=")){
-				System.out.println("this will be admin sql " +type);
+				
 				 stm = "Select * from Level6data WHERE type= 'admin'";	
 			}else{
-				System.out.println("this will be user sql" +type);
+			
 				stm = "Select * from Level6data WHERE type= 'user'";
 			}
 			

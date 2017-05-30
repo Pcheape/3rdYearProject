@@ -165,7 +165,7 @@ public class AdminController extends Controller {
 				List<Player> player = Player.find.all();
 				Player curPlayer = editPlayerForm.get();
 				if (editPlayerForm.hasErrors()) {
-					System.out.println("ERROR In Editing user ");
+					flash("ERROR", "Editing user ");
 				return redirect("/admin");
 			
 				}else{
@@ -192,9 +192,9 @@ public class AdminController extends Controller {
 				List<Player> player = Player.find.all();
 				
 				for(int i = 0 ; i < player.size();i++){
-					System.out.println("reseting score of player"+player.get(i)+" current score is "+player.get(i).score);
+					
 					player.get(i).score = 0;
-					System.out.println("reset  "+player.get(i)+" current score is "+player.get(i).score);
+				
 					player.get(i).update();
 				}
 				return redirect("/admin");
