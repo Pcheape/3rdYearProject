@@ -1,7 +1,7 @@
 package models;
 
 import models.*;
-
+//Login class that validates the user login details using sha215 encryption. 
 public class Login {
     public String email;
     public String password;

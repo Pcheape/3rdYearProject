@@ -25,7 +25,7 @@ import play.mvc.*;
 import play.db.jpa.Transactional;
 
 
-
+//The Level model this will record all the aspects of the Level however will not be accessed by //vulnrable code. 
 
 @Entity
 @Table(name ="Level")
@@ -62,10 +62,10 @@ public static List<Level> findAllLevels(){
 		return Level.find.all();
 	}
 	
+	//This is the authenticate method to make sure the user has passed the level. 
 	
 	public static boolean authenticate(int id, String password) {
     
-		System.out.println("the id is "+id);
 		
 		Level level = find.where().eq("id",id).findUnique();
 		
@@ -73,12 +73,12 @@ public static List<Level> findAllLevels(){
 		{
         return true;
 		}else{
-			System.out.println("invalid auth");
-			 return false;
+		
+		return false;
 			 }
 		}
 		
-		
+	//This is the method that gets the users level and returns the level object
 		
 		public static Level getUserLevel(int id) {
         if (id == 0)

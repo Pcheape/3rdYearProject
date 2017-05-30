@@ -12,7 +12,7 @@ import com.google.inject.Inject;
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorValue("player")
 
-
+// The player model that will store all statistics and details of the player a type of user. 
 
 public class Player extends User implements Comparable<Player>{
 	

@@ -16,8 +16,7 @@ import play.mvc.LegacyWebSocket;
 
 
 /**
- * This controller contains an action to handle HTTP requests
- * to the application's home page.
+ * This controller contains an action to handle the scoreboard display and sorting .
  */
 public class ScoreBoardController extends Controller {
  

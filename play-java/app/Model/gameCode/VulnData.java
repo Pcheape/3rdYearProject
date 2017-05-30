@@ -9,6 +9,7 @@ import com.avaje.ebean.*;
 import com.google.inject.Inject;
 import models.*;
 
+//Level 2 class so that vunrable code can access its own table and not get access to rest of database. 
 
 @Entity
 

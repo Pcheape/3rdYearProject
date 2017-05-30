@@ -62,6 +62,9 @@
   
 </nav>
 </div>
+ @if(flash.containsKey("ERROR")) {
+                <h5 class="alert">@flash.get("ERROR")</h5>
+}
         @* And here's where we render the `Html` object containing
          * the page content. *@
         @content

@@ -3,7 +3,9 @@ package controllers;
 import play.mvc.Http.Context;
 import play.mvc.Result;
 import play.mvc.Security;
-
+/**
+ * This Controller handels user Authentication of both user and admins. 
+ */
 
 public class Secured extends Security.Authenticator {
 

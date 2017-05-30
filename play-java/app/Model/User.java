@@ -7,7 +7,7 @@ import play.data.validation.*;
 import com.avaje.ebean.*;
 import com.google.inject.Inject;
 import models.*;
-
+//The super userclass User. That stores email and password along with the generic methods of both player //and admin. 
 
 @Entity
 @Table(name ="user")
@@ -37,25 +37,25 @@ public class User extends Model {
 	}
 	
 	
-	
+	// Find user by id and return object
 	public static User getLoggedIn(String email) {
         if (email == null)
                 return null;
         else
-            // Find user by id and return object
+            
             return find.where().eq("email", email).findUnique();
 		}
 
 
 
     public String getUserType(){
-        DiscriminatorValue val = this.getClass().getAnnotation( DiscriminatorValue.class );
+        DiscriminatorValue val = this.getClass().getAnnotation(DiscriminatorValue.class );
         return val == null ? null : val.value();
 	}
 	
-	
+	  // If found return the user object with matching username and password
 	public static User authenticate(String email, String password) {
-        // If found return the user object with matching username and password
+      
         return find.where().eq("email", email).eq("password", password).findUnique();
 	}
 	

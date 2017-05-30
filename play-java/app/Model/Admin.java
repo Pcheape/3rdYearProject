@@ -11,6 +11,7 @@ import com.google.inject.Inject;
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorValue("admin")
+//this is the admin model that is a type of user
 
 
 

@@ -7,8 +7,7 @@ import play.data.*;
 import views.html.*;
 import models.*;
 /**
- * This controller contains an action to handle HTTP requests
- * to the application's home page.
+ * This controller handles all Admin views and methods. 
  */
 public class AdminController extends Controller {
 
@@ -29,9 +28,6 @@ public class AdminController extends Controller {
 	public Result getUsers(){
 		
 		List<User> user = User.findAllUsers();
-        
-        
-
         return ok(UserAdmin.render(User.getLoggedIn(session().get("email")),user));
 		
 	}
@@ -39,11 +35,10 @@ public class AdminController extends Controller {
 	public Result getLevels(){
 		List<Level> levels = Level.findAllLevels();
 		return ok(LevelAdmin.render(User.getLoggedIn(session().get("email")),levels));
-		
 	}
 	
-	 public Result editUser(String email)//renders the edit user page for based in the user seleceted by the admin
-	  {		       
+	//renders the edit user page for based in the user seleceted by the admin
+	 public Result editUser(String email){		       
 		List<User> user = User.find.all();	
 		for(int i = 0 ; i < user.size();i++)
 		{
@@ -85,7 +80,7 @@ public class AdminController extends Controller {
 	List<Level> levels = Level.find.all();
 	Level curLevel = editLevelForm.get();
 	if(editLevelForm.hasErrors()){
-		flash("ERROR In Editing level");
+		flash("ERROR","In Editing level");
 		 return redirect("/admin");
 	}else{
 		

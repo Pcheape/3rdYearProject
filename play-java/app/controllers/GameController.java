@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.util.*;
 import play.data.*;
 import views.html.levels.*;
+import views.html.*;
 import models.*;
 import play.db.jpa.*;
 import play.db.jpa.JPAApi;
@@ -21,7 +22,7 @@ import play.mvc.Http.*;
 
 /**
  * This controller contains an action to handle HTTP requests
- * to the application's home page.
+ * to the application's home page. It also handles the game logic and rendering of all player views. 
  */
  
   @Security.Authenticated(Secured.class)
@@ -38,7 +39,13 @@ public class GameController extends Controller {
 		this.jpaApi = api;
 	}
 	
-	
+	public Result index() {
+		
+		User user = User.getLoggedIn(session().get("email"));
+		System.out.println("got to here");
+        return ok(index.render("Security App",user));
+    }
+
 	
     public Result Level() {
 		
@@ -88,16 +95,15 @@ public class GameController extends Controller {
 	 public Result authenticate() {
 					// Bind form instance to the values submitted from the form
                     Form<Level> levelForm = Form.form(Level.class).bindFromRequest();
-                      System.out.println("checking for errors ");
+                     
 					  Player player = (Player)User.getLoggedIn(session().get("email"));
-					  System.out.println("got to here ");
+					  
 					  Level level = Level.getUserLevel(player.level);
                     if (levelForm.hasErrors()) {
                         // If errors, show the form again
-						System.out.println("bad request Level");
                         return redirect("/level");
                     }
-					
+					//this validates the player that is logged ins level and the password he sumbitted. 
 					else if(level.authenticate(player.level,levelForm.get().password)){
                                      
 						
@@ -275,7 +281,7 @@ public class GameController extends Controller {
 		
 		String stm ="";
 		
-			if(type.equals("dXNlcg==")){
+			if(type.equals("YWRtaW4=")){
 				System.out.println("this will be admin sql " +type);
 				 stm = "Select * from Level6data WHERE type= 'admin'";	
 			}else{

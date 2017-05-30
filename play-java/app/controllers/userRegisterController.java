@@ -8,7 +8,7 @@ import views.html.*;
 import models.*;
 /**
  * This controller contains an action to handle HTTP requests
- * to the application's home page.
+ * to the application's home page and handles User Registration and encryption of passwords. 
  */
 public class userRegisterController extends Controller {
  // Display an empty form in the view
@@ -31,12 +31,9 @@ public class userRegisterController extends Controller {
 			User user = User.getLoggedIn(session().get("email"));
 			
 		   if (newRegisterForm.hasErrors()) {
-				//Display the form again
-				System.out.println("badRequest Outputting to log ");
-			
+				flash("ERROR","Invalid Regestration");
 				return badRequest(register.render(user,newRegisterForm));
-				
-			}else{
+				}else{
 				Player player = newRegisterForm.get();
 				for(int i = 0 ; i < userList.size();i++){
 				        
@@ -55,6 +52,7 @@ public class userRegisterController extends Controller {
 					player.solution=0;
 					player.save();
 				}else{
+					flash("ERROR","Invalid Email address");
 					return badRequest(register.render(user,newRegisterForm));
 				}
 			}

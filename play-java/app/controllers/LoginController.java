@@ -6,7 +6,7 @@ import java.util.*;
 import play.data.*;
 import models.User;
 import models.Login;
-
+//handles the login logic . 
 public class LoginController extends Controller {
 
  
@@ -19,14 +19,11 @@ public class LoginController extends Controller {
 
 	  // Process the user login form
    public Result authenticate() {
-   // Bind form instance to the values submitted from the form
+   
       Form<Login> loginForm = Form.form(Login.class).bindFromRequest();		
-					
-  //User.getLoggedIn(session().get("email"));
-			//the has Errors checks the validate function in login if it returns anything but null it has errors 		
       if (loginForm.hasErrors()) {
-         // If errors, show the form again
-			System.out.println("bad request Login ");
+   
+			flash("ERROR","Invalid Username/password");
 			User user = User.getLoggedIn(session().get("email"));
             return badRequest(login.render(user,loginForm));
             }else {						
@@ -42,7 +39,6 @@ public class LoginController extends Controller {
             if (u != null && "admin".equals(u.getUserType())) {
                 return redirect("/admin");
             }
-            System.out.println("login sucessfull");
             // Return to home page
             return redirect("/");
         }
@@ -50,7 +46,6 @@ public class LoginController extends Controller {
     
     public Result logout() {
         session().clear();
-        flash("success", "You've been logged out");
         return redirect("/");
 }
 }

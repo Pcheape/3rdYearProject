@@ -8,6 +8,5 @@ function validate(){
 if(pattern.test(query)){
 	document.levelForm.submit();
 	}
-	alert(pattern.test(query));
-
+	alert("error please enter a valid email");
 }
